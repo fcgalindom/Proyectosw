@@ -22,7 +22,7 @@
                         <div class="row">
                             <div class="col-md-9 col-lg-8 mx-auto">
                                 <h3 class="login-heading mb-4">Registrarse</h3>
-                                <form>
+                                <form method="post" action="../modelo/insertarEmpresa.php">
                                     <div class="form-label-group">
                                         <input type="text" id="nombreComercial" name="nombreComercial" class="form-control" placeholder="Nombre Comercial" required autofocus>
                                         <label for="nombreComercial">Nombre Comercial</label>

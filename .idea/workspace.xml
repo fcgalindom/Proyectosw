@@ -20,11 +20,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e8aa3284-f960-411a-b976-89890b588c8a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/modelo/conecxion.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/modelo/insertarEmpresa.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Prueba.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/link.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/linkCopia.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modelo/insertarEmpresa.php" beforeDir="false" afterPath="$PROJECT_DIR$/modelo/insertarEmpresa.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vista/RegistroProy.php" beforeDir="false" afterPath="$PROJECT_DIR$/vista/RegistroProy.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,7 +59,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1599281471690</updated>
-      <workItem from="1599281472802" duration="4447000" />
+      <workItem from="1599281472802" duration="5506000" />
     </task>
     <servers />
   </component>
@@ -84,5 +82,9 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="517" y="287" key="NewPhpFileDialog/0.0.1366.728@0.0.1366.728" timestamp="1599285415445" />
+    <state x="339" y="162" key="run.anything.popup" timestamp="1599286019289">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="339" y="162" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1599286019289" />
   </component>
 </project>

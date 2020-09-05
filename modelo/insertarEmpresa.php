@@ -10,7 +10,7 @@ $camara_comercio=NULL;
 
 
 $elUsr = "root";
-$elPw = "12345678";
+$elPw = "";
 $elServer = "localhost:3306";
 $laBd = "feriaop_bd";
 
@@ -18,8 +18,7 @@ $laBd = "feriaop_bd";
 $conexion = mysqli_connect($elServer, $elUsr, $elPw, $laBd);
 
 
-$sql = "INSERT INTO MATERIALES VALUES ($cod_material,'$nom_material')";
+$sql = "INSERT into empresa  VALUES (0, $nom_empresa,$nom_comercial,$descripccion,$cod_empresa_t,$estado_empresa,$camara_comercio);";
 $resultado = mysqli_query($conexion, $sql);
 mysqli_close($conexion);
-header("Location: ../vista/Material.php");
-PROCEDURE Sp_VXCi;
+?>
