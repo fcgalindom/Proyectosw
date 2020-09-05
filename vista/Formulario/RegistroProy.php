@@ -25,29 +25,29 @@
                                 <form>
 
                                     <div class="form-label-group">
-                                        <input type="nombre" id="inputName" class="form-control" placeholder="Name" required autofocus>
-                                        <label for="inputNombre">Nombres</label>
+                                        <input type="text" id="inputName" class="form-control" placeholder="Name" required autofocus>
+                                        <label for="inputName">Nombres</label>
                                     </div>
 
                                      <div class="form-label-group">
-                                        <input type="apellido" id="inputApellido" class="form-control" placeholder="Apellido" required autofocus>
+                                        <input type="text" id="inputApellido" class="form-control" placeholder="Apellido" required autofocus>
                                         <label for="inputApellido">Apellidos</label>
                                     </div>
 
                                      <div class="form-label-group">
-                                        <input type="tel" id="inputTel" class="form-control" placeholder="Telefono" required autofocus>
+                                        <input type="text" id="inputTel" class="form-control" placeholder="Telefono" required autofocus>
                                         <label for="inputTel">Telefono</label>
                                     </div>
 
 
                                     <div class="form-label-group">
-                                        <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
-                                        <label for="inputCorreo">Correo</label>
+                                        <input type="text" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
+                                        <label for="inputEmail">Correo</label>
                                     </div>
 
                                      <div class="form-label-group">
-                                        <input type="direccion" id="inputDir" class="form-control" placeholder="Direccion" required autofocus>
-                                        <label for="inputDireccion">Direccion</label>
+                                        <input type="text" id="inputDir" class="form-control" placeholder="Direccion" required autofocus>
+                                        <label for="inputDir">Direccion</label>
                                     </div>
 
                                     <div class="select">
@@ -92,8 +92,8 @@
                                     </div>
 
                                     <div class="form-label-group">
-                                        <input type="email" id="inputConfirmPassword" class="form-control" placeholder="Email address" required autofocus>
-                                        <label for="inputEmail">Confirmar contraseña</label>
+                                        <input type="password" id="inputConfirmPassword" class="form-control" placeholder="Email address" required autofocus>
+                                        <label for="inputConfirmPassword">Confirmar contraseña</label>
                                     </div>
 
                                     <div class="custom-control custom-checkbox mb-3">
