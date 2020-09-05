@@ -22,31 +22,31 @@
                         <div class="row">
                             <div class="col-md-9 col-lg-8 mx-auto">
                                 <h3 class="login-heading mb-4">Registrarse</h3>
-                                <form>
+                                <form action="../../controlador/registro.php" method="POST">
 
                                     <div class="form-label-group">
-                                        <input type="text" id="inputName" class="form-control" placeholder="Name" required autofocus>
+                                        <input type="text" name="nombre" id="inputName" class="form-control" placeholder="Name" required autofocus>
                                         <label for="inputName">Nombres</label>
                                     </div>
 
                                      <div class="form-label-group">
-                                        <input type="text" id="inputApellido" class="form-control" placeholder="Apellido" required autofocus>
+                                        <input type="text" name="apellido" id="inputApellido" class="form-control" placeholder="Apellido" required autofocus>
                                         <label for="inputApellido">Apellidos</label>
                                     </div>
 
                                      <div class="form-label-group">
-                                        <input type="text" id="inputTel" class="form-control" placeholder="Telefono" required autofocus>
+                                        <input type="text" name="telefono" id="inputTel" class="form-control" placeholder="Telefono" required autofocus>
                                         <label for="inputTel">Telefono</label>
                                     </div>
 
 
                                     <div class="form-label-group">
-                                        <input type="text" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
+                                        <input type="text" name="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
                                         <label for="inputEmail">Correo</label>
                                     </div>
 
                                      <div class="form-label-group">
-                                        <input type="text" id="inputDir" class="form-control" placeholder="Direccion" required autofocus>
+                                        <input type="text" name="direccion" id="inputDir" class="form-control" placeholder="Direccion" required autofocus>
                                         <label for="inputDir">Direccion</label>
                                     </div>
 
@@ -87,12 +87,12 @@
                                     <hr>
 
                                     <div class="form-label-group">
-                                        <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
+                                        <input type="password" name="password" id="inputPassword" class="form-control" placeholder="Password" required>
                                         <label for="inputPassword">Contraseña</label>
                                     </div>
 
                                     <div class="form-label-group">
-                                        <input type="password" id="inputConfirmPassword" class="form-control" placeholder="Email address" required autofocus>
+                                        <input type="password" name="ConfirmPassword" id="inputConfirmPassword" class="form-control" placeholder="Email address" required autofocus>
                                         <label for="inputConfirmPassword">Confirmar contraseña</label>
                                     </div>
 
