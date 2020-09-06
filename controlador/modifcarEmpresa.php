@@ -2,7 +2,7 @@
 $nom_empresa = $_POST["nom_empresa"];
 $nom_comercial= $_POST["nom_comercial"];
 $descripcion = $_POST["descripcion"];
-$tipo_empresa = $_POST["tipo_empresa"];
+$tipo_empresa = $_FILES["tipo_empresa"];
 
 $elUsr = "root";
 $elPw  = "";
