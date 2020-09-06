@@ -61,12 +61,12 @@ DROP TABLE IF EXISTS `f_tecnica`;
 CREATE TABLE IF NOT EXISTS `f_tecnica` (
   `cod_f_tecnica` int(11) NOT NULL AUTO_INCREMENT,
   `nom_f_tecnica` varchar(30) DEFAULT NULL,
-  `f_inicio_f_tecnica` date DEFAULT NULL,
   `f_final_f_tecnica` date DEFAULT NULL,
   `ins_f_tecnica` varchar(50) DEFAULT NULL,
-  `cod_exp` int(11) DEFAULT NULL,
+  `nivel` int(1) DEFAULT NULL,
+  `cod_f_academica` int(11) DEFAULT NULL,
   PRIMARY KEY (`cod_f_tecnica`),
-  KEY `EXPERIENCIA_LABORAL_F_TECNICA_FK` (`cod_exp`)
+  KEY `FORMACION_ACADEMICA_F_TECNICA_FK` (`cod_f_academica`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
@@ -81,13 +81,12 @@ DROP TABLE IF EXISTS `certificacion`;
 CREATE TABLE IF NOT EXISTS `certificacion` (
   `cod_certificacion` int(11) NOT NULL AUTO_INCREMENT,
   `nom_certificacion` varchar(30) DEFAULT NULL,
-  `f_inicio_f_tecnica` date DEFAULT NULL,
   `f_final_f_tecnica` date DEFAULT NULL,
   `ins_f_tecnica` varchar(50) DEFAULT NULL,
   `cant_horas` int(11) DEFAULT NULL,
-  `cod_exp` int(11) DEFAULT NULL,
+  `cod_f_academica` int(11) DEFAULT NULL,
   PRIMARY KEY (`cod_certificacion`),
-  KEY `EXPERIENCIA_LABORAL_CERTIFICACION_FK` (`cod_exp`)
+  KEY `FORMACION_ACADEMICA_CERTIFICACION_FK` (`cod_f_academica`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
@@ -150,6 +149,7 @@ CREATE TABLE IF NOT EXISTS `estudiante` (
   `contrasenia` varchar(50) DEFAULT NULL,
   `cod_ciudad` int(11) DEFAULT NULL,
   `cod_carrera` int(11) DEFAULT NULL,
+  `hola_vida_pdf` varchar(55) DEFAULT NULL, 
   PRIMARY KEY (`cod_estudiante`),
   KEY `ESTUDIANTE_CIUDAD_FK` (`cod_ciudad`),
   KEY `ESTUDIANTE_CARRERA_FK` (`cod_carrera`)
@@ -249,11 +249,7 @@ CREATE TABLE IF NOT EXISTS `parametro` (
 DROP TABLE IF EXISTS `perfil`;
 CREATE TABLE IF NOT EXISTS `perfil` (
   `cod_perfil` int(11) NOT NULL AUTO_INCREMENT,
-  `experiencia` varchar(250) DEFAULT NULL,
-  `formacion` varchar(250) DEFAULT NULL,
-  `compe_basicas` varchar(250) DEFAULT NULL,
-  `conocimento` varchar(250) DEFAULT NULL,
-  `habilidades` varchar(250) DEFAULT NULL,
+  `descripcion` varchar(1200) DEFAULT NULL,
   PRIMARY KEY (`cod_perfil`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
@@ -354,13 +350,13 @@ ALTER TABLE `referencia`
 -- Filtros para la tabla `f_tecnica`
 --
 ALTER TABLE `f_tecnica`
-  ADD CONSTRAINT `F_TECNICA_EXP_LABORAL_FK` FOREIGN KEY (`cod_exp`) REFERENCES `exp_laboral` (`cod_exp`);
+  ADD CONSTRAINT `F_TECNICA_FORMACION_ACADEMICA_FK` FOREIGN KEY (`cod_f_academica`) REFERENCES `formacion_academica` (`cod_f_academica`);
 
 --
 -- Filtros para la tabla `certificacion`
 --
 ALTER TABLE `certificacion`
-  ADD CONSTRAINT `CERTIFICACION_EXP_LABORAL_FK` FOREIGN KEY (`cod_exp`) REFERENCES `exp_laboral` (`cod_exp`);
+  ADD CONSTRAINT `CERTIFICACION_EXP_LABORAL_FK` FOREIGN KEY (`cod_f_academica`) REFERENCES `formacion_academica` (`cod_f_academica`);
 
 --
 -- Filtros para la tabla `oferta_estudiante`
