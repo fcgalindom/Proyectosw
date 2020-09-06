@@ -52,23 +52,33 @@
 
                                     <div class="select">
                                     <select name="ciudad" class="form-control" required autofocus>
-                                        <option value="Bioingenieria">Chia</option> 
-                                        <option value="Ingenieria_Sistemas" selected>Cota</option>
-                                        <option value="Ingenieria_Industrial">Bogotá</option>
-                                        <option value="Ingenieria_Ambiental">Soacha</option>
-                                        <option value="Ingenieria_Electronica">OtrasNoSeCuales</option>
-                                        <option value="Carrera" selected>Ciudad</option>
+                                        <?php 
+                                        include("../../modelo/conexion.php");
+                                        $conexion = conectar();
+                                        $sql = "SELECT * FROM CIUDAD";
+                                        $ciudad = mysqli_query($conexion,$sql);
+                                        while ($fila = mysqli_fetch_array($ciudad)) 
+                                        { ?>
+                                            <option value="<?php echo $fila['cod_ciudad'] ?>"> <?php echo $fila['nom_ciudad'] ?> </option>
+                                        <?php }
+                                        ?>
+                                        <option value="ciudad" selected>Ciudad</option>    
                                         </select>
                                     </div>
 
 
                                     <div class="select">
                                     <select name="carrera" class="form-control" required autofocus>
-                                        <option value="Bioingenieria">Bioingenieria</option> 
-                                        <option value="Ingenieria_Sistemas" selected>Ingenieria de sistemas</option>
-                                        <option value="Ingenieria_Industrial">Ingenieria industrial</option>
-                                        <option value="Ingenieria_Ambiental">Ingenieria ambiental</option>
-                                        <option value="Ingenieria_Electronica">Ingenieria electronica</option>
+                                        <?php 
+                                        // include("../../modelo/conexion.php");
+                                        $conexion = conectar();
+                                        $sql = "SELECT * FROM CARRERA";
+                                        $carrera = mysqli_query($conexion,$sql);
+                                        while ($fila = mysqli_fetch_array($carrera)) 
+                                        { ?>
+                                            <option value="<?php echo $fila['cod_carrera'] ?>"><?php echo $fila['nom_carrea'] ?></option>
+                                        <?php }
+                                        ?>
                                         <option value="Carrera" selected>Carrera</option>
                                         </select>
                                     </div>

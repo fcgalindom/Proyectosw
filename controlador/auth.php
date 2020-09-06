@@ -33,3 +33,8 @@ while ($fila = mysqli_fetch_array($consulta))
         break;
     }
 }
+
+if ($encontrado) 
+{
+    echo "encontrado";
+}
