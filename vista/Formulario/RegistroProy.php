@@ -100,9 +100,9 @@
                                         <input type="checkbox" class="custom-control-input" id="customCheck1">
 
                                     </div>
-                                    <button class="btn btn-lg btn-primary btn-block btn-login text-uppercase font-weight-bold mb-2" type="submit">Ingresar</button>
+                                    <button class="btn btn-lg btn-primary btn-block btn-login text-uppercase font-weight-bold mb-2" type="submit">Registrarse</button>
                                     <div class="text-center">
-                                        <a class="small" href="#">Registrarse</a></div>
+                                        <a class="small" href="#">Ingresar</a></div>
                                 </form>
                             </div>
                         </div>
