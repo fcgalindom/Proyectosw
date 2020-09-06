@@ -71,12 +71,12 @@ footer h2::after,
 }
 
 .tp-caption.tp-shape.tp-shapewrapper.tp-resizeme.rs-parallaxlevel-0 {
-    background: #039ee3 !important;
+    background: #3095A0 !important;
 }
 
 a.btn.main_bt,
 button.btn.main_bt {
-	background: #17a5e9;
+	background: #3095A0;
 	border: none;
 }
 
@@ -84,7 +84,7 @@ a.btn.main_bt:hover,
 a.btn.main_bt:focus,
 button.btn.main_bt:hover,
 button.btn.main_bt:focus {
-	background: #25d8ed;
+	background: #3095A0;
 	background-size: 100% 100%;
 	color: #fff;
 }
@@ -96,14 +96,14 @@ a.btn.dark_gray_bt:focus {
 
 a.btn.light_btn,
 button.btn.light_btn {
-	background: #a864a8;
+	background: #3095A0;
 }
 
 a.btn.light_btn:hover,
 a.btn.light_btn:focus button.btn.light_btn:hover,
 a.btn.light_btn:focus {
 	background: #fff;
-	color: #632e62;
+	color: #3095A0;
 	border-color: #fff;
 }
 
@@ -125,19 +125,19 @@ hr.dottad_border,
 .pagination>.active>span:hover,
 .comment_section,
 .boder_dottat_small {
-	border-color: #039ee3;
+	border-color: #3095A0;
 }
 
 
 .price_table_active a.btn:hover,
 .price_table_active a.btn:focus {
-	background: #252525;
+	background: #3095A0;
 	color: #fff;
 }
 
 .border_dotted_circle:hover,
 .border_dotted_circle:focus {
-	border-color: #632e62;
+	border-color: #3095A0;
 }
 
 .btn.light_theme_bt:hover,
@@ -171,8 +171,8 @@ body.light_blue button.btn.white_btn:hover,
 body.light_blue a.btn.white_btn:hover,
 body.light_blue button.btn.white_btn:focus,
 body.light_blue a.btn.white_btn:focus {
-	background: #632e62;
-	border-color: #632e62;
+	background: #3095A0;
+	border-color: #3095A0;
 	color: #fff;
 }
 
@@ -192,7 +192,7 @@ a.btn.white_btn:hover {
 }
 
 .tp-bannertimer {
-    background: #039ee3 !important;
+    background: #3095A0 !important;
 }
 
 .tp-caption.tp-shape.tp-shapewrapper.rs-parallaxlevel-0 {
