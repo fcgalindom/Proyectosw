@@ -774,7 +774,7 @@ hr.dottad_border {
 	margin: 20px auto 0;
 	width: 80px;
 	height: 5px;
-	background: #17a5e9;
+	background: #3095A0;
 }
 
 .main_heading.text_align_left::after {
@@ -2845,7 +2845,7 @@ span.skill {
 	padding: 30px 0;
 	float: left;
 	width: 100%;
-	border-top: solid #039ee3 8px;
+	border-top: solid #3095A0 8px;
 }
 
 .blog_head {

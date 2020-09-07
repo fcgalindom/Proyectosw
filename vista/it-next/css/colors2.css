@@ -31,13 +31,13 @@ a.btn.dark_gray_bt:focus,
 .pagination>.active>span:focus,
 .pagination>.active>span:hover,
 .icon_feature {
-	background: #3c5c9e;
+	background: #3095A0;
     background-size: 100% 100%;
     border: none;
 }
 
 .theme_bg {
-	background: #3c5c9e;
+	background: #3095A0;
 }
 
 #navbar_menu > ul > li a.active,
@@ -49,12 +49,12 @@ footer p a:hover,footer p a:focus,
 footer ul.social_icons li a:hover,
 footer ul.social_icons li a:focus,
 .breadcrumb li a {
-    color: #3c5c9e;
+    color: #3095A0;
 }
 
 .btn.sqaure_bt {
     border-radius: 0;
-    background: #3c5c9e;
+    background: #3095A0;
 }
 
 .btn.sqaure_bt span {
@@ -67,16 +67,16 @@ footer ul.social_icons li a:focus,
 footer h2::after,
 .footer_mail-section .field button.button_custom,
 .cprt,.contact_us_section {
-	background: #3c5c9e;
+	background: #3095A0;
 }
 
 .tp-caption.tp-shape.tp-shapewrapper.tp-resizeme.rs-parallaxlevel-0 {
-    background: #3c5c9e !important;
+    background: #3095A0 !important;
 }
 
 a.btn.main_bt,
 button.btn.main_bt {
-	background: #17a5e9;
+	background: #3095A0;
 	border: none;
 }
 
@@ -96,14 +96,14 @@ a.btn.dark_gray_bt:focus {
 
 a.btn.light_btn,
 button.btn.light_btn {
-	background: #a864a8;
+	background: #3095A0;
 }
 
 a.btn.light_btn:hover,
 a.btn.light_btn:focus button.btn.light_btn:hover,
 a.btn.light_btn:focus {
 	background: #fff;
-	color: #632e62;
+	color: #3095A0;
 	border-color: #fff;
 }
 
@@ -125,19 +125,19 @@ hr.dottad_border,
 .pagination>.active>span:hover,
 .comment_section,
 .boder_dottat_small {
-	border-color: #3c5c9e;
+	border-color: #3095A0;
 }
 
 
 .price_table_active a.btn:hover,
 .price_table_active a.btn:focus {
-	background: #252525;
+	background: #3095A0;
 	color: #fff;
 }
 
 .border_dotted_circle:hover,
 .border_dotted_circle:focus {
-	border-color: #632e62;
+	border-color: #3095A0;
 }
 
 .btn.light_theme_bt:hover,
@@ -171,8 +171,8 @@ body.light_blue button.btn.white_btn:hover,
 body.light_blue a.btn.white_btn:hover,
 body.light_blue button.btn.white_btn:focus,
 body.light_blue a.btn.white_btn:focus {
-	background: #632e62;
-	border-color: #632e62;
+	background: #3095A0;
+	border-color: #3095A0;
 	color: #fff;
 }
 
@@ -192,7 +192,7 @@ a.btn.white_btn:hover {
 }
 
 .tp-bannertimer {
-    background: #3c5c9e !important;
+    background: #3095A0 !important;
 }
 
 .tp-caption.tp-shape.tp-shapewrapper.rs-parallaxlevel-0 {
@@ -202,19 +202,19 @@ a.btn.white_btn:hover {
 /** color 2 **/
 
 #accordion .panel.panel-default:nth-child(1) .panel-heading p a {
-    background: #3c5c9e;
-    border-color: #3c5c9e;
+    background: #3095A0;
+    border-color: #3095A0;
     color: #fff;
 }
 
 #accordion .panel.panel-default .panel-heading p a[aria-expanded="true"] {
-    background: #3c5c9e;
-    border-color: #3c5c9e;
+    background: #3095A0;
+    border-color: #3095A0;
     color: #fff;
 }
 
 #accordion .panel.panel-default .panel-heading p a > i {
-    color: #3c5c9e;
+    color: #3095A0;
 }
 	
 #accordion .panel.panel-default .panel-heading p a, #accordion .panel.panel-default .panel-heading p a[aria-expanded="false"] {
@@ -223,55 +223,55 @@ a.btn.white_btn:hover {
  }	
 	
 .main_heading::after {
-  background: #3c5c9e;
+  background: #3095A0;
 }
 
 .theme_bg .main_heading::after {
-    background: #fff;
+    background: #3095A0;
 }
 
 a.btn.main_bt, button.btn.main_bt {
-    background: #3c5c9e;
+    background: #3095A0;
     border: none;
 }
 
 .price_table_active .price_no {
-    color: #3c5c9e;
+    color: #3095A0;
 }
 
 .team_blog_colum:hover, .team_blog_colum:focus {
-    background: #3c5c9e;
-    border-color: #3c5c9e;
+    background: #3095A0;
+    border-color: #3095A0;
 }
 
 .product_detail .tab_bar_section ul.nav.nav-tabs li a.active {
-    background: #3c5c9e;
+    background: #3095A0;
     color: #fff;
 }
 
 .product_meta > span a {
-	color: #3c5c9e;
+	color: #3095A0;
 }
 
 .shopping-cart .button {
-    background: #3c5c9e;
+    background: #3095A0;
     color: #fff;
 }
 
 .product-table .bt_main {
-    background: #3c5c9e;
+    background: #3095A0;
 }
 
 .tab-info.login-section p a:hover, .tab-info.coupon-section p a:hover, .tab-info.login-section p a:focus, .tab-info.coupon-section p a:focus {
-    color: #3c5c9e;
+    color: #3095A0;
 }
 
 .bt_main {
-    background: #3c5c9e;
+    background: #3095A0;
 }
 
 .adress_cont i {
-    color: #3c5c9e;
+    color: #3095A0;
 }
 
 h2 {
@@ -280,7 +280,7 @@ h2 {
 }
 
 .product_list:hover, .product_list:focus {
-    border-bottom: solid #3c5c9e 5px;
+    border-bottom: solid #3095A0 5px;
 }
 
 .tp-bannertimer {
@@ -294,12 +294,12 @@ h2 {
 }
 
 .border_dottat {
-    background: #3c5c9e;
+    background: #3095A0;
     padding: 45px 0;
 }
 
 .list_style_1 i {
-	color: #3c5c9e;
+	color: #3095A0;
 }
 
 .list_style_1 li {
@@ -313,32 +313,32 @@ h2 {
 }
 
 .blog_feature_cantant {
-    border-color:#3c5c9e;
+    border-color:#3095A0;
 }
 
 .blog_feature_cantant li {
-	color: #3c5c9e;
+	color: #3095A0;
 }
 
 .categary li:hover, .categary li:focus {
-    background:  #3c5c9e;
+    background:  #3095A0;
 }
 
 .tags a:hover, .tags a:focus {
-    border-color: #3c5c9e !important;
+    border-color: #3095A0 !important;
 }
 
 .social_icon ul li a:hover,
 .social_icon ul li a:focus {
-	color: #3c5c9e;
+	color: #3095A0;
 }
 
 .read_more:hover, .read_more:focus {
-    color: #3c5c9e;
+    color: #3095A0;
 }
 
 #accordion .panel.panel-default .panel-heading p a[aria-expanded="false"] i {
-    color: #3c5c9e !important;
+    color: #3095A0 !important;
 }
 
 @media (min-width:992px) and (max-width:1199px) {
