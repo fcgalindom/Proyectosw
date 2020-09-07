@@ -140,19 +140,22 @@
       <br>
       <label>Bachiller</label>
       <div class="row">
-        
+
         <div class="col">
           <input type="text" name="ins_bachiller" class="form-control"  id="bachillerInst" placeholder="Institucion Academica">
          </div>
 
          <div class="col">
-          <input type="text" class="form-control"  id="bachillerTit" placeholder="Titulo Bachiller">
+          <input type="text" name="titulo_bachiller" class="form-control"  id="bachillerTit" placeholder="Titulo Bachiller">
          </div>
 
          <div class="col">
-          <input type="date" class="form-control"  id="bachillerFecha" placeholder="Fecha de Grado">
+          <input type="date" name="fecha_grado" class="form-control"  id="bachillerFecha" placeholder="Fecha de Grado">
          </div>
 
+         <div class="col">
+          <input type="text" name="profesion" class="form-control"  id="profesion" placeholder="Profesion">
+         </div>
        </div>
        
       <br>
@@ -161,15 +164,15 @@
       <div class="row">
         
         <div class="col">
-          <input type="text" class="form-control"   id="tecnicoInst" placeholder="Institucion Academica">
+          <input type="text" name="institucion" class="form-control"   id="tecnicoInst" placeholder="Institucion Academica">
          </div>
 
          <div class="col">
-          <input type="text" class="form-control"  id="tecnicoTit" placeholder="Titulo Tecnico">
+          <input type="text" name="nom_tecnico" class="form-control"  id="tecnicoTit" placeholder="Titulo Tecnico">
          </div>
 
          <div class="col">
-          <input type="date" class="form-control"  id="tecnicoFecha" placeholder="Fecha de Grado">
+          <input type="date" name="fec_tecnico" class="form-control"  id="tecnicoFecha" placeholder="Fecha de Grado">
          </div>
 
        </div>
