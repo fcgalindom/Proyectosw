@@ -1,30 +1,20 @@
 <?php 
-$nom_empresa = $_POST["nom_empresa"];
-$nom_comercial= $_POST["nom_comercial"];
-$descripcion = $_POST["descripcion"];
-$tipo_empresa = $_FILES["tipo_empresa"];
 
-$elUsr = "root";
-$elPw  = "";
-$elServer ="localhost:3306";
-$laBd = "feriaop_bd";
-     
+include("../modelo/conexion.php");
 
+$conexion = conectar();
+$cod_empresa=$_GET['cod_empresa'];
+$descripcion=$_GET['descripcion'];
+$nom_empresa=$_GET['nom_empresa'];
 
-$conexion =  mysqli_connect( $elServer , $elUsr , $elPw , $laBd  ) ;
+$tipo_empresa=$_GET['cod_t_empresa'];
 
 
-$sql = "UPDATE empresa  SET   nom_empresa='{$nom_empresa}' ,  descripcion='{$descripcion}', tipo_empresa='{$tipo_empresa}' WHERE id = '{$variableId}' ";
-
-
-
+$sql = "UPDATE empresa  SET   nom_empresa='{$nom_empresa}' ,  descripcion='{$descripcion}', cod_t_empresa='{$tipo_empresa}' WHERE cod_empresa = '{$cod_empresa}' ";
 
 
 $result = mysqli_query($conexion , $sql);
 
- 
-mysqli_free_result($result);
+mysqli_close($conexion);
 
-mysqli_close($conexion)
-
- ?>
+?>

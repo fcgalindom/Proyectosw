@@ -11,7 +11,7 @@ class  Empresa{
     private  $estado_empresa;
     private  $camara_comercio;
 
-
+     
 
 
     /**

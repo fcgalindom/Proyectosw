@@ -8,7 +8,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="viewport" content="initial-scale=1, maximum-scale=1">
 <!-- site metas -->
-<title>El bosque</title>
+<title>El Bosque</title>
 <meta name="keywords" content="">
 <meta name="description" content="">
 <meta name="author" content="">
@@ -65,12 +65,12 @@
             <div id="navbar_menu">
               <ul class="first-ul">
                 
-                <li><a href="miPerfil.html">miPerfil</a></li>
+                <li><a href="miPerfil.php">MiPerfil</a></li>
                 </li>
-                <li> <a href="it_home.html">Ofertas</a>
+                <li> <a href="inicio.php">Ofertas</a>
                   <ul>
-                    <li><a href="it_blog.html">Realizar Oferta</a></li>
-                    <li><a href="it_blog_grid.html">Ofertas Realizadas</a></li>
+                    <li><a href="realizarOferta.php">Realizar Oferta</a></li>
+                    <li><a href="ofertasRealizadas.php">Ofertas Realizadas</a></li>
                   </ul>
                 </li>
               </ul>
@@ -99,8 +99,8 @@
             <div class="title-holder-cell text-left">
               <h1 class="page-title">Mi Perfil</h1>
               <ol class="breadcrumb">
-                <li><a href="it_home.html">inicio</a></li>
-                <li class="active">Hoja de vida</li>
+                <li><a href="inicio.php">inicio</a></li>
+                <li class="active">Mi Perfil</li>
               </ol>
             </div>
           </div>
@@ -112,79 +112,107 @@
 <!-- end inner page banner -->
 <!-- section -->
 <div class="section padding_layout_1">
-  <div class="container">
-    <div class="row">
-      <div class="col-md-12">
-        <div class="full">
-          <div class="main_heading text_align_center">
-            <h2>MI PERFIL</h2>
-            <p class="large">datos importantes de la empresa</p>
-          </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="full">
+                    <div class="main_heading text_align_center">
+                        <h2>MI PERFIL</h2>
+                        <p class="large">datos importantes de la empresa</p>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
-    </div>
-     <div class="form-group">
-      <label class="font-weight-bold" >Nombre de la Empresa:</label>
-      <div class="row">
-        <br>
-        <div class="col">
-          <input type="text" class="form-control"  id="nom_empresa" style="width : 1170px">
-         </div>
-      </div>
-      
-      <br> 
-      <br>
-      <label class="font-weight-bold" >Nombre Comercial de la Empresa:</label>
-      <div class="row">
-        
-        <div class="col">
-          <input type="text" class="form-control"  id="nom_comercial" style="width : 1170px">
-         </div>
+        <div class="form-group">
+        <form action="..\..\controlador\modifcarEmpresa.php" method="post">
+            <?php
+            include("../../modelo/conexion.php");
+            $conexion = conectar();
+            ?>
+              
+            <?php
+            $sql = "SELECT * FROM  empresa WHERE cod_empresa = 1";
+            $resultado = mysqli_query($conexion,$sql);
+            if( $row = mysqli_fetch_array($resultado , MYSQLI_ASSOC)  )
+            { ?>
+                
+            <label class="font-weight-bold" >Codigo de la Empresa:</label>
+            <div class="row">
+                <br>
+                <div class="col">
+                <input type="text" id="cod_empresa" name="cod_empresa"  size="15" value="<?php echo $row['cod_empresa']?>"  style="width : 1170px" readonly="readonly">  
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <label class="font-weight-bold" >Nombre de la Empresa:</label>
+                <div class="row">
+                    <br>
+                    <div class="col">
+                        <input type="text" class="form-control" name="nom_empresa"  id="nom_empresa" value="<?php echo $row['nom_empresa']?>" style="width : 1170px">
+                    </div>
+                </div>
 
-      </div>
-    <br>
-    <br> 
-    <div class="form-group">
-      <label class="font-weight-bold">DERCRIPCION</label>
-      <br>
-      <textarea class="form-control" id="perfilProf" rows="5"></textarea>
-    </div>
-    <br>
-    <br>
-     <div class="form-group">
-     <label class="font-weight-bold">Tipo Empresa</label>
+                <br>
+                <br>
+                <label class="font-weight-bold" >Nombre Comercial de la Empresa:</label>
+                <div class="row">
 
-      <br>
+                    <div class="col">
+                        <input type="text" class="form-control" name="nom_comercial"  id="nom_comercial" value="<?php echo $row['nom_comercial']?>" style="width : 1170px">
+                    </div>
 
-       <div class="select">
-        <select name="ingles" class="form-control" required autofocus>
-            <option value="A1">A1</option> 
-            <option value="A2">A2</option>
-            <option value="B1">B1</option>
-            <option value="B2">B2</option>
-            <option value="C1">C1</option>
-            <option value="C2">C2</option>
-            <option value="Carrera" selected>Nivel</option>
-            </select>
+                </div>
+                <br>
+                <br>
+                <div class="form-group">
+                    <label class="font-weight-bold">Descripcion</label>
+                    <br>
+                    <textarea class="form-control" name="descripcion" id="descripcion" rows="5"></textarea>
+                </div>
+
+                <?php
+                  }
+                 
+               ?>
+                <br>
+                <br>
+                <div class="form-group">
+                    <label class="font-weight-bold">Tipo Empresa</label>
+
+                    <br>
+
+
+                    <div class="select">
+                        <select name="cod_t_empresa" id="cod_t_empresa" class="form-control"  autofocus>
+                            <?php
+                            $sql = "select * from tipo_empresa";
+                            $resultado = mysqli_query($conexion,$sql);
+                            while ($fila = mysqli_fetch_array($resultado))
+                            { ?>
+                                <option value="<?php echo  $fila['cod_t_empresa'] ?>"><?php echo $fila['nom_t_empresa'] ?></option>
+                                <?php
+                            }
+                            mysqli_close($conexion);
+                            ?>
+
+
+                        </select>
+                    </div>
+
+                    <br>
+                </div>
+
+                    <div class="col">
+                    <input type="submit" class="btn btn-primary btn-lg btn-block">Guardar
+                    </div>
+
+                </div>
+
+            </div>
+                          </form>
         </div>
-       <br>
-    </div>
-
-    
-         <div class="row">
-         <div class="col">
-         <button type="button" class="btn btn-danger btn-lg btn-block">Imprimir</button>
-         </div>
-
-         <div class="col">
-          <button type="button" class="btn btn-primary btn-lg btn-block">Guardar</button>
-         </div>
-
-       </div>
-
-  </div>
-</div>
-<!-- end section -->
+        <!-- end section -->
 
 
 <!-- footer -->
@@ -238,7 +266,30 @@
 <script src="js/wow.js"></script>
 <!-- custom js -->
 <script src="js/custom.js"></script>
-<script>
+
 
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
