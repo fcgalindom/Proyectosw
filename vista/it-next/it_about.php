@@ -127,10 +127,11 @@
       </div>
     </div>
     <div class="form-group">
+    <form action="../../controlador/hoja_vida_registro/CRUD_estudiante.php" method="POST">
       <label class="font-weight-bold">Perfil Profesional</label>
       <br>
       <label >Conocimientos, habilidades, experiencia, competencias, areas de gusto, cualidades</label>
-      <textarea class="form-control" id="perfilProf" rows="5"></textarea>
+      <textarea name="perfil" class="form-control" id="perfilProf" rows="5"></textarea>
     </div>
 
     <br>
@@ -141,7 +142,7 @@
       <div class="row">
         
         <div class="col">
-          <input type="text" class="form-control"  id="bachillerInst" placeholder="Institucion Academica">
+          <input type="text" name="ins_bachiller" class="form-control"  id="bachillerInst" placeholder="Institucion Academica">
          </div>
 
          <div class="col">
@@ -265,19 +266,19 @@
       <label>Cursos certificados, talleres, actualizaciones </label>
        <div class="row">
          <div class="col">
-          <input type="text" class="form-control" placeholder="Nombre">
+          <input type="text" name="nombre_certificacion" class="form-control" placeholder="Nombre">
          </div>
 
          <div class="col">
-          <input type="text" class="form-control" placeholder="Institucion">
+          <input type="text" name="ins_certificado" class="form-control" placeholder="Institucion">
          </div>
 
          <div class="col">
-          <input type="date" class="form-control" placeholder="Fecha">
+          <input type="date" name="fec_certificado" class="form-control" placeholder="Fecha">
          </div>
 
          <div class="col">
-          <input type="number" class="form-control" placeholder="Horas">
+          <input type="number" name="cant_horas" class="form-control" placeholder="Horas">
          </div>
        </div>
 
@@ -434,11 +435,11 @@
        <label>Ingrese la fecha de finalizacion</label>
        <div class="row">
          <div class="col">
-          <input type="text" class="form-control" placeholder="Cargo">
+          <input type="text" name="cargo" class="form-control" placeholder="Cargo">
          </div>
 
          <div class="col">
-          <input type="text" class="form-control" placeholder="Empresa">
+          <input type="text" name="empresa" class="form-control" placeholder="Empresa">
          </div>
 
          <div class="col">
@@ -446,7 +447,7 @@
          </div>
 
          <div class="col">
-          <textarea type="text" class="form-control" placeholder="Funciones Principales"></textarea>
+          <textarea type="text" name="fun_principales" class="form-control" placeholder="Funciones Principales"></textarea>
          </div>
        </div>
        <br>
@@ -460,7 +461,7 @@
          </div>
 
          <div class="col">
-          <input type="date" class="form-control" placeholder="Fecha finalizacion">
+          <input type="date" name="fecha_fin" class="form-control" placeholder="Fecha finalizacion">
          </div>
 
          <div class="col">
@@ -509,15 +510,15 @@
       <br>
        <div class="row">
          <div class="col">
-          <input type="text" class="form-control" placeholder="Nombre Completo">
+          <input type="text" name="nom_referencia" class="form-control" placeholder="Nombre Completo">
          </div>
 
          <div class="col">
-          <input type="text" class="form-control" placeholder="Cargo">
+          <input type="text" name="cargo_referencia" class="form-control" placeholder="Cargo">
          </div>
 
          <div class="col">
-          <input type="number" class="form-control" placeholder="Celular">
+          <input type="number" name="celular_referencia" class="form-control" placeholder="Celular">
          </div>
        </div>
 
@@ -545,12 +546,12 @@
          </div>
 
          <div class="col">
-          <button type="button" class="btn btn-primary btn-lg btn-block">Guardar</button>
+          <button type="submit" class="btn btn-primary btn-lg btn-block">Guardar</button>
          </div>
 
        </div>
-
-  </div>
+         </form>
+ </div>
 </div>
 <!-- end section -->
 
