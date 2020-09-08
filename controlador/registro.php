@@ -11,22 +11,16 @@ $carrera = $_POST['carrera'];
 $contrasenia = $_POST['password'];
 $con_contrasenia = $_POST['ConfirmPassword'];
 
-if (!($contrasenia == $con_contrasenia)) 
+if($contrasenia == $con_contrasenia)
 {
-    
-} else 
-{
-    $rutaModelo = "../modelo";
-    $rutaVista = "../vista";
-    include("$rutaModelo/conexion.php");
-    $conexion = conectar();
-    $nombre = "$nombre $apellido";
-    #$sql = "INSERT INTO ESTUDIANTE VALUES(0,'$nombre',$telefono,'$correo','$direccion',0,'$contrasenia',$ciudad,$carrera)";
-    #$consulta = mysqli_query($conexion,$sql);
-    echo "agregado";
+  include("../modelo/conexion.php");
+  $conexion = conectar();
+  $nombre = "$nombre $apellido";
+  $sql = "INSERT INTO ESTUDIANTE VALUES(0,'$nombre',$telefono,'$correo','$direccion',0,'$contrasenia',$ciudad,$carrera,NULL)";
+  mysqli_query($conexion,$sql);
+  mysqli_close($conexion);  
 }
 
-
+echo "$nombre --> $apellido --> $telefono --> $correo --> $direccion --> $ciudad --> $semestre --> $carrera";
+    
 header("Location: hoja_vida_registro/CRUD_Estudiante.php");
-#echo $carrera;
-#echo "$nombre --> $apellido --> $telefono --> $correo --> $direccion --> $ciudad --> $semestre --> $carrera";

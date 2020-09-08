@@ -345,9 +345,19 @@ ALTER TABLE `empresa`
 --
 ALTER TABLE `estudiante`
   ADD CONSTRAINT `ESTUDIANTE_CARRERA_FK` FOREIGN KEY (`cod_carrera`) REFERENCES `carrera` (`cod_carrera`),
-  ADD CONSTRAINT `ESTUDIANTE_CIUDAD_FK` FOREIGN KEY (`cod_ciudad`) REFERENCES `ciudad` (`cod_ciudad`),
-  ADD CONSTRAINT `ESTUDIANTE_FORMACION_ACADEMICA_FK` FOREIGN KEY (`cod_estudiante`) REFERENCES `formacion_academica` (`cod_f_academica`),
-  ADD CONSTRAINT `ESTUDIANTE_PERFIL_FK` FOREIGN KEY (`cod_estudiante`) REFERENCES `perfil` (`cod_perfil`);
+  ADD CONSTRAINT `ESTUDIANTE_CIUDAD_FK` FOREIGN KEY (`cod_ciudad`) REFERENCES `ciudad` (`cod_ciudad`);
+--
+-- Filtros para la tabla `perfil`
+--
+
+ALTER TABLE `perfil`
+ADD CONSTRAINT `PERFIL_ESTUDIANTE_FK` FOREIGN KEY (`cod_perfil`) REFERENCES `estudiante` (`cod_estudiante`);
+
+--
+-- Filtros para la tabla `formacion_academica`
+--
+ALTER TABLE `formacion_academica`
+ADD CONSTRAINT `FORMACION_ACADEMICA_ESTUDIANTE_FK` FOREIGN KEY (`cod_f_academica`) REFERENCES `estudiante` (`cod_estudiante`);
 
 --
 -- Filtros para la tabla `oferta`

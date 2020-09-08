@@ -80,10 +80,4 @@ function guardarCertificaciones()
     echo "$nombre_cer --> $ins_certificado --> $fec_certificado --> $horas";
 }
 
-function guardarEstudiante()
-{
-    include("../registro.php");
-    echo $nombre;
-}
-
-guardarEstudiante();
+guardarPerfil();
