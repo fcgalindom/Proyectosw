@@ -1,7 +1,5 @@
 <?php
 
-header("../vista/it-next/it_about.php");
-
 $nombre = $_POST['nombre'];
 $apellido = $_POST['apellido'];
 $telefono = $_POST['telefono'];
@@ -23,10 +21,12 @@ if (!($contrasenia == $con_contrasenia))
     include("$rutaModelo/conexion.php");
     $conexion = conectar();
     $nombre = "$nombre $apellido";
-    $sql = "INSERT INTO ESTUDIANTE VALUES(0,'$nombre',$telefono,'$correo','$direccion',0,'$contrasenia',$ciudad,$carrera)";
-    $consulta = mysqli_query($conexion,$sql);
+    #$sql = "INSERT INTO ESTUDIANTE VALUES(0,'$nombre',$telefono,'$correo','$direccion',0,'$contrasenia',$ciudad,$carrera)";
+    #$consulta = mysqli_query($conexion,$sql);
     echo "agregado";
 }
 
+
+header("Location: hoja_vida_registro/CRUD_Estudiante.php");
 #echo $carrera;
 #echo "$nombre --> $apellido --> $telefono --> $correo --> $direccion --> $ciudad --> $semestre --> $carrera";

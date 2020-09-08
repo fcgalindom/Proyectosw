@@ -51,6 +51,23 @@ CREATE TABLE IF NOT EXISTS `carrera` (
 
 -- --------------------------------------------------------
 
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `exp_academica`
+--
+
+DROP TABLE IF EXISTS `exp_academica`;
+CREATE TABLE IF NOT EXISTS `exp_academica` (
+  `cod_exp_academica` int(11) NOT NULL AUTO_INCREMENT,
+  `nom_exp_academica` varchar(30) DEFAULT NULL,
+  `con_aplicados` varchar(150) DEFAULT NULL,
+  `cod_estudiante` int(11) DEFAULT NULL,
+  PRIMARY KEY (`cod_exp_academica`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
 -- --------------------------------------------------------
 
 --
@@ -166,9 +183,7 @@ CREATE TABLE IF NOT EXISTS `exp_laboral` (
   `cod_exp` int(11) NOT NULL AUTO_INCREMENT,
   `cargo` varchar(50) DEFAULT NULL,
   `empresa` varchar(50) DEFAULT NULL,
-  `objetivo` varchar(250) DEFAULT NULL,
   `fun_principales` varchar(250) DEFAULT NULL,
-  `fecha_inicio` date DEFAULT NULL,
   `fecha_fin` date DEFAULT NULL,
   PRIMARY KEY (`cod_exp`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
@@ -183,9 +198,9 @@ DROP TABLE IF EXISTS `formacion_academica`;
 CREATE TABLE IF NOT EXISTS `formacion_academica` (
   `cod_f_academica` int(11) NOT NULL AUTO_INCREMENT,
   `ins_bachiller` varchar(100) DEFAULT NULL,
+  `titulo_bachiller` varchar(30) DEFAULT NULL,
+  `fec_fin_bachiller` date DEFAULT NULL,
   `profesion` varchar(100) DEFAULT NULL,
-  `f_tecnica` varchar(100) DEFAULT NULL,
-  `certificaciones` varchar(100) DEFAULT NULL,
   `idiomas` varchar(100) DEFAULT NULL,
   PRIMARY KEY (`cod_f_academica`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
@@ -199,6 +214,7 @@ CREATE TABLE IF NOT EXISTS `formacion_academica` (
 DROP TABLE IF EXISTS `oferta`;
 CREATE TABLE IF NOT EXISTS `oferta` (
   `cod_oferta` int(11) NOT NULL AUTO_INCREMENT,
+  `descripcion_oferta` VARCHAR(175),
   `salario` int(11) DEFAULT NULL,
   `fecha_inicio` date DEFAULT NULL,
   `estado` int(11) DEFAULT NULL,
@@ -357,6 +373,12 @@ ALTER TABLE `f_tecnica`
 --
 ALTER TABLE `certificacion`
   ADD CONSTRAINT `CERTIFICACION_EXP_LABORAL_FK` FOREIGN KEY (`cod_f_academica`) REFERENCES `formacion_academica` (`cod_f_academica`);
+
+--
+-- Filtros para la tabla `exp_academica`
+--
+ALTER TABLE `exp_academica`
+  ADD CONSTRAINT `EXP_ACADEMICA_ESTUDIANTE_FK` FOREIGN KEY (`cod_estudiante`) REFERENCES `estudiante` (`cod_estudiante`);
 
 --
 -- Filtros para la tabla `oferta_estudiante`

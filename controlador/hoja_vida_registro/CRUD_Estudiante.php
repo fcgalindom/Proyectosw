@@ -79,3 +79,11 @@ function guardarCertificaciones()
     #mysqli_query($conexion,$sql);
     echo "$nombre_cer --> $ins_certificado --> $fec_certificado --> $horas";
 }
+
+function guardarEstudiante()
+{
+    include("../registro.php");
+    echo $nombre;
+}
+
+guardarEstudiante();
