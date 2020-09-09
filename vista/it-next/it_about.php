@@ -26,14 +26,11 @@
 <link rel="stylesheet" href="css/custom.css" />
 <!-- wow Animation css -->
 <link rel="stylesheet" href="css/animate.css" />
-<!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-      <![endif]-->
+
 </head>
 <body id="default_theme" class="it_service about">
 <!-- loader -->
-<div class="bg_load"> <img class="loader_animation" src="images/loaders/loader_1.png" alt="#" /> </div>
+<div class="bg_load"> <img class="loader_animation" src="images/loaders/bosqueloader.png" alt="#" /> </div>
 <!-- end loader -->
 <!-- header -->
 <header id="default_header" class="header_style_1">
@@ -64,16 +61,16 @@
           <div class="menu_side">
             <div id="navbar_menu">
               <ul class="first-ul">
-                <li> <a  href="it_home.html">Home</a>
+                <li> <a  href="it_home.php">Home</a>
                   
                 </li>
-                <li><a class="active" href="it_about.html">Hoja de Vida</a></li>
+                <li><a class="active" href="it_about.php">Hoja de Vida</a></li>
                   
                 </li>
-                <li> <a href="it_blog.html">Mis ofertas</a>
+                <li> <a href="it_blog.php">Mis ofertas</a>
                   
                 </li>
-                <li> <a  href="it_contact.html">Datos de Contacto</a>
+                <li> <a  href="it_contact.php">Datos de Contacto</a>
                   
                 </li>              
               </ul>

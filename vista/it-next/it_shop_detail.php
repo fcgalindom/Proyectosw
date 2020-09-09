@@ -34,9 +34,9 @@
       <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
       <![endif]-->
 </head>
-<body id="default_theme" class="contact_us">
+<body id="default_theme" class="it_service about">
 <!-- loader -->
-<div class="bg_load"> <img class="loader_animation" src="images/loaders/loader_1.png" alt="#" /> </div>
+<div class="bg_load"> <img class="loader_animation" src="images/loaders/bosqueloader.png" alt="#" /> </div>
 <!-- end loader -->
 <!-- header -->
 <header id="default_header" class="header_style_1">
@@ -68,12 +68,16 @@
             <div id="navbar_menu">
               <ul class="first-ul">
                 <li> <a  href="it_home.html">Home</a>
+                  
                 </li>
-                <li><a href="it_about.html">Hoja de Vida</a></li>
+                <li><a class="active" href="it_about.html">Hoja de Vida</a></li>
+                  
                 </li>
                 <li> <a href="it_blog.html">Mis ofertas</a>
+                  
                 </li>
-                <li> <a class="active" href="it_contact.html">Datos de Contacto</a>
+                <li> <a  href="it_contact.html">Datos de Contacto</a>
+                  
                 </li>              
               </ul>
             </div>
@@ -99,10 +103,10 @@
         <div class="full">
           <div class="title-holder">
             <div class="title-holder-cell text-left">
-              <h1 class="page-title">Contact</h1>
+              <h1 class="page-title">Empresa</h1>
               <ol class="breadcrumb">
-                <li><a href="index.html">Home</a></li>
-                <li class="active">Contact</li>
+                <li><a href="it_home.php">Home</a></li>
+                <li class="active">Empresa</li>
               </ol>
             </div>
           </div>
@@ -112,70 +116,107 @@
   </div>
 </div>
 <!-- end inner page banner -->
-<div class="section padding_layout_1">
+<!-- section -->
+<div class="section padding_layout_1 product_detail">
   <div class="container">
     <div class="row">
-      <div class="col-xl-2 col-lg-2 col-md-12 col-sm-12 col-xs-12"></div>
-      <div class="col-xl-8 col-lg-8 col-md-12 col-sm-12 col-xs-12">
+      <div class="col-md-12">
         <div class="row">
-          <div class="full">
-            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 adress_cont margin_bottom_30_all">
-              <div class="information_bottom left-side margin_bottom_20_all">
-                <div class="icon_bottom"> <i class="fa fa-road" aria-hidden="true"></i> </div>
-                <div class="info_cont">
-                  <h4>Lorem Ipsum is simply dummy text..</h4>
-                  <p>Sydney Australia</p>
-                </div>
-              </div>
-              <div class="information_bottom left-side margin_bottom_20_all">
-                <div class="icon_bottom"> <i class="fa fa-user" aria-hidden="true"></i> </div>
-                <div class="info_cont">
-                  <h4>0011 234 56789</h4>
-                  <p>Mon-Fri 8:30am-6:30pm</p>
-                </div>
-              </div>
-              <div class="information_bottom left-side">
-                <div class="icon_bottom"> <i class="fa fa-envelope" aria-hidden="true"></i> </div>
-                <div class="info_cont">
-                  <h4>Correo institucional</h4>
-                  <p>nombre@unbosque.edu.co</p>
-                </div>
+          <div class=" col-md-5">
+            <div class="product_detail_feature_img hizoom hi2">
+              <div class='hizoom hi2'> <img src="images/it_service/huawei.jpg" alt="#" /> </div>
+            </div>
+          </div>
+          <div class=" col-md-7 product_detail_side detail_style1">
+            <div class="product-heading">
+              <h2>
 
+                <?php    
+                    $conectar = mysqli_connect('localhost','root','','feriaOportunidades');
+                    $sql= "SELECT descripcion_oferta, salario, TIPO_CONTRATO.nom_t_contrato, nom_empresa, EMPRESA.descripcion
+                            FROM OFERTA, EMPRESA, TIPO_CONTRATO
+                            WHERE EMPRESA.cod_empresa = OFERTA.cod_empresa AND OFERTA.cod_t_contrato = TIPO_CONTRATO.cod_t_contrato
+                            GROUP BY descripcion_oferta, salario, TIPO_CONTRATO.nom_t_contrato, nom_empresa, EMPRESA.descripcion";
+
+                    $respuesta=mysqli_query($conectar, $sql);                     
+                                while ($row = mysqli_fetch_array($respuesta)){
+                                  echo  $row['nom_empresa'];
+                                }
+                     mysqli_close($conectar);
+
+                      ?>
+
+              </h2>
+            </div>
+            <div class="detail-contant">
+              <p>
+                   
+                    <?php    
+                    $conectar = mysqli_connect('localhost','root','','feriaOportunidades');
+                    $sql= "SELECT descripcion_oferta, salario, TIPO_CONTRATO.nom_t_contrato, nom_empresa, EMPRESA.descripcion
+                            FROM OFERTA, EMPRESA, TIPO_CONTRATO
+                            WHERE EMPRESA.cod_empresa = OFERTA.cod_empresa AND OFERTA.cod_t_contrato = TIPO_CONTRATO.cod_t_contrato
+                            GROUP BY descripcion_oferta, salario, TIPO_CONTRATO.nom_t_contrato, nom_empresa, EMPRESA.descripcion";
+
+                    $respuesta=mysqli_query($conectar, $sql);                     
+                                while ($row = mysqli_fetch_array($respuesta)){
+                                  echo  $row['descripcion'];
+                                }
+                     mysqli_close($conectar);
+
+                      ?>
+                      
+                  </p>    
+              <form class="cart" method="post" action="it_blog.php>
                 
+                <button type="submit" class="btn sqaure_bt">Enviar hoja de vida</button>
+              </form>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12">
+            <div class="full">
+              <div class="tab_bar_section">
+                <ul class="nav nav-tabs" role="tablist">
+                  <li class="nav-item"><a class="nav-link active" data-toggle="tab" href="#">Descripcion de la Oferta</a></li>
+                </ul>
+                <!-- Tab panes -->
+                <div class="tab-content">
+                  <div id="description" class="tab-pane active">
+                    <div class="product_desc">
+
+                    <?php    
+                    $conectar = mysqli_connect('localhost','root','','feriaOportunidades');
+                    $sql= "SELECT descripcion_oferta, salario, TIPO_CONTRATO.nom_t_contrato, nom_empresa, EMPRESA.descripcion
+                            FROM OFERTA, EMPRESA, TIPO_CONTRATO
+                            WHERE EMPRESA.cod_empresa = OFERTA.cod_empresa AND OFERTA.cod_t_contrato = TIPO_CONTRATO.cod_t_contrato
+                            GROUP BY descripcion_oferta, salario, TIPO_CONTRATO.nom_t_contrato, nom_empresa, EMPRESA.descripcion";
+
+                    $respuesta=mysqli_query($conectar, $sql);                     
+                                while ($row = mysqli_fetch_array($respuesta)){
+                                  echo  $row['descripcion_oferta'];
+                                  echo "<br>";
+                                  echo  $row['salario'];
+                                  echo "<br>";
+                                  echo  $row['nom_t_contrato'];
+                                  echo "<br>";
+                                }
+                    mysqli_close($conectar);
+                    ?>
+
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
-            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 adress_cont margin_bottom_30_all"> 
-              <div class="information_bottom left-side margin_bottom_20_all">
-                <div class="icon_bottom"> <i class="fa fa-road" aria-hidden="true"></i> </div>
-                <div class="info_cont">
-                  <h4>Lorem Ipsum is simply dummy text..</h4>
-                  <p>Sydney Australia</p>
-                </div>
-              </div>
-              <div class="information_bottom left-side margin_bottom_20_all">
-                <div class="icon_bottom"> <i class="fa fa-user" aria-hidden="true"></i> </div>
-                <div class="info_cont">
-                  <h4>0011 234 56789</h4>
-                  <p>Mon-Fri 8:30am-6:30pm</p>
-                </div>
-              </div>
-              <div class="information_bottom left-side">
-                <div class="icon_bottom"> <i class="fa fa-envelope" aria-hidden="true"></i> </div>
-                <div class="info_cont">
-                  <h4>Correo institucional</h4>
-                  <p>nombre@unbosque.edu.co</p>
-                </div>
-              </div>
-                </div>
           </div>
         </div>
       </div>
     </div>
   </div>
 </div>
-
-
-
+<!-- end section -->
 
 <!-- footer -->
 <footer class="footer_style_2">
@@ -208,7 +249,8 @@
               <li><a href="it_news.html"><i class="fa fa-angle-right"></i> News</a></li>
               <li><a href="it_contact.html"><i class="fa fa-angle-right"></i> Contact us</a></li>
             </ul>
-          </div>          
+          </div>
+         
         </div>
       </div>
       <div class="cprt">
@@ -228,5 +270,14 @@
 <!-- custom js -->
 <script src="js/custom.js"></script>
 
+<!-- zoom effect -->
+<script src='js/hizoom.js'></script>
+<script>
+       
+        $('.hi2').hiZoom({
+            width: 400,
+            position: 'right'
+        });
+    </script>
 </body>
 </html>
