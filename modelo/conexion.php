@@ -2,6 +2,6 @@
 
 function conectar()
 {
-    $conectar = mysqli_connect('localhost','root','','mydatabase');
+    $conectar = mysqli_connect('localhost','root','','feriaOportunidades');
     return $conectar;
 }
