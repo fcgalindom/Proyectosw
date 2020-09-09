@@ -372,19 +372,15 @@
        <label>Proyectos </label>
        <div class="row">
          <div class="col">
-          <input type="text" class="form-control" placeholder="Titulo del Proyecto">
+          <input type="text" name="nom_exp_academica" class="form-control" placeholder="Titulo del Proyecto">
          </div>
 
          <div class="col">
-          <input type="text" class="form-control" placeholder="Materia/Asignatura">
+          <input type="text" name="materia" class="form-control" placeholder="Materia/Asignatura">
          </div>
 
          <div class="col">
-          <textarea type="number" class="form-control" placeholder="Conocimientos Aplicados"></textarea>
-         </div>
-
-         <div class="col">
-          <input type="number" class="form-control" placeholder="Materia/Asignatura">
+          <textarea type="number" name="con_aplicados" class="form-control" placeholder="Conocimientos Aplicados"></textarea>
          </div>
        </div>
 
@@ -443,7 +439,7 @@
          </div>
 
          <div class="col">
-          <input type="date" class="form-control" placeholder="Fecha finalizacion">
+          <input type="date" name="fecha_fin_exp_laboral" class="form-control" placeholder="Fecha finalizacion">
          </div>
 
          <div class="col">

@@ -17,10 +17,13 @@ if($contrasenia == $con_contrasenia)
   $conexion = conectar();
   $nombre = "$nombre $apellido";
   $sql = "INSERT INTO ESTUDIANTE VALUES(0,'$nombre',$telefono,'$correo','$direccion',0,'$contrasenia',$ciudad,$carrera,NULL)";
-  mysqli_query($conexion,$sql);
-  mysqli_close($conexion);  
+  mysqli_query($conexion,$sql);  
+  $sql = "SELECT cod_estudiante FROM ESTUDIANTE WHERE correo = $correo AND contrasenia = $contrasenia";
+  $resultado = mysqli_query($conexion,$sql);
+  mysqli_close($conexion);
+  $cod_estudiante = $resultado;
 }
 
-echo "$nombre --> $apellido --> $telefono --> $correo --> $direccion --> $ciudad --> $semestre --> $carrera";
+#echo "$nombre --> $apellido --> $telefono --> $correo --> $direccion --> $ciudad --> $semestre --> $carrera";
     
 header("Location: hoja_vida_registro/CRUD_Estudiante.php");
