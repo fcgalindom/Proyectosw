@@ -22,8 +22,8 @@
                         <div class="row">
                             <div class="col-md-9 col-lg-8 mx-auto">
                                 <h3 class="login-heading mb-4">Registrarse</h3>
-                                <form action="../../controlador/registro.php" method="POST">
-
+                             <!--   <form action="../../controlador/registro.php" id="formulario" method="POST"> -->
+                                <form id="hoja_vida">
                                     <div class="form-label-group">
                                         <input type="text" name="nombre" id="inputName" class="form-control" placeholder="Name" required autofocus>
                                         <label for="inputName">Nombres</label>
@@ -120,9 +120,7 @@
         </div>
         </div>
 
-        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+        <script src="../js/prueba.js"></script>
 </body>
 
 </html>

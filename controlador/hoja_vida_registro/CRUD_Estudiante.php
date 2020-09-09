@@ -23,7 +23,6 @@ function guardarFormacionAcademica()
     $ingles = $_POST['ingles'];
     $fecha = $_POST['fecha_grado'];
     $sql = "INSERT INTO FORMACION_ACADEMICA VALUES(0,'$ins_bachiller','$titulo','$fecha','$profesion','$ingles')";
-    #echo $sql;
     mysqli_query($conexion,$sql);
     mysqli_close($conexion);
 }
@@ -93,8 +92,8 @@ function guardarCertificaciones()
 
 #guardarPerfil();
 #guardarFormacionAcademica();
+#guardar_f_tecnica();
+#guardarCertificaciones();
 #guardarReferencias();
 #guardarExperienciaLaboral();
 #guardarExperienciaAcademica();
-#guardarCertificaciones();
-guardar_f_tecnica();

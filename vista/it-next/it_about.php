@@ -545,7 +545,7 @@
          </div>
 
          <div class="col">
-          <button type="submit" class="btn btn-primary btn-lg btn-block">Guardar</button>
+          <button type="submit" id="enviar" class="btn btn-primary btn-lg btn-block">Guardar</button>
          </div>
 
        </div>
