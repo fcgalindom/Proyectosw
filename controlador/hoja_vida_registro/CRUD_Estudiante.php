@@ -73,7 +73,6 @@ function guardar_f_tecnica()
     $institucion = $_POST['institucion'];
     $nivel =  1;
     $sql = "INSERT INTO F_TECNICA VALUES(0,'$nombre','$fecha','$institucion',$nivel,1)";
-    #echo $sql;
     mysqli_query($conexion,$sql);
     mysqli_close($conexion);
 }
