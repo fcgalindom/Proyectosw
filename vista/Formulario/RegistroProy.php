@@ -25,33 +25,33 @@
                              <!--   <form action="../../controlador/registro.php" id="formulario" method="POST"> -->
                                 <form id="formulario">
                                     <div class="form-label-group">
-                                        <input type="text" name="nombre" id="inputName" class="form-control" placeholder="Name" required autofocus>
+                                        <input type="text" name="nombre" id="inputName" class="form-control" placeholder="Name" >
                                         <label for="inputName">Nombres</label>
                                     </div>
 
                                      <div class="form-label-group">
-                                        <input type="text" name="apellido" id="inputApellido" class="form-control" placeholder="Apellido" required autofocus>
+                                        <input type="text" name="apellido" id="inputApellido" class="form-control" placeholder="Apellido" >
                                         <label for="inputApellido">Apellidos</label>
                                     </div>
 
                                      <div class="form-label-group">
-                                        <input type="text" name="telefono" id="inputTel" class="form-control" placeholder="Telefono" required autofocus>
+                                        <input type="text" name="telefono" id="inputTel" class="form-control" placeholder="Telefono" >
                                         <label for="inputTel">Telefono</label>
                                     </div>
 
 
                                     <div class="form-label-group">
-                                        <input type="text" name="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
+                                        <input type="text" name="email" id="inputEmail" class="form-control" placeholder="Email address" >
                                         <label for="inputEmail">Correo</label>
                                     </div>
 
                                      <div class="form-label-group">
-                                        <input type="text" name="direccion" id="inputDir" class="form-control" placeholder="Direccion" required autofocus>
+                                        <input type="text" name="direccion" id="inputDir" class="form-control" placeholder="Direccion" >
                                         <label for="inputDir">Direccion</label>
                                     </div>
 
                                     <div class="select">
-                                    <select name="ciudad" class="form-control" required autofocus>
+                                    <select name="ciudad" class="form-control" >
                                         <?php 
                                         include("../../modelo/conexion.php");
                                         $conexion = conectar();
@@ -68,7 +68,7 @@
 
 
                                     <div class="select">
-                                    <select name="carrera" class="form-control" required autofocus>
+                                    <select name="carrera" class="form-control" >
                                         <?php 
                                         // include("../../modelo/conexion.php");
                                         $conexion = conectar();
@@ -84,7 +84,7 @@
                                     </div>
 
                                     <div class="select">
-                                    <select name="semestre" class="form-control" required autofocus> 
+                                    <select name="semestre" class="form-control" > 
                                         <option value="7" >7</option>
                                         <option value="8">8</option>
                                         <option value="9">9</option>
@@ -97,12 +97,12 @@
                                     <hr>
 
                                     <div class="form-label-group">
-                                        <input type="password" name="password" id="inputPassword" class="form-control" placeholder="Password" required>
+                                        <input type="password" name="password" id="inputPassword" class="form-control" placeholder="Password" >
                                         <label for="inputPassword">Contraseña</label>
                                     </div>
 
                                     <div class="form-label-group">
-                                        <input type="password" name="ConfirmPassword" id="inputConfirmPassword" class="form-control" placeholder="Email address" required autofocus>
+                                        <input type="password" name="ConfirmPassword" id="inputConfirmPassword" class="form-control" placeholder="Email address" >
                                         <label for="inputConfirmPassword">Confirmar contraseña</label>
                                     </div>
 
