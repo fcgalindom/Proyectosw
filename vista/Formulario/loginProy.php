@@ -22,7 +22,7 @@
                         <div class="row">
                             <div class="col-md-9 col-lg-8 mx-auto">
                                 <h3 class="login-heading mb-4">Feria de proyectos</h3>
-                                <form id="formulario">
+                                <form id="formulario2">
                                     <div class="form-label-group">
                                         <input type="email" name="email" id="inputEmail" class="form-control" placeholder="Email address">
                                         <label for="inputEmail">Email address</label>
@@ -43,6 +43,9 @@
                                     <div class="text-center">
                                         <a class="small" href="#">Registrarse como Empresa</a></div>
                                 </form>
+                                <div id="alertas2">
+                                       
+                                    </div>
                             </div>
                         </div>
                     </div>

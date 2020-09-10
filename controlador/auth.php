@@ -2,17 +2,30 @@
 $email = $_POST['email'];
 $password = $_POST['password'];
 
-if($email === '' && $password === '')
-{
-    echo json_encode('Llena todos los campos');
-}
-else if($email == '')
-{
+$mail = explode("@", $email);
+$arroba = substr_count($email, '@');
 
-}
-else
+if($email === '' || $password === '')
 {
-    echo json_encode('Validacion correcta');
+    echo json_encode('INCOMPLETO');
+}
+else{
+   if ($arroba !== 1){
+        echo json_encode('correo mal');
+
+    }else {
+
+        if($mail[1] !== 'unbosque.edu.co'){
+
+             echo json_encode('correo mal');
+
+        }else{
+            echo json_encode('correcto'); 
+            
+        }   
+    }
+}
+    //echo json_encode('Validacion correcta');
     // $rutaModelo = "../modelo";
     // include("$rutaModelo/conexion.php");
     // $conexion = conectar();
@@ -37,5 +50,5 @@ else
     // {
     //     echo json_encode('No encontrado');
     // }
-}
+
 ?>
