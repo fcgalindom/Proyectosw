@@ -1,4 +1,9 @@
+<<<<<<< HEAD
 <html lang="en">
+=======
+<!doctype html>
+<html lang="es">
+>>>>>>> cedc5646a216cae3b24e0cec7b43d7133cea4f9a
 
 <head>
     <!-- Required meta tags -->
@@ -12,7 +17,7 @@
 
 <body>
 
-    <<div class="container-fluid">
+    <div class="container-fluid">
         <div class="row no-gutter">
             <div class="d-none d-md-flex col-md-4 col-lg-6 bg-image"></div>
             <div class="col-md-8 col-lg-6">
