@@ -1,4 +1,3 @@
-<!doctype html>
 <html lang="en">
 
 <head>
@@ -51,26 +50,9 @@
                                     </div>
 
                                     <div class="select">
-                                    <select name="ciudad" class="form-control" >
-                                        <?php 
-                                        include("../../modelo/conexion.php");
-                                        $conexion = conectar();
-                                        $sql = "SELECT * FROM CIUDAD";
-                                        $ciudad = mysqli_query($conexion,$sql);
-                                        while ($fila = mysqli_fetch_array($ciudad)) 
-                                        { ?>
-                                            <option value="<?php echo $fila['cod_ciudad'] ?>"> <?php echo $fila['nom_ciudad'] ?> </option>
-                                        <?php }
-                                        ?>
-                                        <option value="ciudad" selected>Ciudad</option>    
-                                        </select>
-                                    </div>
-
-
-                                    <div class="select">
                                     <select name="carrera" class="form-control" >
                                         <?php 
-                                        // include("../../modelo/conexion.php");
+                                        include("../../modelo/conexion.php");
                                         $conexion = conectar();
                                         $sql = "SELECT * FROM CARRERA";
                                         $carrera = mysqli_query($conexion,$sql);
@@ -92,8 +74,6 @@
                                         </select>
                                     </div>
 
-                                  
-
                                     <hr>
 
                                     <div class="form-label-group">
@@ -102,16 +82,15 @@
                                     </div>
 
                                     <div class="form-label-group">
-                                        <input type="password" name="ConfirmPassword" id="inputConfirmPassword" class="form-control" placeholder="Email address" >
+                                        <input type="password" name="ConfirmPassword" id="inputConfirmPassword" class="form-control" placeholder="Confirm Password">
                                         <label for="inputConfirmPassword">Confirmar contraseña</label>
                                     </div>
-
-                                    <div class="custom-control custom-checkbox mb-3">
-                                        <input type="checkbox" class="custom-control-input" id="customCheck1">
-
-                                    </div>
+                                    
                                     <button class="btn btn-lg btn-primary btn-block btn-login text-uppercase font-weight-bold mb-2" type="submit">Registrarse</button>
                                 </form>
+                                    <div id="alertas">
+                                       
+                                    </div>
                             </div>
                         </div>
                     </div>

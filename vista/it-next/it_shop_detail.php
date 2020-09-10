@@ -167,8 +167,8 @@
                       ?>
                       
                   </p>    
-              <form class="cart" method="post" action="it_blog.php>
-                
+              <form class="cart" method="post" action="it_blog.php">
+              
                 <button type="submit" class="btn sqaure_bt">Enviar hoja de vida</button>
               </form>
             </div>
