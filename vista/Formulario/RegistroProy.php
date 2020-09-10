@@ -120,7 +120,7 @@
         </div>
         </div>
 
-        <script src="../js/prueba.js"></script>
+        <script src="../js/validacion_estudiante.js"></script>
 </body>
 
 </html>
