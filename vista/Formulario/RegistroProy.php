@@ -23,7 +23,7 @@
                             <div class="col-md-9 col-lg-8 mx-auto">
                                 <h3 class="login-heading mb-4">Registrarse</h3>
                              <!--   <form action="../../controlador/registro.php" id="formulario" method="POST"> -->
-                                <form id="hoja_vida">
+                                <form id="formulario">
                                     <div class="form-label-group">
                                         <input type="text" name="nombre" id="inputName" class="form-control" placeholder="Name" required autofocus>
                                         <label for="inputName">Nombres</label>
