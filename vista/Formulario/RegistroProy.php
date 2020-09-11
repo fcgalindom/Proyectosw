@@ -1,11 +1,6 @@
-<<<<<<< HEAD
-<html lang="en">
-=======
+<head>
 <!doctype html>
 <html lang="es">
->>>>>>> cedc5646a216cae3b24e0cec7b43d7133cea4f9a
-
-<head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">

@@ -6,16 +6,12 @@ formulario.addEventListener('submit',function(e){
 
    var datos = new FormData(formulario)
 
-    console.log(datos.get('email'))
-    console.log(datos.get('password'))
-
    fetch('../../controlador/auth.php',{
        method: 'POST',
        body: datos
     })
     .then(res => res.json())
     .then(data => {
-        console.log(data)
        if (data === 'INCOMPLETO'){
         alertas.innerHTML = `
          <div class="alert alert-danger" role="alert">
@@ -30,12 +26,8 @@ formulario.addEventListener('submit',function(e){
         </div>
         `
        }else if (data === 'correcto'){
-        alertas.innerHTML = `
 
-         <div class="alert alert-primary" role="alert">
-          TODO ESTA PERFECTO PA REDIRIGIR
-        </div>
-        `
+         location.href = "../../controlador/estudiante/Login.php?"+"email="+datos.get('email')+"&password="+datos.get('password')
        }
     })
 })
