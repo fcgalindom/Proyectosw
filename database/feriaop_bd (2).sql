@@ -63,6 +63,7 @@ CREATE TABLE IF NOT EXISTS `exp_academica` (
   `cod_exp_academica` int(11) NOT NULL AUTO_INCREMENT,
   `nom_exp_academica` varchar(30) DEFAULT NULL,
   `con_aplicados` varchar(150) DEFAULT NULL,
+  `materia` varchar(20) DEFAULT NULL,
   `cod_estudiante` int(11) DEFAULT NULL,
   PRIMARY KEY (`cod_exp_academica`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
@@ -105,21 +106,6 @@ CREATE TABLE IF NOT EXISTS `certificacion` (
   PRIMARY KEY (`cod_certificacion`),
   KEY `FORMACION_ACADEMICA_CERTIFICACION_FK` (`cod_f_academica`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
--- --------------------------------------------------------
-
---
--- Estructura de tabla para la tabla `ciudad`
---
-
-DROP TABLE IF EXISTS `ciudad`;
-CREATE TABLE IF NOT EXISTS `ciudad` (
-  `cod_ciudad` int(11) NOT NULL AUTO_INCREMENT,
-  `nom_ciudad` varchar(50) DEFAULT NULL,
-  PRIMARY KEY (`cod_ciudad`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
--- --------------------------------------------------------
 
 --
 -- Estructura de tabla para la tabla `empresa`
@@ -164,11 +150,9 @@ CREATE TABLE IF NOT EXISTS `estudiante` (
   `direccion` varchar(50) DEFAULT NULL,
   `lim_oferta` int(11) DEFAULT NULL,
   `contrasenia` varchar(50) DEFAULT NULL,
-  `cod_ciudad` int(11) DEFAULT NULL,
   `cod_carrera` int(11) DEFAULT NULL,
   `hola_vida_pdf` varchar(55) DEFAULT NULL, 
   PRIMARY KEY (`cod_estudiante`),
-  KEY `ESTUDIANTE_CIUDAD_FK` (`cod_ciudad`),
   KEY `ESTUDIANTE_CARRERA_FK` (`cod_carrera`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
@@ -185,6 +169,7 @@ CREATE TABLE IF NOT EXISTS `exp_laboral` (
   `empresa` varchar(50) DEFAULT NULL,
   `fun_principales` varchar(250) DEFAULT NULL,
   `fecha_fin` date DEFAULT NULL,
+  `cod_estudiante` int(11) DEFAULT NULL,
   PRIMARY KEY (`cod_exp`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
@@ -344,8 +329,7 @@ ALTER TABLE `empresa`
 -- Filtros para la tabla `estudiante`
 --
 ALTER TABLE `estudiante`
-  ADD CONSTRAINT `ESTUDIANTE_CARRERA_FK` FOREIGN KEY (`cod_carrera`) REFERENCES `carrera` (`cod_carrera`),
-  ADD CONSTRAINT `ESTUDIANTE_CIUDAD_FK` FOREIGN KEY (`cod_ciudad`) REFERENCES `ciudad` (`cod_ciudad`);
+  ADD CONSTRAINT `ESTUDIANTE_CARRERA_FK` FOREIGN KEY (`cod_carrera`) REFERENCES `carrera` (`cod_carrera`);
 --
 -- Filtros para la tabla `perfil`
 --
@@ -389,6 +373,12 @@ ALTER TABLE `certificacion`
 --
 ALTER TABLE `exp_academica`
   ADD CONSTRAINT `EXP_ACADEMICA_ESTUDIANTE_FK` FOREIGN KEY (`cod_estudiante`) REFERENCES `estudiante` (`cod_estudiante`);
+
+--
+-- Filtros para la tabla `exp_laboral`
+--
+ALTER TABLE `exp_laboral`
+  ADD CONSTRAINT `EXP_LABORAL_ESTUDIANTE_FK` FOREIGN KEY (`cod_estudiante`) REFERENCES `estudiante` (`cod_estudiante`);
 
 --
 -- Filtros para la tabla `oferta_estudiante`
