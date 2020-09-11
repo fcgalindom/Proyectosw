@@ -42,24 +42,4 @@ else {
 	}
 }
 
-<<<<<<< HEAD
 
-
-=======
-if($contrasenia == $con_contrasenia)
-{
-  include("../modelo/conexion.php");
-  $conexion = conectar();
-  $nombre = "$nombre $apellido";
-  $sql = "INSERT INTO ESTUDIANTE VALUES(0,'$nombre',$telefono,'$correo','$direccion',0,'$contrasenia',$ciudad,$carrera,NULL)";
-  mysqli_query($conexion,$sql);  
-  $sql = "SELECT cod_estudiante FROM ESTUDIANTE WHERE correo = $correo AND contrasenia = $contrasenia";
-  $resultado = mysqli_query($conexion,$sql);
-  mysqli_close($conexion);
-  $cod_estudiante = $resultado;
-}
-
-#echo "$nombre --> $apellido --> $telefono --> $correo --> $direccion --> $ciudad --> $semestre --> $carrera";
-    
-header("Location: hoja_vida_registro/CRUD_Estudiante.php");
->>>>>>> cedc5646a216cae3b24e0cec7b43d7133cea4f9a

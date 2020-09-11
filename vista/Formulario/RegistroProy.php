@@ -1,23 +1,19 @@
-<<<<<<< HEAD
+<!DOCTYPE html>
 <html lang="en">
-=======
-<!doctype html>
-<html lang="es">
->>>>>>> cedc5646a216cae3b24e0cec7b43d7133cea4f9a
-
 <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>El bosque</title>
+     <!-- Required meta tags -->
+     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     <link rel='stylesheet' type='text/css' media='screen' href='loginProy.css'>
 </head>
-
 <body>
-
-    <div class="container-fluid">
+<div class="container-fluid">
         <div class="row no-gutter">
             <div class="d-none d-md-flex col-md-4 col-lg-6 bg-image"></div>
             <div class="col-md-8 col-lg-6">
@@ -29,7 +25,7 @@
                              <!--   <form action="../../controlador/registro.php" id="formulario" method="POST"> -->
                                 <form id="formulario">
                                     <div class="form-label-group">
-                                        <input type="text" name="nombre" id="inputName" class="form-control" placeholder="Name" >
+                                        <input type="text" name="nombre" id="inputName"  class="form-control" placeholder="Name" >
                                         <label for="inputName">Nombres</label>
                                     </div>
 
@@ -39,7 +35,7 @@
                                     </div>
 
                                      <div class="form-label-group">
-                                        <input type="text" name="telefono" id="inputTel" class="form-control" placeholder="Telefono" >
+                                        <input type="text" name="telefono" id="inputTel" class="form-control" placeholder="Telefono" maxlength="10" onKeypress="if (event.keyCode < 45 || event.keyCode > 57) event.returnValue = false;">
                                         <label for="inputTel">Telefono</label>
                                     </div>
 
@@ -63,7 +59,7 @@
                                         $carrera = mysqli_query($conexion,$sql);
                                         while ($fila = mysqli_fetch_array($carrera)) 
                                         { ?>
-                                            <option value="<?php echo $fila['cod_carrera'] ?>"><?php echo $fila['nom_carrea'] ?></option>
+                                            <option value="<?php echo $fila['cod_carrera'] ?>"><?php echo $fila['nom_carrera'] ?></option>
                                         <?php }
                                         ?>
                                         <option value="Carrera" selected>Carrera</option>
@@ -105,6 +101,8 @@
         </div>
 
         <script src="../js/validacion_estudiante.js"></script>
-</body>
 
+    
+</body>
 </html>
+
