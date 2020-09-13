@@ -26,7 +26,6 @@ formulario.addEventListener('submit',function(e){
         </div>
         `
        }else if (data === 'correcto'){
-
          location.href = "../../controlador/estudiante/Login.php?"+"email="+datos.get('email')+"&password="+datos.get('password')
        }
     })

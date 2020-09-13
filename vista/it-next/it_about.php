@@ -125,6 +125,7 @@
     </div>
     <div class="form-group">
     <form action="../../controlador/hoja_vida_registro/CRUD_estudiante.php" method="POST">
+    <input type="hidden" name="key" value="<?php echo $_GET['ky'] ?>">
       <label class="font-weight-bold">Perfil Profesional</label>
       <br>
       <label >Conocimientos, habilidades, experiencia, competencias, areas de gusto, cualidades</label>
@@ -604,6 +605,3 @@
 <!-- custom js -->
 <script src="js/custom.js"></script>
 <script>
-
-</body>
-</html>

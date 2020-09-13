@@ -1,12 +1,13 @@
 <?php
 
 include("../../modelo/conexion.php");
+$key = $_POST['key'];
 
 //finalizado
 function guardarPerfil()
 {
     $perfil = $_POST['perfil'];
-    $sql = "INSERT INTO PERFIL VALUES(0,'$perfil')";
+    $sql = "INSERT INTO PERFIL VALUES($key,'$perfil')";
     $conexion = conectar();
     mysqli_query($conexion,$sql);
     mysqli_close($conexion);

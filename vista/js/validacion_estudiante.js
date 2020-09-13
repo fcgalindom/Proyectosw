@@ -1,5 +1,7 @@
-var formulario = document.getElementById('formulario');
-var alertas = document.getElementById('alertas');
+var formulario = document.getElementById('formulario')
+var alertas = document.getElementById('alertas')
+var algo = ""
+var otro = ""
 
 formulario.addEventListener('submit',function(e){
    e.preventDefault()
@@ -7,15 +9,15 @@ formulario.addEventListener('submit',function(e){
 
    var datos = new FormData(formulario)
 
-    console.log(datos.get('nombre'))
-    console.log(datos.get('apellido'))
-    console.log(datos.get('telefono'))
-    console.log(datos.get('email'))
-    console.log(datos.get('direccion'))
-    console.log(datos.get('carrera'))
-    console.log(datos.get('semestre'))
-    console.log(datos.get('password'))
-    console.log(datos.get('ConfirmPassword'))
+    // console.log(datos.get('nombre'))
+    // console.log(datos.get('apellido'))
+    // console.log(datos.get('telefono'))
+    // console.log(datos.get('email'))
+    // console.log(datos.get('direccion'))
+    // console.log(datos.get('carrera'))
+    // console.log(datos.get('semestre'))
+    // console.log(datos.get('password'))
+    // console.log(datos.get('ConfirmPassword'))
 
 
    fetch('../../controlador/registro.php',{
@@ -48,12 +50,27 @@ formulario.addEventListener('submit',function(e){
         `
        }
        else if (data === 'correcto'){
-        alertas.innerHTML = `
 
-         <div class="alert alert-primary" role="alert">
-          TODO ESTA PERFECTO PA REDIRIGIR
-        </div>
-        `
+         var dat = "nombre="+datos.get('nombre')+"&apellido="+datos.get('apellido')+"&telefono="+datos.get('telefono')
+         +"&email="+datos.get('email')+"&direccion="+datos.get('direccion')+"&carrera="+datos.get('carrera')
+         +"&semestre="+datos.get('semestre')+"&password="+datos.get('password')
+
+        location.href = "../../controlador/estudiante/registro.php?"+dat
+
+        // alertas.innerHTML = 
+        //`
+        //  <div class="alert alert-primary" role="alert">
+        //   TODO ESTA PERFECTO PA REDIRIGIR
+        // </div>
+        // `
        }
    })
+})
+
+formulario.addEventListener('submit',function(e){
+  e.preventDefault()
+  if(algo === 'correcto')
+  {
+    console.log('Algo')
+  }
 })
