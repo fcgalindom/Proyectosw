@@ -10,7 +10,8 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     <link rel='stylesheet' type='text/css' media='screen' href='loginProy.css'>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="../vista/js/script.js"></script>
+
+    <script src="../vistaEmpresa/js/script.js"></script>
 </head>
 
 <body>
@@ -24,7 +25,7 @@
                         <div class="row">
                             <div class="col-md-9 col-lg-8 mx-auto">
                                 <h3 class="login-heading mb-4">Registrarse</h3>
-                                <form action="..\controlador\insertarEmpresa.php" method="post"   enctype="multipart/form-data">
+                                <form action="..\controladorEmpresa\insertarEmpresa.php" method="post"   enctype="multipart/form-data">
                                     <div class="form-label-group">
                                         <input type="text" id="nombreComercial" name="nombreComercial" class="form-control" placeholder="Nombre Comercial" required autofocus>
                                         <label for="nombreComercial">Nombre Comercial</label>
@@ -38,7 +39,9 @@
 
                                     <div class="form-label-group" >
 
-                                        <p>Subir Achivo :
+                                    <label for="nombreComercial">Subir Achivo Camara de Comercio con nombre de la Empresa</label>
+                                    <br>
+                                    <br>
                                         <input type="file" name="camaraComercio"  id="camaraComercio" required   onchange="return validacionImagen()">
 
                                         </p>

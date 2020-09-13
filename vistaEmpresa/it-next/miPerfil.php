@@ -30,6 +30,8 @@
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
       <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
       <![endif]-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="../../vistaEmpresa/js/script.js"></script>
 </head>
 <body id="default_theme" class="it_service about">
 <!-- loader -->
@@ -69,8 +71,8 @@
                 </li>
                 <li> <a href="inicio.php">Ofertas</a>
                   <ul>
-                    <li><a href="realizarOferta.php">Realizar Oferta</a></li>
-                    <li><a href="ofertasRealizadas.php">Ofertas Realizadas</a></li>
+                    <li><a href="ofertas.php">Realizar Oferta</a></li>
+                    <li><a href="mostrar.php">Ofertas Realizadas</a></li>
                   </ul>
                 </li>
               </ul>
@@ -124,23 +126,23 @@
             </div>
         </div>
         <div class="form-group">
-        <form action="..\..\controlador\modifcarEmpresa.php" method="post">
+        <form action="..\..\controladorEmpresa\modifcarEmpresa.php" method="post" enctype="multipart/form-data">
             <?php
-            include("../../modelo/conexion.php");
+            include("../../modeloEmpresa/conexion.php");
             $conexion = conectar();
             ?>
               
             <?php
-            $sql = "SELECT * FROM  empresa WHERE cod_empresa = 1";
+            $sql = "SELECT * FROM  empresa WHERE cod_empresa = 7";
             $resultado = mysqli_query($conexion,$sql);
             if( $row = mysqli_fetch_array($resultado , MYSQLI_ASSOC)  )
             { ?>
                 
-            <label class="font-weight-bold" >Codigo de la Empresa:</label>
+    
             <div class="row">
                 <br>
                 <div class="col">
-                <input type="text" id="cod_empresa" name="cod_empresa"  size="15" value="<?php echo $row['cod_empresa']?>"  style="width : 1170px" readonly="readonly">  
+                <input type="hidden" id="cod_empresa" name="cod_empresa"  size="15" value="<?php echo $row['cod_empresa']?>"  style="width : 1170px" readonly="readonly">  
                 </div>
             </div>
             
@@ -169,6 +171,15 @@
                     <label class="font-weight-bold">Descripcion</label>
                     <br>
                     <textarea class="form-control" name="descripcion" id="descripcion" rows="5"></textarea>
+                </div>
+                <br>
+                <br>
+                <div class="form-label-group" >
+                     <label class="font-weight-bold">Subir logo de la empresa</label>
+                      <p>Subir Achivo :
+                          <input type="file" name="logo"  id="logo" required   onchange="return validacionImagen2()">
+
+                     </p>
                 </div>
 
                 <?php

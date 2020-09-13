@@ -20,143 +20,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="48626bb6-51b3-42d8-8e29-fc29ac2c404f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/vista/it-next/miPerfil.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vista/it-next/ofertas.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Proyectosw-ramaEmpresa/controlador/auth.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Proyectosw-ramaEmpresa/controlador/registro.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Proyectosw-ramaEmpresa/modelo/conexion.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Proyectosw-ramaEmpresa/vista/Formulario/RegistroProy.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Proyectosw-ramaEmpresa/vista/Formulario/loginProy.css" beforeDir="false" afterPath="$PROJECT_DIR$/vista/loginProy.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Proyectosw-ramaEmpresa/vista/Formulario/loginProy.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Proyectosw-ramaEmpresa/vista/formulario.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Proyectosw-ramaEmpresa/vista/it-next/css/animate.css" beforeDir="false" afterPath="$PROJECT_DIR$/vista/it-next/css/animate.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Proyectosw-ramaEmpresa/vista/it-next/css/bootstrap-grid.css" beforeDir="false" afterPath="$PROJECT_DIR$/vista/it-next/css/bootstrap-grid.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Proyectosw-ramaEmpresa/vista/it-next/css/bootstrap-grid.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/vista/it-next/css/bootstrap-grid.min.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Proyectosw-ramaEmpresa/vista/it-next/css/bootstrap-reboot.css" beforeDir="false" afterPath="$PROJECT_DIR$/vista/it-next/css/bootstrap-reboot.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Proyectosw-ramaEmpresa/vista/it-next/css/bootstrap-reboot.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/vista/it-next/css/bootstrap-reboot.min.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Proyectosw-ramaEmpresa/vista/it-next/css/bootstrap-select.css" beforeDir="false" afterPath="$PROJECT_DIR$/vista/it-next/css/bootstrap-select.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Proyectosw-ramaEmpresa/vista/it-next/css/bootstrap.css" beforeDir="false" afterPath="$PROJECT_DIR$/vista/it-next/css/bootstrap.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Proyectosw-ramaEmpresa/vista/it-next/css/bootstrap.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/vista/it-next/css/bootstrap.min.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Proyectosw-ramaEmpresa/vista/it-next/css/colors1.css" beforeDir="false" afterPath="$PROJECT_DIR$/vista/it-next/css/colors1.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Proyectosw-ramaEmpresa/vista/it-next/css/colors1_dark.css" beforeDir="false" afterPath="$PROJECT_DIR$/vista/it-next/css/colors1_dark.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Proyectosw-ramaEmpresa/vista/it-next/css/colors2.css" beforeDir="false" afterPath="$PROJECT_DIR$/vista/it-next/css/colors2.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Proyectosw-ramaEmpresa/vista/it-next/css/colors3.css" beforeDir="false" afterPath="$PROJECT_DIR$/vista/it-next/css/colors3.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Proyectosw-ramaEmpresa/vista/it-next/css/colors_landing_page.css" beforeDir="false" afterPath="$PROJECT_DIR$/vista/it-next/css/colors_landing_page.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Proyectosw-ramaEmpresa/vista/it-next/css/custom.css" beforeDir="false" afterPath="$PROJECT_DIR$/vista/it-next/css/custom.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Proyectosw-ramaEmpresa/vista/it-next/css/dark_layout.css" beforeDir="false" afterPath="$PROJECT_DIR$/vista/it-next/css/dark_layout.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Proyectosw-ramaEmpresa/vista/it-next/css/font-awesome.css" beforeDir="false" afterPath="$PROJECT_DIR$/vista/it-next/css/font-awesome.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Proyectosw-ramaEmpresa/vista/it-next/css/font-awesome.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/vista/it-next/css/font-awesome.min.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Proyectosw-ramaEmpresa/vista/it-next/css/hizoom.css" beforeDir="false" afterPath="$PROJECT_DIR$/vista/it-next/css/hizoom.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Proyectosw-ramaEmpresa/vista/it-next/css/owl.carousel.css" beforeDir="false" afterPath="$PROJECT_DIR$/vista/it-next/css/owl.carousel.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Proyectosw-ramaEmpresa/vista/it-next/css/owl.carousel.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/vista/it-next/css/owl.carousel.min.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Proyectosw-ramaEmpresa/vista/it-next/css/owl.theme.default.css" beforeDir="false" afterPath="$PROJECT_DIR$/vista/it-next/css/owl.theme.default.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Proyectosw-ramaEmpresa/vista/it-next/css/responsive.css" beforeDir="false" afterPath="$PROJECT_DIR$/vista/it-next/css/responsive.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Proyectosw-ramaEmpresa/vista/it-next/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/vista/it-next/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Proyectosw-ramaEmpresa/vista/it-next/fonts/FontAwesome.otf" beforeDir="false" afterPath="$PROJECT_DIR$/vista/it-next/fonts/FontAwesome.otf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Proyectosw-ramaEmpresa/vista/it-next/fonts/fontawesome-webfont.eot" beforeDir="false" afterPath="$PROJECT_DIR$/vista/it-next/fonts/fontawesome-webfont.eot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Proyectosw-ramaEmpresa/vista/it-next/fonts/fontawesome-webfont.svg" beforeDir="false" afterPath="$PROJECT_DIR$/vista/it-next/fonts/fontawesome-webfont.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Proyectosw-ramaEmpresa/vista/it-next/fonts/fontawesome-webfont.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/vista/it-next/fonts/fontawesome-webfont.ttf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Proyectosw-ramaEmpresa/vista/it-next/fonts/fontawesome-webfont.woff" beforeDir="false" afterPath="$PROJECT_DIR$/vista/it-next/fonts/fontawesome-webfont.woff" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Proyectosw-ramaEmpresa/vista/it-next/fonts/fontawesome-webfont.woff2" beforeDir="false" afterPath="$PROJECT_DIR$/vista/it-next/fonts/fontawesome-webfont.woff2" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Proyectosw-ramaEmpresa/vista/it-next/images/fevicon/fevicon.png" beforeDir="false" afterPath="$PROJECT_DIR$/vista/it-next/images/fevicon/fevicon.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Proyectosw-ramaEmpresa/vista/it-next/images/gradian_black.png" beforeDir="false" afterPath="$PROJECT_DIR$/vista/it-next/images/gradian_black.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Proyectosw-ramaEmpresa/vista/it-next/images/gradian_blue.png" beforeDir="false" afterPath="$PROJECT_DIR$/vista/it-next/images/gradian_blue.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Proyectosw-ramaEmpresa/vista/it-next/images/it_service/1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/vista/it-next/images/it_service/1.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Proyectosw-ramaEmpresa/vista/it-next/images/it_service/2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/vista/it-next/images/it_service/2.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Proyectosw-ramaEmpresa/vista/it-next/images/it_service/22.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/vista/it-next/images/it_service/22.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Proyectosw-ramaEmpresa/vista/it-next/images/it_service/3.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/vista/it-next/images/it_service/3.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Proyectosw-ramaEmpresa/vista/it-next/images/it_service/4.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/vista/it-next/images/it_service/4.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Proyectosw-ramaEmpresa/vista/it-next/images/it_service/404_error_img.png" beforeDir="false" afterPath="$PROJECT_DIR$/vista/it-next/images/it_service/404_error_img.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Proyectosw-ramaEmpresa/vista/it-next/images/it_service/5.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/vista/it-next/images/it_service/5.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Proyectosw-ramaEmpresa/vista/it-next/images/it_service/6.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/vista/it-next/images/it_service/6.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Proyectosw-ramaEmpresa/vista/it-next/images/it_service/7.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/vista/it-next/images/it_service/7.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Proyectosw-ramaEmpresa/vista/it-next/images/it_service/8.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/vista/it-next/images/it_service/8.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Proyectosw-ramaEmpresa/vista/it-next/images/it_service/accepted.png" beforeDir="false" afterPath="$PROJECT_DIR$/vista/it-next/images/it_service/accepted.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Proyectosw-ramaEmpresa/vista/it-next/images/it_service/brand_icon1.png" beforeDir="false" afterPath="$PROJECT_DIR$/vista/it-next/images/it_service/brand_icon1.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Proyectosw-ramaEmpresa/vista/it-next/images/it_service/brand_icon2.png" beforeDir="false" afterPath="$PROJECT_DIR$/vista/it-next/images/it_service/brand_icon2.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Proyectosw-ramaEmpresa/vista/it-next/images/it_service/brand_icon3.png" beforeDir="false" afterPath="$PROJECT_DIR$/vista/it-next/images/it_service/brand_icon3.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Proyectosw-ramaEmpresa/vista/it-next/images/it_service/brand_icon4.png" beforeDir="false" afterPath="$PROJECT_DIR$/vista/it-next/images/it_service/brand_icon4.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Proyectosw-ramaEmpresa/vista/it-next/images/it_service/brand_icon5.png" beforeDir="false" afterPath="$PROJECT_DIR$/vista/it-next/images/it_service/brand_icon5.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Proyectosw-ramaEmpresa/vista/it-next/images/it_service/client1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/vista/it-next/images/it_service/client1.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Proyectosw-ramaEmpresa/vista/it-next/images/it_service/client1.png" beforeDir="false" afterPath="$PROJECT_DIR$/vista/it-next/images/it_service/client1.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Proyectosw-ramaEmpresa/vista/it-next/images/it_service/client2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/vista/it-next/images/it_service/client2.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Proyectosw-ramaEmpresa/vista/it-next/images/it_service/client2.png" beforeDir="false" afterPath="$PROJECT_DIR$/vista/it-next/images/it_service/client2.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Proyectosw-ramaEmpresa/vista/it-next/images/it_service/client3.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/vista/it-next/images/it_service/client3.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Proyectosw-ramaEmpresa/vista/it-next/images/it_service/client3.png" beforeDir="false" afterPath="$PROJECT_DIR$/vista/it-next/images/it_service/client3.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Proyectosw-ramaEmpresa/vista/it-next/images/it_service/dark_bg_img.png" beforeDir="false" afterPath="$PROJECT_DIR$/vista/it-next/images/it_service/dark_bg_img.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Proyectosw-ramaEmpresa/vista/it-next/images/it_service/dark_bg_img2.png" beforeDir="false" afterPath="$PROJECT_DIR$/vista/it-next/images/it_service/dark_bg_img2.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Proyectosw-ramaEmpresa/vista/it-next/images/it_service/home_01.png" beforeDir="false" afterPath="$PROJECT_DIR$/vista/it-next/images/it_service/home_01.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Proyectosw-ramaEmpresa/vista/it-next/images/it_service/i1.png" beforeDir="false" afterPath="$PROJECT_DIR$/vista/it-next/images/it_service/i1.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Proyectosw-ramaEmpresa/vista/it-next/images/it_service/i2.png" beforeDir="false" afterPath="$PROJECT_DIR$/vista/it-next/images/it_service/i2.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Proyectosw-ramaEmpresa/vista/it-next/images/it_service/i3.png" beforeDir="false" afterPath="$PROJECT_DIR$/vista/it-next/images/it_service/i3.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Proyectosw-ramaEmpresa/vista/it-next/images/it_service/i4.png" beforeDir="false" afterPath="$PROJECT_DIR$/vista/it-next/images/it_service/i4.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Proyectosw-ramaEmpresa/vista/it-next/images/it_service/inner_page_banner.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/vista/it-next/images/it_service/inner_page_banner.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Proyectosw-ramaEmpresa/vista/it-next/images/it_service/location_icon_map_cont.png" beforeDir="false" afterPath="$PROJECT_DIR$/vista/it-next/images/it_service/location_icon_map_cont.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Proyectosw-ramaEmpresa/vista/it-next/images/it_service/phone_icon.png" beforeDir="false" afterPath="$PROJECT_DIR$/vista/it-next/images/it_service/phone_icon.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Proyectosw-ramaEmpresa/vista/it-next/images/it_service/post-01.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/vista/it-next/images/it_service/post-01.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Proyectosw-ramaEmpresa/vista/it-next/images/it_service/post-02.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/vista/it-next/images/it_service/post-02.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Proyectosw-ramaEmpresa/vista/it-next/images/it_service/post-03.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/vista/it-next/images/it_service/post-03.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Proyectosw-ramaEmpresa/vista/it-next/images/it_service/post-04.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/vista/it-next/images/it_service/post-04.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Proyectosw-ramaEmpresa/vista/it-next/images/it_service/post-05.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/vista/it-next/images/it_service/post-05.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Proyectosw-ramaEmpresa/vista/it-next/images/it_service/post-06.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/vista/it-next/images/it_service/post-06.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Proyectosw-ramaEmpresa/vista/it-next/images/it_service/post-07.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/vista/it-next/images/it_service/post-07.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Proyectosw-ramaEmpresa/vista/it-next/images/it_service/post-08.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/vista/it-next/images/it_service/post-08.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Proyectosw-ramaEmpresa/vista/it-next/images/it_service/si1.png" beforeDir="false" afterPath="$PROJECT_DIR$/vista/it-next/images/it_service/si1.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Proyectosw-ramaEmpresa/vista/it-next/images/it_service/si2.png" beforeDir="false" afterPath="$PROJECT_DIR$/vista/it-next/images/it_service/si2.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Proyectosw-ramaEmpresa/vista/it-next/images/it_service/si3.png" beforeDir="false" afterPath="$PROJECT_DIR$/vista/it-next/images/it_service/si3.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Proyectosw-ramaEmpresa/vista/it-next/images/it_service/si4.png" beforeDir="false" afterPath="$PROJECT_DIR$/vista/it-next/images/it_service/si4.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Proyectosw-ramaEmpresa/vista/it-next/images/it_service/si5.png" beforeDir="false" afterPath="$PROJECT_DIR$/vista/it-next/images/it_service/si5.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Proyectosw-ramaEmpresa/vista/it-next/images/it_service/si6.png" beforeDir="false" afterPath="$PROJECT_DIR$/vista/it-next/images/it_service/si6.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Proyectosw-ramaEmpresa/vista/it-next/images/it_service/slide1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/vista/it-next/images/it_service/slide1.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Proyectosw-ramaEmpresa/vista/it-next/images/it_service/slide2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/vista/it-next/images/it_service/slide2.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Proyectosw-ramaEmpresa/vista/it-next/images/it_service/slide3.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/vista/it-next/images/it_service/slide3.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Proyectosw-ramaEmpresa/vista/it-next/images/it_service/team-member-1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/vista/it-next/images/it_service/team-member-1.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Proyectosw-ramaEmpresa/vista/it-next/images/it_service/team-member-2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/vista/it-next/images/it_service/team-member-2.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Proyectosw-ramaEmpresa/vista/it-next/images/it_service/team-member-3.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/vista/it-next/images/it_service/team-member-3.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Proyectosw-ramaEmpresa/vista/it-next/images/it_service/test_bg.png" beforeDir="false" afterPath="$PROJECT_DIR$/vista/it-next/images/it_service/test_bg.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Proyectosw-ramaEmpresa/vista/it-next/images/loaders/loader_1.png" beforeDir="false" afterPath="$PROJECT_DIR$/vista/it-next/images/loaders/loader_1.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Proyectosw-ramaEmpresa/vista/it-next/images/logos/it_logo.png" beforeDir="false" afterPath="$PROJECT_DIR$/vista/it-next/images/logos/it_logo.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Proyectosw-ramaEmpresa/vista/it-next/images/logos/it_logo_white.png" beforeDir="false" afterPath="$PROJECT_DIR$/vista/it-next/images/logos/it_logo_white.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Proyectosw-ramaEmpresa/vista/it-next/images/logos/logito.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/vista/it-next/images/logos/logito.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Proyectosw-ramaEmpresa/vista/it-next/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/vista/it-next/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Proyectosw-ramaEmpresa/vista/it-next/it_about.html" beforeDir="false" afterPath="$PROJECT_DIR$/vista/it-next/it_about.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Proyectosw-ramaEmpresa/vista/it-next/it_home.html" beforeDir="false" afterPath="$PROJECT_DIR$/vista/it-next/it_home.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Proyectosw-ramaEmpresa/vista/it-next/js/bootstrap.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/vista/it-next/js/bootstrap.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Proyectosw-ramaEmpresa/vista/it-next/js/custom.js" beforeDir="false" afterPath="$PROJECT_DIR$/vista/it-next/js/custom.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Proyectosw-ramaEmpresa/vista/it-next/js/hizoom.js" beforeDir="false" afterPath="$PROJECT_DIR$/vista/it-next/js/hizoom.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Proyectosw-ramaEmpresa/vista/it-next/js/jquery.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/vista/it-next/js/jquery.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Proyectosw-ramaEmpresa/vista/it-next/js/menumaker.js" beforeDir="false" afterPath="$PROJECT_DIR$/vista/it-next/js/menumaker.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Proyectosw-ramaEmpresa/vista/it-next/js/wow.js" beforeDir="false" afterPath="$PROJECT_DIR$/vista/it-next/js/wow.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Proyectosw-ramaEmpresa/vista/it-next/miPerfil.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Proyectosw-ramaEmpresa/vista/it-next/ofertasRealizadas.html" beforeDir="false" afterPath="$PROJECT_DIR$/vista/it-next/ofertasRealizadas.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Proyectosw-ramaEmpresa/vista/it-next/realizarOferta.html" beforeDir="false" afterPath="$PROJECT_DIR$/vista/it-next/realizarOferta.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Proyectosw-ramaEmpresa/vista/it-next/revolution/assets/coloredbg.png" beforeDir="false" afterPath="$PROJECT_DIR$/vista/it-next/revolution/assets/coloredbg.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Proyectosw-ramaEmpresa/vista/it-next/revolution/assets/gridtile.png" beforeDir="false" afterPath="$PROJECT_DIR$/vista/it-next/revolution/assets/gridtile.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Proyectosw-ramaEmpresa/vista/it-next/revolution/assets/gridtile_3x3.png" beforeDir="false" afterPath="$PROJECT_DIR$/vista/it-next/revolution/assets/gridtile_3x3.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Proyectosw-ramaEmpresa/vista/it-next/revolution/assets/gridtile_3x3_white.png" beforeDir="false" afterPath="$PROJECT_DIR$/vista/it-next/revolution/assets/gridtile_3x3_white.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Proyectosw-ramaEmpresa/vista/it-next/revolution/assets/gridtile_white.png" beforeDir="false" afterPath="$PROJECT_DIR$/vista/it-next/revolution/assets/gridtile_white.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Proyectosw-ramaEmpresa/vista/it-next/revolution/assets/loader.gif" beforeDir="false" afterPath="$PROJECT_DIR$/vista/it-next/revolution/assets/loader.gif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Proyectosw-ramaEmpresa/vista/it-next/revolution/css/closedhand.cur" beforeDir="false" afterPath="$PROJECT_DIR$/vista/it-next/revolution/css/closedhand.cur" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Proyectosw-ramaEmpresa/vista/it-next/revolution/css/layers.css" beforeDir="false" afterPath="$PROJECT_DIR$/vista/it-next/revolution/css/layers.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Proyectosw-ramaEmpresa/vista/it-next/revolution/css/navigation.css" beforeDir="false" afterPath="$PROJECT_DIR$/vista/it-next/revolution/css/navigation.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Proyectosw-ramaEmpresa/vista/it-next/revolution/css/openhand.cur" beforeDir="false" afterPath="$PROJECT_DIR$/vista/it-next/revolution/css/openhand.cur" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Proyectosw-ramaEmpresa/vista/it-next/revolution/css/settings.css" beforeDir="false" afterPath="$PROJECT_DIR$/vista/it-next/revolution/css/settings.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Proyectosw-ramaEmpresa/vista/it-next/revolution/fonts/revicons/revicons.eot" beforeDir="false" afterPath="$PROJECT_DIR$/vista/it-next/revolution/fonts/revicons/revicons.eot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Proyectosw-ramaEmpresa/vista/it-next/revolution/fonts/revicons/revicons.svg" beforeDir="false" afterPath="$PROJECT_DIR$/vista/it-next/revolution/fonts/revicons/revicons.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Proyectosw-ramaEmpresa/vista/it-next/revolution/fonts/revicons/revicons.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/vista/it-next/revolution/fonts/revicons/revicons.ttf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Proyectosw-ramaEmpresa/vista/it-next/revolution/fonts/revicons/revicons.woff" beforeDir="false" afterPath="$PROJECT_DIR$/vista/it-next/revolution/fonts/revicons/revicons.woff" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Proyectosw-ramaEmpresa/vista/it-next/revolution/js/extensions/revolution.extension.actions.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/vista/it-next/revolution/js/extensions/revolution.extension.actions.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Proyectosw-ramaEmpresa/vista/it-next/revolution/js/extensions/revolution.extension.carousel.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/vista/it-next/revolution/js/extensions/revolution.extension.carousel.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Proyectosw-ramaEmpresa/vista/it-next/revolution/js/extensions/revolution.extension.kenburn.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/vista/it-next/revolution/js/extensions/revolution.extension.kenburn.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Proyectosw-ramaEmpresa/vista/it-next/revolution/js/extensions/revolution.extension.layeranimation.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/vista/it-next/revolution/js/extensions/revolution.extension.layeranimation.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Proyectosw-ramaEmpresa/vista/it-next/revolution/js/extensions/revolution.extension.migration.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/vista/it-next/revolution/js/extensions/revolution.extension.migration.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Proyectosw-ramaEmpresa/vista/it-next/revolution/js/extensions/revolution.extension.navigation.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/vista/it-next/revolution/js/extensions/revolution.extension.navigation.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Proyectosw-ramaEmpresa/vista/it-next/revolution/js/extensions/revolution.extension.parallax.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/vista/it-next/revolution/js/extensions/revolution.extension.parallax.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Proyectosw-ramaEmpresa/vista/it-next/revolution/js/extensions/revolution.extension.slideanims.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/vista/it-next/revolution/js/extensions/revolution.extension.slideanims.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Proyectosw-ramaEmpresa/vista/it-next/revolution/js/extensions/revolution.extension.video.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/vista/it-next/revolution/js/extensions/revolution.extension.video.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Proyectosw-ramaEmpresa/vista/it-next/revolution/js/jquery.themepunch.revolution.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/vista/it-next/revolution/js/jquery.themepunch.revolution.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Proyectosw-ramaEmpresa/vista/it-next/revolution/js/jquery.themepunch.tools.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/vista/it-next/revolution/js/jquery.themepunch.tools.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Proyectosw-ramaEmpresa/vista/loginProy.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/controlador/insertarEmpresa.php" beforeDir="false" afterPath="$PROJECT_DIR$/controlador/insertarEmpresa.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controlador/modifcarEmpresa.php" beforeDir="false" afterPath="$PROJECT_DIR$/controlador/modifcarEmpresa.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vista/it-next/inicio.php" beforeDir="false" afterPath="$PROJECT_DIR$/vista/it-next/inicio.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vista/it-next/it_about.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vista/it-next/miPerfil.php" beforeDir="false" afterPath="$PROJECT_DIR$/vista/it-next/miPerfil.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vista/loginProy.css" beforeDir="false" afterPath="$PROJECT_DIR$/vista/loginProy.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -210,6 +81,25 @@
       <workItem from="1599450630514" duration="125000" />
       <workItem from="1599450797940" duration="30000" />
       <workItem from="1599450831582" duration="2657000" />
+      <workItem from="1599583069202" duration="6410000" />
+      <workItem from="1599591075937" duration="1745000" />
+      <workItem from="1599592866176" duration="1814000" />
+      <workItem from="1599594769822" duration="1777000" />
+      <workItem from="1599596602275" duration="1786000" />
+      <workItem from="1599598459435" duration="1864000" />
+      <workItem from="1599600672299" duration="1822000" />
+      <workItem from="1599602568169" duration="1754000" />
+      <workItem from="1599604367377" duration="1776000" />
+      <workItem from="1599606185397" duration="1772000" />
+      <workItem from="1599608029737" duration="1858000" />
+      <workItem from="1599609949629" duration="1275000" />
+      <workItem from="1599611860562" duration="1676000" />
+      <workItem from="1599615709563" duration="1266000" />
+      <workItem from="1599617813722" duration="1021000" />
+      <workItem from="1599619641642" duration="1591000" />
+      <workItem from="1599621996137" duration="1774000" />
+      <workItem from="1599623811552" duration="395000" />
+      <workItem from="1599754645528" duration="2248000" />
     </task>
     <servers />
   </component>
@@ -233,6 +123,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="469" y="0" key="#PHP/0.0.1366.728@0.0.1366.728" timestamp="1599370044292" />
+    <state x="137" y="19" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1599601326829">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="137" y="19" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.728@0.0.1366.728" timestamp="1599601326829" />
     <state x="730" y="92" key="#com.intellij.ide.util.MemberChooser" timestamp="1599370603967">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -245,10 +139,18 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="463" y="119" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1599450826873" />
-    <state x="517" y="287" key="NewPhpFileDialog" timestamp="1599452067802">
+    <state x="447" y="87" key="NewPhpClassDialog" timestamp="1599606801246">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="517" y="287" key="NewPhpFileDialog/0.0.1366.728@0.0.1366.728" timestamp="1599452067802" />
+    <state x="447" y="87" key="NewPhpClassDialog/0.0.1366.728@0.0.1366.728" timestamp="1599606801246" />
+    <state x="517" y="287" key="NewPhpFileDialog" timestamp="1599606811566">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="517" y="287" key="NewPhpFileDialog/0.0.1366.728@0.0.1366.728" timestamp="1599606811566" />
+    <state x="0" y="0" width="1339" height="715" key="dock-window-1" timestamp="1599606158691">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="0" y="0" width="1339" height="715" key="dock-window-1/0.0.1366.728@0.0.1366.728" timestamp="1599606158691" />
     <state x="339" y="162" key="run.anything.popup" timestamp="1599337329665">
       <screen x="0" y="0" width="1366" height="728" />
     </state>

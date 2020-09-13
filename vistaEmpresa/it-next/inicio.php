@@ -71,10 +71,10 @@
                 
                 <li><a href="it_about.html">Mi Perfil</a></li>
                 </li>
-                <li> <a href="it_home.html">Ofertas</a>
+                <li> <a href="ofertas.php">Ofertas</a>
                   <ul>
-                    <li><a href="it_blog.html">Realizar Oferta</a></li>
-                    <li><a href="it_blog_grid.html">Ofertas Realizadas</a></li>
+                    <li><a href="ofertas.php">Realizar Oferta</a></li>
+                    <li><a href="mostrar.php">Ofertas Realizadas</a></li>
                   </ul>
                 </li>
               </ul>
@@ -170,7 +170,7 @@
                               data-splitin="none" 
                               data-splitout="none" 
                               data-responsive_offset="on" 
-                              style="z-index: 7; white-space: nowrap;">SOFIA ES LA MEJOR</div>
+                              style="z-index: 7; white-space: nowrap;"></div>
             </li>
             <li data-index="rs-181" data-transition="zoomin" data-slotamount="7"  data-easein="Power4.easeInOut" data-easeout="Power4.easeInOut" data-masterspeed="2000"  data-thumb="images/it_service/slide2.jpg"  data-rotate="0"  data-saveperformance="off"  data-title="Easy To Use & Customize" data-description="">
               <!-- MAIN IMAGE -->
