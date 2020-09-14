@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPgE html>
 <html lang="en">
 <head>
 <!-- basic -->

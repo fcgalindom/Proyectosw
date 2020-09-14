@@ -159,7 +159,7 @@
   var h = h +1 ;
   console.log(h);
 </SCRIPT>   
-<form action="..\..\controladorEmpresa\eliminarOferta.php" method="post">
+<form action="..\..\\eliminarOferta.php" method="post">
     <center>
                    
     <table class="table">

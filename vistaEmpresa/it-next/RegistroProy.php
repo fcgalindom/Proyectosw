@@ -11,12 +11,12 @@
     <link rel='stylesheet' type='text/css' media='screen' href='loginProy.css'>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
-    <script src="../vistaEmpresa/js/script.js"></script>
+    <script src="js/script.js"></script>
 </head>
 
-<body>
+<body  onload="onload();" >
 
-    <<div class="container-fluid">
+    <div class="container-fluid">
         <div class="row no-gutter">
             <div class="d-none d-md-flex col-md-4 col-lg-6 bg-image"></div>
             <div class="col-md-8 col-lg-6">
@@ -24,15 +24,31 @@
                     <div class="container">
                         <div class="row">
                             <div class="col-md-9 col-lg-8 mx-auto">
-                                <h3 class="login-heading mb-4">Registrarse</h3>
-                                <form action="..\controladorEmpresa\insertarEmpresa.php" method="post"   enctype="multipart/form-data">
+                               <center> <h3 class="login-heading mb-4">Registrarse</h3></center>
+                                <form action="..\..\controladorEmpresa\insertarEmpresa.php" method="post"   enctype="multipart/form-data">
                                     <div class="form-label-group">
                                         <input type="text" id="nombreComercial" name="nombreComercial" class="form-control" placeholder="Nombre Comercial" required autofocus>
-                                        <label for="nombreComercial">Nombre Comercial</label>
                                     </div>
+                                    <br>
                                     <div class="form-label-group">
                                         <input type="text" id="nombreRazonSocial" name="nombreRazonSocial" class="form-control" placeholder="Nombre Razon Social" required autofocus>
-                                        <label for="nombreRazonSocial">Nombre Razon Social</label>
+                                        
+                                    </div>
+                                    <br>
+                                    <div class="form-label-group">
+                                        <input type="text" id="correo" name="correo" class="form-control" placeholder="correo" required autofocus>
+                                        
+                                    </div>
+                                    <br>
+                                    <div class="form-label-group">
+                                        <input type="text" id="password" name="password" class="form-control" placeholder="password" placeholder="password" required autofocus>
+                                        
+                                    </div>
+                                    <br>
+                                    
+                                    <div class="form-label-group">
+                                        <input  type="text" id="confirmarPassword" name="confirmarPassword" class="form-control" placeholder="confirmarPassword" required autofocus>
+ 
                                     </div>
 
 
@@ -42,19 +58,14 @@
                                     <label for="nombreComercial">Subir Achivo Camara de Comercio con nombre de la Empresa</label>
                                     <br>
                                     <br>
+                                    
+                                    
+                                    
                                         <input type="file" name="camaraComercio"  id="camaraComercio" required   onchange="return validacionImagen()">
-
-                                        </p>
                                     </div>
-
-
-
-
-
-
-
-                                    <button class="btn btn-lg btn-primary btn-block btn-login text-uppercase font-weight-bold mb-2" type="submit">Registrarse</button>
-
+                                    
+                                    
+                                    <button class="btn btn-lg btn-primary btn-block btn-login text-uppercase font-weight-bold mb-2" type="submit" onclick="return kk()">Registrarse</button>
                                 </form>
                             </div>
                         </div>

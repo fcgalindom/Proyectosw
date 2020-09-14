@@ -56,7 +56,30 @@ function validacionImagen2() {
         }
     }
 
-
-
 }
-
+var lolz;
+var  lolz2;
+function onload() { 
+    lolz = document.getElementById('confirmarPassword');
+    lolz2 = document.getElementById('password');
+    
+}
+function kk(){
+        
+         
+         if(lolz.value == lolz2.value ){
+            
+            return true;
+         }
+         else{
+            alert('las contraseñas no coinciden');
+            return false;
+        }
+        
+    
+   
+    
+  
+    
+    
+}
