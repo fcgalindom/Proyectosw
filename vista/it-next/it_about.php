@@ -531,15 +531,15 @@
          <div class="row">
 
          <div class="col">
-          <button type="submit" id="enviar" href="../../controlador/PDF/pruebadescarga.php" class="btn btn-primary btn-lg btn-block">Guardar</button>
+          <button type="submit" id="enviar"class="btn btn-lg btn-block">Guardar</button>
+          <button type="button" onclick="location.href='../../controlador/PDF/pruebadescarga.php?ky=$codigo'" class="btn  btn-block">Descargar</button>
          </div>
 
-       </div>
-         </form>
-         <div id="alertas3">
-                                       
         </div>
- </div>
+         </form>
+         <div id="alertas3">                             
+        </div>
+         </div>
 </div>
 <!-- end section -->
 
