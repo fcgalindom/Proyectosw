@@ -67,16 +67,16 @@
           <div class="menu_side">
             <div id="navbar_menu">
               <ul class="first-ul">
-                <li> <a  href="it_home.html">Home</a>
+                <li> <a  href="it_home.php">Home</a>
                   
                 </li>
-                <li><a class="active" href="it_about.html">Hoja de Vida</a></li>
+                <li><a class="active" href="it_about.php">Hoja de Vida</a></li>
                   
                 </li>
-                <li> <a href="it_blog.html">Mis ofertas</a>
+                <li> <a href="it_blog.php">Mis ofertas</a>
                   
                 </li>
-                <li> <a  href="it_contact.html">Datos de Contacto</a>
+                <li> <a  href="it_contact.php">Datos de Contacto</a>
                   
                 </li>              
               </ul>

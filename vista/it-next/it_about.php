@@ -366,7 +366,7 @@
     <div class="form-group">
      <label class="font-weight-bold">Experiencia Academica (opcional)</label>
       <br>
-       <label>Proyectos </label>
+       <label>Proyectos</label>
        <div class="row">
          <div class="col">
           <input type="text" name="nom_exp_academica" class="form-control" placeholder="Titulo del Proyecto">
@@ -396,9 +396,6 @@
           <textarea type="number" class="form-control" placeholder="Conocimientos Aplicados"></textarea>
          </div>
 
-         <div class="col">
-          <input type="number" class="form-control" placeholder="Materia/Asignatura">
-         </div>
        </div>
 
        <br>
@@ -415,9 +412,6 @@
           <textarea type="number" class="form-control" placeholder="Conocimientos Aplicados"></textarea>
          </div>
 
-         <div class="col">
-          <input type="number" class="form-control" placeholder="Materia/Asignatura">
-         </div>
        </div>
     </div>
 

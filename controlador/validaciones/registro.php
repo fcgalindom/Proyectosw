@@ -30,7 +30,7 @@ else {
 
 		}else{
 
-			if($contrasenia !== $con_contrasenia){
+			if($contrasenia != $con_contrasenia){
 					echo json_encode('CONTRASENIAS NO COINCIDEN');
 
 			}else {
@@ -41,5 +41,8 @@ else {
 		}	
 	}
 }
+<<<<<<< HEAD:controlador/validaciones/registro.php
 
 
+=======
+>>>>>>> 042f74db9287699f466f66c8d7657eedfd00fca6:controlador/registro.php

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,6 +7,13 @@
     <title>El bosque</title>
      <!-- Required meta tags -->
      <meta charset="utf-8">
+=======
+<head>
+<!doctype html>
+<html lang="es">
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+>>>>>>> 042f74db9287699f466f66c8d7657eedfd00fca6
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Bootstrap CSS -->
