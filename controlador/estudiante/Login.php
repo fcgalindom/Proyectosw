@@ -1,5 +1,7 @@
 <?php
 include("../../modelo/conexion.php");
+include("../../modelo/Codigo.php");
+$cod = new Codigo();
 $email = $_GET['email'];
 $password = $_GET['password'];
 
@@ -20,7 +22,7 @@ while ($fila = mysqli_fetch_array($resultado))
 }
 
 if($encontrado)
-{
+{ 
     header("Location: ../../vista/it-next/it_about.php?ky=$codigo");
 }
 else{

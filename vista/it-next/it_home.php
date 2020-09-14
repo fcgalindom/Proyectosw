@@ -3,6 +3,7 @@
 include("../../modelo/conexion.php");
 $conexion = conectar();
 
+$codigo = $_GET['ky'];
 $sql = "SELECT
 cod_estudiante
 FROM
@@ -10,7 +11,7 @@ perfil, estudiante, formacion_academica
 WHERE
 perfil.cod_perfil = estudiante.cod_estudiante AND
 formacion_academica.cod_f_academica = estudiante.cod_estudiante AND
-cod_estudiante = 1";
+cod_estudiante = $codigo";
 
 $resultado = mysqli_query($conexion, $sql);
 mysqli_close($conexion);
@@ -22,7 +23,7 @@ foreach ($resultado as $key)
 
 if($llave == null)
 {
-   header("Location: it_about.php");
+   header("Location: it_about.php?ky=$codigo");
 }
 ?>
 
@@ -96,13 +97,17 @@ if($llave == null)
           <div class="menu_side">
             <div id="navbar_menu">
               <ul class="first-ul">
-                <li> <a class="active" href="it_home.php">Home</a>
+                <li> 
+                  <a class="active" href="<?php echo "it_home.php?ky=$codigo" ?>">Home</a>
                 </li>
-                <li><a href="it_about.php">Hoja de Vida</a></li>
+                <li>
+                  <a href="<?php echo "it_about.php?ky=$codigo" ?>">Hoja de Vida</a>
                 </li>
-                <li> <a href="it_blog.php">Mis ofertas</a>
+                <li> 
+                  <a href="<?php echo "it_blog.php?ky=$codigo" ?>">Mis ofertas</a>
                 </li>
-                <li> <a href="it_contact.php">Datos de Contacto</a>
+                <li> 
+                  <a href="<?php echo "it_contact?ky=$codigo" ?>">Datos de Contacto</a>
                 </li>              
               </ul>
             </div>
