@@ -16,7 +16,6 @@ function guardarPerfil()
 // finalizado
 function guardarFormacionAcademica()
 {
-    #include("../../modelo/conexion.php");
     $conexion = conectar();
     $key = $_POST['key'];
     $ins_bachiller  = $_POST['ins_bachiller'];
@@ -63,8 +62,22 @@ function guardarReferencias()
     $nombre = $_POST['nom_referencia'];
     $cargo = $_POST['cargo_referencia'];
     $celular = $_POST['celular_referencia'];
-    $sql = "INSERT INTO REFERENCIA VALUES(0,'$nombre','$cargo',$celular,$key)";
-    mysqli_query($conexion,$sql);
+
+    if($nombre != '' && $cargo != '' && $celular != '')
+    {
+        $sql = "INSERT INTO REFERENCIA VALUES(0,'$nombre','$cargo',$celular,$key)";
+        mysqli_query($conexion,$sql);
+    }
+
+    $nombre = $_POST['nom_referencia2'];
+    $cargo = $_POST['cargo_referencia2'];
+    $celular = $_POST['celular_referencia2'];
+
+    if($nombre != '' && $cargo != '' && $celular != '')
+    {
+        $sql = "INSERT INTO REFERENCIA VALUES(0,'$nombre','$cargo',$celular,$key)";
+        mysqli_query($conexion,$sql);
+    }
     mysqli_close($conexion);
 }
 
@@ -91,13 +104,15 @@ function guardarCertificaciones()
     $ins_certificado = $_POST['ins_certificado'];
     $fec_certificado = $_POST['fec_certificado'];
     $horas = $_POST['cant_horas'];
-    $sql = "INSERT INTO CERTIFICACION VALUES(0,'$nombre_cer','$fec_certificado','$ins_certificado',$horas,$key)";
-    #echo $sql;
-    mysqli_query($conexion,$sql);
+    if($nombre_cer != '' && $ins_certificado != '' && $fec_certificado != '' && $horas != '')
+    {
+        $sql = "INSERT INTO CERTIFICACION VALUES(0,'$nombre_cer','$fec_certificado','$ins_certificado',$horas,$key)";
+        mysqli_query($conexion,$sql);
+    }
     mysqli_close($conexion);
 }
 
-guardarPerfil();
+#guardarPerfil();
 #guardarFormacionAcademica();
 #guardar_f_tecnica();
 #guardarCertificaciones();

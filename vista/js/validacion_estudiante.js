@@ -1,7 +1,5 @@
 var formulario = document.getElementById('formulario')
 var alertas = document.getElementById('alertas')
-var algo = ""
-var otro = ""
 
 formulario.addEventListener('submit',function(e){
    e.preventDefault()
