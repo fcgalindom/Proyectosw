@@ -1,19 +1,8 @@
-<<<<<<< HEAD
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>El bosque</title>
-     <!-- Required meta tags -->
-     <meta charset="utf-8">
-=======
 <head>
 <!doctype html>
 <html lang="es">
     <!-- Required meta tags -->
     <meta charset="utf-8">
->>>>>>> 042f74db9287699f466f66c8d7657eedfd00fca6
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Bootstrap CSS -->
@@ -67,7 +56,7 @@
                                         $carrera = mysqli_query($conexion,$sql);
                                         while ($fila = mysqli_fetch_array($carrera)) 
                                         { ?>
-                                            <option value="<?php echo $fila['cod_carrera'] ?>"><?php echo $fila['nom_carrera'] ?></option>
+                                            <option value="<?php echo $fila['cod_carrera'] ?>"><?php echo $fila['nom_carrea'] ?></option>
                                         <?php }
                                         ?>
                                         <option value="Carrera" selected>Carrera</option>
