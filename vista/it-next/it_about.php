@@ -178,17 +178,6 @@
        <div class="row">
         <br>
         <div class="col">
-<<<<<<< HEAD
-          <input type="text" class="form-control"   name="tecnicoInst2" placeholder="Institucion Academica">
-         </div>
-
-         <div class="col">
-          <input type="text" class="form-control"  name="tecnicoTit2" placeholder="Titulo Tecnico">
-         </div>
-
-         <div class="col">
-          <input type="date" class="form-control"  name="tecnicoFecha2" placeholder="Fecha de Grado">
-=======
           <input type="text" name="institucion2" class="form-control"   id="tecnicoInst2" placeholder="Institucion Academica">
          </div>
 
@@ -198,7 +187,6 @@
 
          <div class="col">
           <input type="date" name="fec_tecnico2" class="form-control"  id="tecnicoFecha2" placeholder="Fecha de Grado">
->>>>>>> e0c43689bfeb160b195c7dbd21f364cbb01f71cc
          </div>
 
        </div>
@@ -206,17 +194,6 @@
        <div class="row">
         
         <div class="col">
-<<<<<<< HEAD
-          <input type="text" class="form-control"   name="tecnicoInst3" placeholder="Institucion Academica">
-         </div>
-
-         <div class="col">
-          <input type="text" class="form-control"  name="tecnicoTit3" placeholder="Titulo Tecnico">
-         </div>
-
-         <div class="col">
-          <input type="date" class="form-control"  name="tecnicoFecha3" placeholder="Fecha de Grado">
-=======
           <input type="text" name="institucion3" class="form-control"   id="tecnicoInst3" placeholder="Institucion Academica">
          </div>
 
@@ -226,7 +203,6 @@
 
          <div class="col">
           <input type="date" name="fec_tecnico3" class="form-control"  id="tecnicoFecha3" placeholder="Fecha de Grado">
->>>>>>> e0c43689bfeb160b195c7dbd21f364cbb01f71cc
          </div>
 
        </div>
@@ -237,17 +213,6 @@
       <div class="row">
         
         <div class="col">
-<<<<<<< HEAD
-          <input type="text" class="form-control"  name="tecnologoInst" placeholder="Institucion Academica">
-         </div>
-
-         <div class="col">
-          <input type="text" class="form-control"  name="tecnologoTit" placeholder="Titulo Tecnologo">
-         </div>
-
-         <div class="col">
-          <input type="date" class="form-control"  name="tecnologoFecha" placeholder="Fecha de Grado">
-=======
           <input type="text" name="institucion4" class="form-control"  id="tecnologoInst" placeholder="Institucion Academica">
          </div>
 
@@ -257,7 +222,6 @@
 
          <div class="col">
           <input type="date" name="fec_tecnologo" class="form-control"  id="tecnologoFecha" placeholder="Fecha de Grado">
->>>>>>> e0c43689bfeb160b195c7dbd21f364cbb01f71cc
          </div>
 
        </div>
@@ -265,17 +229,6 @@
        <div class="row">
         
         <div class="col">
-<<<<<<< HEAD
-          <input type="text" class="form-control"  name="tecnologoInst2" placeholder="Institucion Academica">
-         </div>
-
-         <div class="col">
-          <input type="text" class="form-control"  name="tecnologoTit2" placeholder="Titulo Tecnologo">
-         </div>
-
-         <div class="col">
-          <input type="date" class="form-control"  name="tecnologoFecha2" placeholder="Fecha de Grado">
-=======
           <input type="text" name="institucion5" class="form-control"  id="tecnologoInst2" placeholder="Institucion Academica">
          </div>
 
@@ -285,7 +238,6 @@
 
          <div class="col">
           <input type="date" name="fec_tecnologo2" class="form-control"  id="tecnologoFecha2" placeholder="Fecha de Grado">
->>>>>>> e0c43689bfeb160b195c7dbd21f364cbb01f71cc
          </div>
 
        </div>
@@ -293,17 +245,6 @@
        <div class="row">
         
         <div class="col">
-<<<<<<< HEAD
-          <input type="text" class="form-control"  name="tecnologoInst3" placeholder="Institucion Academica">
-         </div>
-
-         <div class="col">
-          <input type="text" class="form-control"  name="tecnologoTit3" placeholder="Titulo Tecnologo">
-         </div>
-
-         <div class="col">
-          <input type="date" class="form-control"  name="tecnologoFecha3" placeholder="Fecha de Grado">
-=======
           <input type="text" name="institucion6" class="form-control"  id="tecnologoInst3" placeholder="Institucion Academica">
          </div>
 
@@ -313,7 +254,6 @@
 
          <div class="col">
           <input type="date" name="fec_tecnologo3" class="form-control"  id="tecnologoFecha3" placeholder="Fecha de Grado">
->>>>>>> e0c43689bfeb160b195c7dbd21f364cbb01f71cc
          </div>
 
        </div>
@@ -457,14 +397,8 @@
          </div>
 
          <div class="col">
-<<<<<<< HEAD
-          <textarea type="text" class="form-control" placeholder="Conocimientos Aplicados"></textarea>
+          <textarea type="text" name="con_aplicados2" class="form-control" placeholder="Conocimientos Aplicados"></textarea>
          </div>
-
-=======
-          <textarea type="number" name="con_aplicados2" class="form-control" placeholder="Conocimientos Aplicados"></textarea>
-         </div>
->>>>>>> e0c43689bfeb160b195c7dbd21f364cbb01f71cc
        </div>
 
        <br>
@@ -474,18 +408,12 @@
          </div>
 
          <div class="col">
-<<<<<<< HEAD
-          <textarea type="text" class="form-control" placeholder="Conocimientos Aplicados"></textarea>
-         </div>
-
-=======
           <input type="text" name="materia3" class="form-control" placeholder="Materia/Asignatura">
          </div>
 
          <div class="col">
           <textarea type="number" name="con_aplicados3" class="form-control" placeholder="Conocimientos Aplicados"></textarea>
          </div>
->>>>>>> e0c43689bfeb160b195c7dbd21f364cbb01f71cc
        </div>
     </div>
 
