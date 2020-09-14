@@ -33,11 +33,8 @@
                                         <label for="inputPassword">Password</label>
                                     </div>
 
-                                    <div class="custom-control custom-checkbox mb-3">
-                                        <input type="checkbox" class="custom-control-input" id="customCheck1">
-
-                                    </div>
                                     <button class="btn btn-lg btn-primary btn-block btn-login text-uppercase font-weight-bold mb-2" type="submit">Ingresar</button>
+                                    
                                     <div class="text-center">
                                         <a class="small" href="registroProy.php">Registrarse como Estudiante</a></div>
                                     <div class="text-center">

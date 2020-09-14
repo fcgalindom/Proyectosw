@@ -249,33 +249,34 @@ function Footer()
 }
 
 require 'conec.php';
-$codigo=1;
 
-$con_header = "SELECT nom_estudiante, telefono, correo, direccion FROM estudiante WHERE cod_estudiante=$codigo";
+$code=1;
+
+$con_header = "SELECT nom_estudiante, telefono, correo, direccion FROM estudiante WHERE cod_estudiante=$code";
 $header = $mysqli->query($con_header);
 
 $con_obligatorios = "SELECT ins_bachiller, titulo_bachiller, fec_fin_bachiller, idiomas, descripcion 
                     FROM estudiante, perfil, formacion_academica
                     WHERE PERFIL.cod_perfil=ESTUDIANTE.cod_estudiante AND FORMACION_ACADEMICA.cod_f_academica = ESTUDIANTE.cod_estudiante 
-                    AND cod_estudiante=$codigo";
+                    AND cod_estudiante=$code";
 $obligatorios = $mysqli->query($con_obligatorios);
 
-$con_tecnico = "SELECT nom_f_tecnica, ins_f_tecnica, f_final_f_tecnica FROM f_tecnica WHERE nivel=1 AND cod_f_academica=$codigo ";
+$con_tecnico = "SELECT nom_f_tecnica, ins_f_tecnica, f_final_f_tecnica FROM f_tecnica WHERE nivel=1 AND cod_f_academica=$code ";
 $tecnico = $mysqli->query($con_tecnico);
 
-$con_tecnologo = "SELECT nom_f_tecnica, ins_f_tecnica, f_final_f_tecnica FROM f_tecnica WHERE nivel=2 AND cod_f_academica=$codigo ";
+$con_tecnologo = "SELECT nom_f_tecnica, ins_f_tecnica, f_final_f_tecnica FROM f_tecnica WHERE nivel=2 AND cod_f_academica=$code ";
 $tecnologo = $mysqli->query($con_tecnologo);
 
-$con_complementaria = "SELECT nom_certificacion, f_final_f_tecnica, ins_f_tecnica, cant_horas FROM certificacion WHERE cod_f_academica=$codigo ";
+$con_complementaria = "SELECT nom_certificacion, f_final_f_tecnica, ins_f_tecnica, cant_horas FROM certificacion WHERE cod_f_academica=$code ";
 $complementaria = $mysqli->query($con_complementaria);
 
-$con_expaca = "SELECT nom_exp_academica, con_aplicados, materia FROM exp_academica WHERE cod_estudiante=$codigo ";
+$con_expaca = "SELECT nom_exp_academica, con_aplicados, materia FROM exp_academica WHERE cod_estudiante=$code ";
 $expaca = $mysqli->query($con_expaca);
 
-$con_explabo = "SELECT cargo, empresa, fun_principales, fecha_fin FROM exp_laboral WHERE cod_estudiante=$codigo ";
+$con_explabo = "SELECT cargo, empresa, fun_principales, fecha_fin FROM exp_laboral WHERE cod_estudiante=$code ";
 $explaboral = $mysqli->query($con_explabo);
 
-$con_referencias = "SELECT nom_ref, cargo_ref, tel_ref FROM referencia WHERE cod_estudiante=$codigo ";
+$con_referencias = "SELECT nom_ref, cargo_ref, tel_ref FROM referencia WHERE cod_estudiante=$code ";
 $referencias = $mysqli->query($con_referencias);
 
 

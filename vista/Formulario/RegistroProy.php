@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 <head>
+=======
+>>>>>>> a2398f22746ce97f8252c426a190fba1036ad3c2
 <!doctype html>
 <html lang="es">
     <!-- Required meta tags -->
