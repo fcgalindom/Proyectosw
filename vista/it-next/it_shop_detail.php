@@ -70,7 +70,7 @@
                 <li> <a  href="it_home.php">Home</a>
                   
                 </li>
-                <li><a class="active" href="it_about.php">Hoja de Vida</a></li>
+                <li><a href="it_about.php">Hoja de Vida</a></li>
                   
                 </li>
                 <li> <a href="it_blog.php">Mis ofertas</a>

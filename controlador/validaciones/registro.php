@@ -34,7 +34,6 @@ else {
 					echo json_encode('CONTRASENIAS NO COINCIDEN');
 
 			}else {
-
 					echo json_encode('correcto');	
 			} 
 			

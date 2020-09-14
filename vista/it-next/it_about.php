@@ -125,10 +125,13 @@
     </div>
     <div class="form-group">
     <form id="hojaDeVida">
+    <form action="../../controlador/hoja_vida_registro/CRUD_estudiante.php" method="POST">
+    <input type="hidden" name="key" value="<?php echo $_GET['ky'] ?>">
+
       <label class="font-weight-bold">Perfil Profesional</label>
       <br>
       <label >Conocimientos, habilidades, experiencia, competencias, areas de gusto, cualidades</label>
-      <textarea name="perfil" class="form-control" rows="5" required></textarea>
+      <textarea name="perfil" class="form-control" maxlenght="10"  rows="5" required></textarea>
     </div>
 
     <br>
@@ -377,7 +380,7 @@
          </div>
 
          <div class="col">
-          <textarea type="number" name="con_aplicados" class="form-control" placeholder="Conocimientos Aplicados"></textarea>
+          <textarea type="text" name="con_aplicados" class="form-control" placeholder="Conocimientos Aplicados"></textarea>
          </div>
        </div>
 
@@ -393,7 +396,7 @@
          </div>
 
          <div class="col">
-          <textarea type="number" class="form-control" placeholder="Conocimientos Aplicados"></textarea>
+          <textarea type="text" class="form-control" placeholder="Conocimientos Aplicados"></textarea>
          </div>
 
        </div>
@@ -409,7 +412,7 @@
          </div>
 
          <div class="col">
-          <textarea type="number" class="form-control" placeholder="Conocimientos Aplicados"></textarea>
+          <textarea type="text" class="form-control" placeholder="Conocimientos Aplicados"></textarea>
          </div>
 
        </div>
@@ -528,12 +531,9 @@
     <br>
     <br>
          <div class="row">
-         <div class="col">
-         <button type="button" class="btn btn-danger btn-lg btn-block">Imprimir</button>
-         </div>
 
          <div class="col">
-          <button type="submit" id="enviar" class="btn btn-primary btn-lg btn-block">Guardar</button>
+          <button type="submit" id="enviar" href="../../controlador/PDF/pruebadescarga.php" class="btn btn-primary btn-lg btn-block">Guardar</button>
          </div>
 
        </div>
@@ -598,6 +598,3 @@
 <!-- custom js -->
 <script src="js/custom.js"></script>
 <script>
-
-</body>
-</html>
