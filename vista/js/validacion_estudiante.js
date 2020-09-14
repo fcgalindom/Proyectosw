@@ -1,10 +1,5 @@
-<<<<<<< HEAD
-var formulario = document.getElementById('formulario');
-var alertas = document.getElementById('alertas');
-=======
 var formulario = document.getElementById('formulario')
 var alertas = document.getElementById('alertas')
->>>>>>> e0c43689bfeb160b195c7dbd21f364cbb01f71cc
 
 formulario.addEventListener('submit',function(e){
    e.preventDefault()
