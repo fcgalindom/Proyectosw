@@ -1,3 +1,31 @@
+<?php
+
+include("../../modelo/conexion.php");
+$conexion = conectar();
+
+$sql = "SELECT
+cod_estudiante
+FROM
+perfil, estudiante, formacion_academica
+WHERE
+perfil.cod_perfil = estudiante.cod_estudiante AND
+formacion_academica.cod_f_academica = estudiante.cod_estudiante AND
+cod_estudiante = 1";
+
+$resultado = mysqli_query($conexion, $sql);
+mysqli_close($conexion);
+$llave = 0;
+foreach ($resultado as $key) 
+{
+  $llave = $key['cod_estudiante'];
+}
+
+if($llave == null)
+{
+   header("Location: it_about.php");
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>

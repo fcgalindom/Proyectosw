@@ -123,6 +123,7 @@
         </div>
       </div>
     </div>
+    <!-- -->
     <div class="form-group">
     <form id="hojaDeVida">
     <form action="../../controlador/hoja_vida_registro/CRUD_estudiante.php" method="POST">
@@ -177,6 +178,7 @@
        <div class="row">
         <br>
         <div class="col">
+<<<<<<< HEAD
           <input type="text" class="form-control"   name="tecnicoInst2" placeholder="Institucion Academica">
          </div>
 
@@ -186,6 +188,17 @@
 
          <div class="col">
           <input type="date" class="form-control"  name="tecnicoFecha2" placeholder="Fecha de Grado">
+=======
+          <input type="text" name="institucion2" class="form-control"   id="tecnicoInst2" placeholder="Institucion Academica">
+         </div>
+
+         <div class="col">
+          <input type="text" name="nom_tecnico2" class="form-control"  id="tecnicoTit2" placeholder="Titulo Tecnico">
+         </div>
+
+         <div class="col">
+          <input type="date" name="fec_tecnico2" class="form-control"  id="tecnicoFecha2" placeholder="Fecha de Grado">
+>>>>>>> e0c43689bfeb160b195c7dbd21f364cbb01f71cc
          </div>
 
        </div>
@@ -193,6 +206,7 @@
        <div class="row">
         
         <div class="col">
+<<<<<<< HEAD
           <input type="text" class="form-control"   name="tecnicoInst3" placeholder="Institucion Academica">
          </div>
 
@@ -202,6 +216,17 @@
 
          <div class="col">
           <input type="date" class="form-control"  name="tecnicoFecha3" placeholder="Fecha de Grado">
+=======
+          <input type="text" name="institucion3" class="form-control"   id="tecnicoInst3" placeholder="Institucion Academica">
+         </div>
+
+         <div class="col">
+          <input type="text" name="nom_tecnico3" class="form-control"  id="tecnicoTit3" placeholder="Titulo Tecnico">
+         </div>
+
+         <div class="col">
+          <input type="date" name="fec_tecnico3" class="form-control"  id="tecnicoFecha3" placeholder="Fecha de Grado">
+>>>>>>> e0c43689bfeb160b195c7dbd21f364cbb01f71cc
          </div>
 
        </div>
@@ -212,6 +237,7 @@
       <div class="row">
         
         <div class="col">
+<<<<<<< HEAD
           <input type="text" class="form-control"  name="tecnologoInst" placeholder="Institucion Academica">
          </div>
 
@@ -221,6 +247,17 @@
 
          <div class="col">
           <input type="date" class="form-control"  name="tecnologoFecha" placeholder="Fecha de Grado">
+=======
+          <input type="text" name="institucion4" class="form-control"  id="tecnologoInst" placeholder="Institucion Academica">
+         </div>
+
+         <div class="col">
+          <input type="text" name="nom_tecnologo" class="form-control"  id="tecnologoTit" placeholder="Titulo Tecnologo">
+         </div>
+
+         <div class="col">
+          <input type="date" name="fec_tecnologo" class="form-control"  id="tecnologoFecha" placeholder="Fecha de Grado">
+>>>>>>> e0c43689bfeb160b195c7dbd21f364cbb01f71cc
          </div>
 
        </div>
@@ -228,6 +265,7 @@
        <div class="row">
         
         <div class="col">
+<<<<<<< HEAD
           <input type="text" class="form-control"  name="tecnologoInst2" placeholder="Institucion Academica">
          </div>
 
@@ -237,6 +275,17 @@
 
          <div class="col">
           <input type="date" class="form-control"  name="tecnologoFecha2" placeholder="Fecha de Grado">
+=======
+          <input type="text" name="institucion5" class="form-control"  id="tecnologoInst2" placeholder="Institucion Academica">
+         </div>
+
+         <div class="col">
+          <input type="text" name="nom_tecnologo2" class="form-control"  id="tecnologoTit2" placeholder="Titulo Tecnologo">
+         </div>
+
+         <div class="col">
+          <input type="date" name="fec_tecnologo2" class="form-control"  id="tecnologoFecha2" placeholder="Fecha de Grado">
+>>>>>>> e0c43689bfeb160b195c7dbd21f364cbb01f71cc
          </div>
 
        </div>
@@ -244,6 +293,7 @@
        <div class="row">
         
         <div class="col">
+<<<<<<< HEAD
           <input type="text" class="form-control"  name="tecnologoInst3" placeholder="Institucion Academica">
          </div>
 
@@ -253,6 +303,17 @@
 
          <div class="col">
           <input type="date" class="form-control"  name="tecnologoFecha3" placeholder="Fecha de Grado">
+=======
+          <input type="text" name="institucion6" class="form-control"  id="tecnologoInst3" placeholder="Institucion Academica">
+         </div>
+
+         <div class="col">
+          <input type="text" name="nom_tecnologo3" class="form-control"  id="tecnologoTit3" placeholder="Titulo Tecnologo">
+         </div>
+
+         <div class="col">
+          <input type="date" name="fec_tecnologo3" class="form-control"  id="tecnologoFecha3" placeholder="Fecha de Grado">
+>>>>>>> e0c43689bfeb160b195c7dbd21f364cbb01f71cc
          </div>
 
        </div>
@@ -286,39 +347,19 @@
 
        <div class="row">
          <div class="col">
-          <input type="text" class="form-control" placeholder="Nombre">
+          <input type="text" name="nombre_certificacion2" class="form-control" placeholder="Nombre">
          </div>
 
          <div class="col">
-          <input type="text" class="form-control" placeholder="Institucion">
+          <input type="text" name="ins_certificado2" class="form-control" placeholder="Institucion">
          </div>
 
          <div class="col">
-          <input type="date" class="form-control" placeholder="Fecha">
+          <input type="date" name="fec_certificado2" class="form-control" placeholder="Fecha">
          </div>
 
          <div class="col">
-          <input type="number" class="form-control" placeholder="Horas">
-         </div>
-       </div>
-
-       <br>
-
-       <div class="row">
-         <div class="col">
-          <input type="text" class="form-control" placeholder="Nombre">
-         </div>
-
-         <div class="col">
-          <input type="text" class="form-control" placeholder="Institucion">
-         </div>
-
-         <div class="col">
-          <input type="date" class="form-control" placeholder="Fecha">
-         </div>
-
-         <div class="col">
-          <input type="number" class="form-control" placeholder="Horas">
+          <input type="number" name="cant_horas2" class="form-control" placeholder="Horas">
          </div>
        </div>
 
@@ -326,19 +367,39 @@
 
        <div class="row">
          <div class="col">
-          <input type="text" class="form-control" placeholder="Nombre">
+          <input type="text" name="nombre_certificacion3" class="form-control" placeholder="Nombre">
          </div>
 
          <div class="col">
-          <input type="text" class="form-control" placeholder="Institucion">
+          <input type="text" name="ins_certificado3" class="form-control" placeholder="Institucion">
+         </div>
+
+         <div class="col">
+          <input type="date" name="fec_certificado3" class="form-control" placeholder="Fecha">
+         </div>
+
+         <div class="col">
+          <input type="number" name="cant_horas3" class="form-control" placeholder="Horas">
+         </div>
+       </div>
+
+       <br>
+
+       <div class="row">
+         <div class="col">
+          <input type="text" name="nombre_certificacion4" class="form-control" placeholder="Nombre">
+         </div>
+
+         <div class="col">
+          <input type="text" name="ins_certificado4" class="form-control" placeholder="Institucion">
          </div>
          
          <div class="col">
-          <input type="date" class="form-control" placeholder="Fecha">
+          <input type="date" name="fec_certificado4" class="form-control" placeholder="Fecha">
          </div>
 
          <div class="col">
-          <input type="number" class="form-control" placeholder="Horas">
+          <input type="number" name="cant_horas4" class="form-control" placeholder="Horas">
          </div>
        </div>
 
@@ -388,33 +449,43 @@
 
        <div class="row">
          <div class="col">
-          <input type="text" class="form-control" placeholder="Titulo del Proyecto">
+          <input type="text" name="nom_exp_academica2" class="form-control" placeholder="Titulo del Proyecto">
          </div>
 
          <div class="col">
-          <input type="text" class="form-control" placeholder="Materia/Asignatura">
+          <input type="text" name="materia2" class="form-control" placeholder="Materia/Asignatura">
          </div>
 
          <div class="col">
+<<<<<<< HEAD
           <textarea type="text" class="form-control" placeholder="Conocimientos Aplicados"></textarea>
          </div>
 
+=======
+          <textarea type="number" name="con_aplicados2" class="form-control" placeholder="Conocimientos Aplicados"></textarea>
+         </div>
+>>>>>>> e0c43689bfeb160b195c7dbd21f364cbb01f71cc
        </div>
 
        <br>
        <div class="row">
          <div class="col">
-          <input type="text" class="form-control" placeholder="Titulo del Proyecto">
+          <input type="text" name="nom_exp_academica3" class="form-control" placeholder="Titulo del Proyecto">
          </div>
 
          <div class="col">
-          <input type="text" class="form-control" placeholder="Materia/Asignatura">
-         </div>
-
-         <div class="col">
+<<<<<<< HEAD
           <textarea type="text" class="form-control" placeholder="Conocimientos Aplicados"></textarea>
          </div>
 
+=======
+          <input type="text" name="materia3" class="form-control" placeholder="Materia/Asignatura">
+         </div>
+
+         <div class="col">
+          <textarea type="number" name="con_aplicados3" class="form-control" placeholder="Conocimientos Aplicados"></textarea>
+         </div>
+>>>>>>> e0c43689bfeb160b195c7dbd21f364cbb01f71cc
        </div>
     </div>
 
@@ -422,7 +493,6 @@
     <div class="form-group">
      <label class="font-weight-bold">Experiencia Laboral (opcional)</label>
       <br>
-       <label>Ingrese la fecha de finalizacion</label>
        <div class="row">
          <div class="col">
           <input type="text" name="cargo" class="form-control" placeholder="Cargo">
@@ -433,7 +503,7 @@
          </div>
 
          <div class="col">
-          <input type="date" name="fecha_fin_exp_laboral" class="form-control" placeholder="Fecha finalizacion">
+          <input type="date" name="fecha_fin" class="form-control" placeholder="Fecha finalizacion">
          </div>
 
          <div class="col">
@@ -443,55 +513,55 @@
        <br>
        <div class="row">
          <div class="col">
-          <input type="text" class="form-control" placeholder="Cargo">
+          <input type="text" name="cargo2" class="form-control" placeholder="Cargo">
          </div>
 
          <div class="col">
-          <input type="text" class="form-control" placeholder="Empresa">
+          <input type="text" name="empresa2" class="form-control" placeholder="Empresa">
          </div>
 
          <div class="col">
-          <input type="date" name="fecha_fin" class="form-control" placeholder="Fecha finalizacion">
+          <input type="date" name="fecha_fin2" class="form-control" placeholder="Fecha finalizacion">
          </div>
 
          <div class="col">
-          <textarea type="text" class="form-control" placeholder="Funciones Principales"></textarea>
+          <textarea type="text" name="fun_principales2" class="form-control" placeholder="Funciones Principales"></textarea>
          </div>
        </div>
        <br>
        <div class="row">
          <div class="col">
-          <input type="text" class="form-control" placeholder="Cargo">
+          <input type="text" name="cargo3" class="form-control" placeholder="Cargo">
          </div>
 
          <div class="col">
-          <input type="text" class="form-control" placeholder="Empresa">
+          <input type="text" name="empresa3" class="form-control" placeholder="Empresa">
          </div>
 
          <div class="col">
-          <input type="date" class="form-control" placeholder="Fecha finalizacion">
+          <input type="date" name="fecha_fin3" class="form-control" placeholder="Fecha finalizacion">
          </div>
 
          <div class="col">
-          <textarea type="text" class="form-control" placeholder="Funciones Principales"></textarea>
+          <textarea type="text" name="fun_principales3" class="form-control" placeholder="Funciones Principales"></textarea>
          </div>
        </div>
        <br>
        <div class="row">
          <div class="col">
-          <input type="text" class="form-control" placeholder="Cargo">
+          <input type="text" name="cargo4" class="form-control" placeholder="Cargo">
          </div>
 
          <div class="col">
-          <input type="text" class="form-control" placeholder="Empresa">
+          <input type="text" name="empresa4" class="form-control" placeholder="Empresa">
          </div>
 
          <div class="col">
-          <input type="date" class="form-control" placeholder="Fecha finalizacion">
+          <input type="date" name="fecha_fin4" class="form-control" placeholder="Fecha finalizacion">
          </div>
 
          <div class="col">
-          <textarea type="text" class="form-control" placeholder="Funciones Principales"></textarea>
+          <textarea type="text" name="fun_principales4" class="form-control" placeholder="Funciones Principales"></textarea>
          </div>
        </div>
     </div>
@@ -516,15 +586,15 @@
 
        <div class="row">
          <div class="col">
-          <input type="text" class="form-control" placeholder="Nombre Completo">
+          <input type="text" name="nom_referencia2" class="form-control" placeholder="Nombre Completo">
          </div>
 
          <div class="col">
-          <input type="text" class="form-control" placeholder="Cargo">
+          <input type="text" name="cargo_referencia2" class="form-control" placeholder="Cargo">
          </div>
 
          <div class="col">
-          <input type="number" class="form-control" placeholder="Celular">
+          <input type="number" name="celular_referencia2" class="form-control" placeholder="Celular">
          </div>
        </div>
     </div>
