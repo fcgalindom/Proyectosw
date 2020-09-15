@@ -63,18 +63,18 @@
           <div class="menu_side">
             <div id="navbar_menu">
               <ul class="first-ul">
-                <li> <a  href="it_home.php">Home</a>
-                  
+              <li> 
+                  <a href="<?php echo "it_home.php?ky=$codigo" ?>">Home</a>
                 </li>
-                <li><a class="active" href="it_about.php">Hoja de Vida</a></li>
-                  
+                <li>
+                  <a  class="active" href="<?php echo "it_about.php?ky=$codigo" ?>">Hoja de Vida</a>
                 </li>
-                <li> <a href="it_blog.php">Mis ofertas</a>
-                  
+                <li> 
+                  <a href="<?php echo "it_blog.php?ky=$codigo" ?>">Mis ofertas</a>
                 </li>
-                <li> <a  href="it_contact.php">Datos de Contacto</a>
-                  
-                </li>              
+                <li> 
+                  <a href="<?php echo "it_contact?ky=$codigo" ?>">Datos de Contacto</a>
+                </li>               
               </ul>
             </div>
             <div class="search_icon">
