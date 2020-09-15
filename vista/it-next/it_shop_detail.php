@@ -8,12 +8,12 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="viewport" content="initial-scale=1, maximum-scale=1">
 <!-- site metas -->
-<title>It.Next - IT Service Responsive Html Theme</title>
+<title>El bosque</title>
 <meta name="keywords" content="">
 <meta name="description" content="">
 <meta name="author" content="">
 <!-- site icons -->
-<link rel="icon" href="images/fevicon/fevicon.png" type="image/gif" />
+<link rel="icon" href="images/loaders/bosqueloader.png" type="image/gif" />
 <!-- bootstrap css -->
 <link rel="stylesheet" href="css/bootstrap.min.css" />
 <!-- Site css -->
@@ -124,6 +124,20 @@
         <div class="row">
           <div class=" col-md-5">
             <div class="product_detail_feature_img hizoom hi2">
+            <?php    
+                    $conectar = mysqli_connect('localhost','root','','feriaOportunidades');
+                    $sql= "SELECT descripcion_oferta, salario, TIPO_CONTRATO.nom_t_contrato, nom_empresa, EMPRESA.descripcion
+                            FROM OFERTA, EMPRESA, TIPO_CONTRATO
+                            WHERE EMPRESA.cod_empresa = OFERTA.cod_empresa AND OFERTA.cod_t_contrato = TIPO_CONTRATO.cod_t_contrato
+                            GROUP BY descripcion_oferta, salario, TIPO_CONTRATO.nom_t_contrato, nom_empresa, EMPRESA.descripcion";
+
+                    $respuesta=mysqli_query($conectar, $sql);                     
+                                while ($row = mysqli_fetch_array($respuesta)){
+                                  echo  $row['descripcion'];
+                                }
+                     mysqli_close($conectar);
+
+                      ?>
               <div class='hizoom hi2'> <img src="images/it_service/huawei.jpg" alt="#" /> </div>
             </div>
           </div>

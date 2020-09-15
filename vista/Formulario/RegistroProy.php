@@ -83,7 +83,7 @@
                                         <label for="inputConfirmPassword">Confirmar contraseña</label>
                                     </div>
                                     
-                                    <button class="btn btn-lg btn-primary btn-block btn-login text-uppercase font-weight-bold mb-2" type="submit">Registrarse</button>
+                                    <button class="btn sqaure_bt" type="submit">Registrarse</button>
                                 </form>
                                     <div id="alertas">
                                        

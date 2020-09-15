@@ -33,7 +33,7 @@
                                         <label for="inputPassword">Password</label>
                                     </div>
 
-                                    <button class="btn btn-lg btn-primary btn-block btn-login text-uppercase font-weight-bold mb-2" type="submit">Ingresar</button>
+                                    <button class="btn sqaure_bt" type="submit">Ingresar</button>
                                     
                                     <div class="text-center">
                                         <a class="small" href="registroProy.php">Registrarse como Estudiante</a></div>
