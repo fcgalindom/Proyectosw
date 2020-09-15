@@ -1,6 +1,4 @@
-<?php
-$codigo = $_GET['ky'];
-?>
+<?php $codigo = $_GET['ky'] ?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -65,17 +63,17 @@ $codigo = $_GET['ky'];
           <div class="menu_side">
             <div id="navbar_menu">
               <ul class="first-ul">
-                <li> 
-                  <a href="<?php echo "it_home.php?ky=$codigo" ?>">Home</a>
+                <li> <a  href="it_home.php">Home</a>
+                  
                 </li>
-                <li>
-                  <a class="active" href="<?php echo "it_about.php?ky=$codigo" ?>">Hoja de Vida</a>
+                <li><a class="active" href="it_about.php">Hoja de Vida</a></li>
+                  
                 </li>
-                <li> 
-                  <a href="<?php echo "it_blog.php?ky=$codigo" ?>">Mis ofertas</a>
+                <li> <a href="it_blog.php">Mis ofertas</a>
+                  
                 </li>
-                <li> 
-                  <a href="<?php echo "it_contact?ky=$codigo" ?>">Datos de Contacto</a>
+                <li> <a  href="it_contact.php">Datos de Contacto</a>
+                  
                 </li>              
               </ul>
             </div>
@@ -131,7 +129,7 @@ $codigo = $_GET['ky'];
     <div class="form-group">
     <form id="hojaDeVida">
     <form action="../../controlador/hoja_vida_registro/CRUD_estudiante.php" method="POST">
-      <input type="hidden" name="key" value="<?php echo $_GET['ky'] ?>">
+    <input type="hidden" name="key" value="<?php echo $_GET['ky'] ?>">
 
       <label class="font-weight-bold">Perfil Profesional</label>
       <br>
@@ -532,18 +530,17 @@ $codigo = $_GET['ky'];
     </div>
     <br>
     <br>
-         <div class="row">
+        <div class="row">
 
-         <div class="col">
-          <button type="submit" id="enviar"class="btn btn-lg btn-block">Guardar</button>
-          <button type="button" onclick="location.href='../../controlador/PDF/pruebadescarga.php?ky=$codigo'" class="btn  btn-block">Descargar</button>
-         </div>
+        <div class="col">
+          <button type="submit" id="enviar" class="btn sqaure_bt btn-lg btn-block">Guardar</button>
+          <a href="<?php echo "../../controlador/PDF/pruebadescarga.php?ky=$codigo" ?>" class="btn sqaure_bt btn-lg btn-block">Descargar</a>
+        </div>
 
         </div>
          </form>
-         <div id="alertas3">                             
+         <div id="alertas3"></div>
         </div>
-         </div>
 </div>
 <!-- end section -->
 

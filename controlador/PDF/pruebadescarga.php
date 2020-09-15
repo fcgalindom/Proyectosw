@@ -1,4 +1,5 @@
 <?php
+$codigo = $_GET['ky'];
 require('fpdf/fpdf.php');
 
     
@@ -250,7 +251,8 @@ function Footer()
 
 require 'conec.php';
 
-$code=1;
+$code=$codigo;
+
 
 $con_header = "SELECT nom_estudiante, telefono, correo, direccion FROM estudiante WHERE cod_estudiante=$code";
 $header = $mysqli->query($con_header);
