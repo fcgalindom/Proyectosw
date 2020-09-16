@@ -1,3 +1,3 @@
 <?php
-    $mysqli = new mysqli('localhost','root','','feriaOportunidades');
+    $mysqli = new mysqli('localhost','root','','feriaop_bd');
     
