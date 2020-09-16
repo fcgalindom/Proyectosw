@@ -24,5 +24,5 @@ if($encontrado)
     header("Location: ../../vista/it-next/it_about.php?ky=$codigo");
 }
 else{
-    header("Location: ../../vista/formulario/loginproy.php");
+    header("Location: ../../vista/it-next/loginproy.php");
 }
