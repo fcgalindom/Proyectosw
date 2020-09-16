@@ -92,13 +92,13 @@ if($llave == null)
             <div id="navbar_menu">
               <ul class="first-ul">
                 <li> 
-                  <a class="active" href="<?php echo "it_home.php?ky=$codigo" ?>">Home</a>
+                  <a href="<?php echo "it_home.php?ky=$codigo" ?>">Home</a>
                 </li>
                 <li>
                   <a href="<?php echo "it_about.php?ky=$codigo" ?>">Hoja de Vida</a>
                 </li>
                 <li> 
-                  <a href="<?php echo "it_blog.php?ky=$codigo" ?>">Mis ofertas</a>
+                  <a class="active" href="<?php echo "it_blog.php?ky=$codigo" ?>">Mis ofertas</a>
                 </li>
                 <li> 
                   <a href="<?php echo "it_contact?ky=$codigo" ?>">Datos de Contacto</a>
