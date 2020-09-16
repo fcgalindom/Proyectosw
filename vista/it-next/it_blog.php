@@ -26,7 +26,7 @@ if($llave == null)
 }
 ?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
 <!-- basic -->
 <meta charset="utf-8">

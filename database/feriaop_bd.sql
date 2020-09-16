@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1:3306
--- Tiempo de generación: 16-09-2020 a las 02:36:05
+-- Tiempo de generación: 16-09-2020 a las 03:09:40
 -- Versión del servidor: 8.0.21
 -- Versión de PHP: 7.3.21
 
@@ -108,6 +108,7 @@ CREATE TABLE IF NOT EXISTS `empresa` (
   `contraseña` varchar(300) NOT NULL,
   `ingresos` int NOT NULL,
   `camara_comercio` varchar(200) DEFAULT NULL,
+  `tipo_usuario` int DEFAULT NULL,
   PRIMARY KEY (`cod_empresa`),
   KEY `EMPRESA_TIPO_EMPRESA_FK` (`cod_t_empresa`)
 ) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
@@ -116,9 +117,9 @@ CREATE TABLE IF NOT EXISTS `empresa` (
 -- Volcado de datos para la tabla `empresa`
 --
 
-INSERT INTO `empresa` (`cod_empresa`, `nom_empresa`, `nom_comercial`, `descripcion`, `cod_t_empresa`, `estado_empresa`, `logo`, `correo`, `contraseña`, `ingresos`, `camara_comercio`) VALUES
-(1, 'das', 'dasd', 'dsadasd', 1, '1', '../dataEmpresa/logoEmpresa/feriaop_bd.sql', 'fe@gmail.com', '7110eda4d09e062aa5e4a390b0a572ac0d2c0220', 1, 'Vigente'),
-(2, 'Pepsi', 'PP', 'Alternativa de cocacola', 4, '1', 'ruta', 'Pepsi@gmail.com', '1234', 1, 'Vigente');
+INSERT INTO `empresa` (`cod_empresa`, `nom_empresa`, `nom_comercial`, `descripcion`, `cod_t_empresa`, `estado_empresa`, `logo`, `correo`, `contraseña`, `ingresos`, `camara_comercio`, `tipo_usuario`) VALUES
+(1, 'das', 'dasd', 'dsadasd', 1, '1', '../dataEmpresa/logoEmpresa/feriaop_bd.sql', 'fe@gmail.com', '7110eda4d09e062aa5e4a390b0a572ac0d2c0220', 1, 'Vigente', NULL),
+(2, 'Pepsi', 'PP', 'Alternativa de cocacola', 4, '1', 'ruta', 'Pepsi@gmail.com', '1234', 1, 'Vigente', NULL);
 
 --
 -- Disparadores `empresa`
@@ -178,6 +179,7 @@ CREATE TABLE IF NOT EXISTS `estudiante` (
   `lim_oferta` int DEFAULT NULL,
   `contrasenia` varchar(50) DEFAULT NULL,
   `cod_carrera` int DEFAULT NULL,
+  `tipo_usuario` int DEFAULT NULL,
   PRIMARY KEY (`cod_estudiante`),
   KEY `ESTUDIANTE_CARRERA_FK` (`cod_carrera`)
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
@@ -186,8 +188,8 @@ CREATE TABLE IF NOT EXISTS `estudiante` (
 -- Volcado de datos para la tabla `estudiante`
 --
 
-INSERT INTO `estudiante` (`cod_estudiante`, `nom_estudiante`, `telefono`, `correo`, `direccion`, `lim_oferta`, `contrasenia`, `cod_carrera`) VALUES
-(1, 'Daniel Chimbi', '3166271527', 'dachimbil@unbosque.edu.co', 'Cra 73 #71a-29', 2, '123456', 1);
+INSERT INTO `estudiante` (`cod_estudiante`, `nom_estudiante`, `telefono`, `correo`, `direccion`, `lim_oferta`, `contrasenia`, `cod_carrera`, `tipo_usuario`) VALUES
+(1, 'Daniel Chimbi', '3166271527', 'dachimbil@unbosque.edu.co', 'Cra 73 #71a-29', 2, '123456', 1, NULL);
 
 --
 -- Disparadores `estudiante`
