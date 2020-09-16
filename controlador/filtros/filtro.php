@@ -28,3 +28,7 @@ foreach ($descripcion as $key)
 mysqli_close($conexion);
 return $array;
 }
+
+?>
+
+<script src="../../vista/js/filtro.js"></script>
