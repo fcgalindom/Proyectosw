@@ -6,6 +6,7 @@ $codigo = $_POST['key'];
 //finalizado
 function guardarPerfil()
 {
+    
     $perfil = $_POST['perfil'];
     $key = $_POST['key'];
     $sql = "INSERT INTO PERFIL VALUES($key,'$perfil')";

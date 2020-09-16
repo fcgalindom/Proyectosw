@@ -108,12 +108,10 @@ if($llave == null)
                 </li>
                 <li> 
                   <a href="<?php echo "it_contact?ky=$codigo" ?>">Datos de Contacto</a>
-                </li>              
-              </ul>
-            </div>
-            <div class="search_icon">
-              <ul>
-                <li><a href="#" data-toggle="modal" data-target="#search_bar"><i class="fa fa-search" aria-hidden="true"></i></a></li>
+                </li>    
+                <li> 
+                <input type="email" class="form-control" placeholder="Buscar" >
+                </li>           
               </ul>
             </div>
           </div>

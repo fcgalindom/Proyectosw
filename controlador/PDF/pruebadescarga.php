@@ -87,12 +87,6 @@ class PDF extends FPDF
     }
 
     function tecnico($instituto, $nombre,$fecha){
-    $this->Ln(30);
-    $this->Cell(13);
-    $this->SetTextColor(48,149,160);
-    $this->SetFont('Arial','B',15);
-    $this->Cell(30,10,'Tecnico',0,0,'C');
-
     $this->Ln(10);
     $this->Cell(15);
     $this->SetTextColor(0,0,0);
@@ -112,12 +106,6 @@ class PDF extends FPDF
     }
 
     function tecnologo($instituto, $nombre,$fecha){
-    $this->Ln(10);
-    $this->Cell(13);
-    $this->SetTextColor(48,149,160);
-    $this->SetFont('Arial','B',15);
-    $this->Cell(30,10,'Tecnologo',0,0,'C');
-
     $this->Ln(10);
     $this->Cell(15);
     $this->SetTextColor(0,0,0);
@@ -296,15 +284,35 @@ $referencias = $mysqli->query($con_referencias);
          $row['idiomas'], $row['descripcion']);
     }
 
-    while($row=$tecnico ->fetch_assoc()){
-        $pdf->tecnico($row['ins_f_tecnica'], $row['nom_f_tecnica'], $row['f_final_f_tecnica']);
+    if($tecnico != ''){
+        $pdf->Ln(30);
+        $pdf->Cell(13);
+        $pdf->SetTextColor(48,149,160);
+        $pdf->SetFont('Arial','B',15);
+        $pdf->Cell(30,10,'Tecnico',0,0,'C');
+
+        while($row=$tecnico ->fetch_assoc()){
+            $pdf->tecnico($row['ins_f_tecnica'], $row['nom_f_tecnica'], $row['f_final_f_tecnica']);
+        }
+    }else {
+        
     }
 
-    while($row=$tecnologo ->fetch_assoc()){
-        $pdf->tecnologo($row['ins_f_tecnica'], $row['nom_f_tecnica'], $row['f_final_f_tecnica']);
-    }
+    if($tecnologo != ''){
+        $pdf->Ln(10);
+        $pdf->Cell(13);
+        $pdf->SetTextColor(48,149,160);
+        $pdf->SetFont('Arial','B',15);
+        $pdf->Cell(30,10,'Tecnologo',0,0,'C');
+    
 
-    if($complementaria !== ''){
+        while($row=$tecnologo ->fetch_assoc()){
+            $pdf->tecnologo($row['ins_f_tecnica'], $row['nom_f_tecnica'], $row['f_final_f_tecnica']);
+        }
+    }
+   
+
+    if($complementaria != ''){
         $pdf->Ln(20);
         $pdf->Cell(15);
         $pdf->SetTextColor(48,149,160);
@@ -316,7 +324,7 @@ $referencias = $mysqli->query($con_referencias);
         }
     }
 
-    if($expaca !== ''){
+    if($expaca != ''){
         $pdf->Ln(20);
         $pdf->Cell(15);
         $pdf->SetTextColor(48,149,160);
@@ -328,7 +336,7 @@ $referencias = $mysqli->query($con_referencias);
         }
     }
     
-    if($explaboral !== ''){
+    if($explaboral != ''){
         $pdf->Ln(20);
         $pdf->Cell(15);
         $pdf->SetTextColor(48,149,160);
@@ -340,7 +348,7 @@ $referencias = $mysqli->query($con_referencias);
         }
     }
 
-    if($referencias !== ''){
+    if($referencias != ''){
         $pdf->Ln(20);
         $pdf->Cell(15);
         $pdf->SetTextColor(48,149,160);
@@ -352,6 +360,7 @@ $referencias = $mysqli->query($con_referencias);
         }
     }
 
+    
     $pdf->Output('hoja_de_vida.pdf', 'D');
     header("Location: http://localhost/proyectosw/vista/it-next/it_about.php?ky=$code");
 ?>

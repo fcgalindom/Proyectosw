@@ -92,23 +92,20 @@ if($llave == null)
             <div id="navbar_menu">
               <ul class="first-ul">
                 <li> 
-                  <a href="<?php echo "it_home.php?ky=$codigo" ?>">Home</a>
+                  <a class="active" href="<?php echo "it_home.php?ky=$codigo" ?>">Home</a>
                 </li>
                 <li>
-                  <a href="<?php echo "it_about.php?ky=$codigo" ?>">Hoja de vida</a>
+                  <a href="<?php echo "it_about.php?ky=$codigo" ?>">Hoja de Vida</a>
                 </li>
                 <li> 
-                  <a class="active" href="<?php echo "it_blog.php?ky=$codigo" ?>">Mis ofertas</a>
+                  <a href="<?php echo "it_blog.php?ky=$codigo" ?>">Mis ofertas</a>
                 </li>
                 <li> 
-                  <!-- <a  href="it_contact.php">Datos de Contacto</a> -->
-                  <a  href="<?php echo "it_contact.php?ky=$codigo" ?>">Datos de Contacto</a>
-                </li>              
-              </ul>
-            </div>
-            <div class="search_icon">
-              <ul>
-                <li><a href="#" data-toggle="modal" data-target="#search_bar"><i class="fa fa-search" aria-hidden="true"></i></a></li>
+                  <a href="<?php echo "it_contact?ky=$codigo" ?>">Datos de Contacto</a>
+                </li>    
+                <li> 
+                <input type="email" class="form-control" placeholder="Buscar" >
+                </li>           
               </ul>
             </div>
           </div>
