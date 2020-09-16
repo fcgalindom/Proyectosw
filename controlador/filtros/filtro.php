@@ -8,8 +8,14 @@ $conexion = conectar();
 $texto = $_POST['texto'];
 $array = [];
 
-$sql = "SELECT descripcion_oferta,cod_oferta FROM oferta, estudiante WHERE estudiante.cod_carrera = oferta.oferta_carrera
-GROUP BY descripcion_oferta";
+$sql = "SELECT logo, nom_oferta, fecha_inicio, descripcion_oferta, OFERTA.cod_oferta
+FROM oferta, oferta_estudiante, estudiante, empresa
+WHERE
+estudiante.cod_estudiante =oferta_estudiante.cod_estudiante AND 
+oferta_estudiante.cod_oferta = oferta.cod_oferta AND
+empresa.cod_empresa = oferta.cod_empresa AND
+estudiante.cod_carrera = oferta.oferta_carrera
+GROUP BY logo, nom_oferta, fecha_inicio, descripcion_oferta, oferta.cod_oferta";
 
 $descripcion = mysqli_query($conexion,$sql);
 $x = 0;
