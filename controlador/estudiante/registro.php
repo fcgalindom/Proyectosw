@@ -13,7 +13,7 @@ $carrera = $_GET['carrera'];
 $semestre = $_GET['semestre'];
 $passowrd = $_GET['password'];
 $nombre = "$nombre $apellido";
-$sql = "INSERT INTO ESTUDIANTE VALUES(0,'$nombre',$telefono,'$email','$direccion',0,'$passowrd',1,1,null)";
+$sql = "INSERT INTO ESTUDIANTE VALUES(0,'$nombre','$telefono','$email','$direccion',0,'$passowrd',1)";
 mysqli_query($conexion, $sql);
 mysqli_close($conexion);
 
