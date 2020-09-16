@@ -199,9 +199,9 @@ class PDF extends FPDF
         $this->MultiCell(160,7,$fech);
     
         $this->Cell(15);
-        $horas = ('Funciones: '.$funciones);
+        $func = ('Funciones: '.$funciones);
         $this->SetFont('Arial','',15);
-        $this->MultiCell(160,7,$horas);
+        $this->MultiCell(160,7,$func);
     }
 
     function referencias($nombre,$cargo,$telefono){
@@ -214,14 +214,14 @@ class PDF extends FPDF
         $this->MultiCell(160,7,$nom);
       
         $this->Cell(15);
-        $inst = ('Cargo: '.$cargo);
+        $carg = ('Cargo: '.$cargo);
         $this->SetFont('Arial','',15);
-        $this->MultiCell(160,7,$inst);
+        $this->MultiCell(160,7,$carg);
     
         $this->Cell(15);
-        $fech = ('telefono: '.$telefono);
+        $tel = ('telefono: '.$telefono);
         $this->SetFont('Arial','',15);
-        $this->MultiCell(160,7,$fech);
+        $this->MultiCell(160,7,$tel);
 
     }
     
@@ -284,7 +284,7 @@ $referencias = $mysqli->query($con_referencias);
          $row['idiomas'], $row['descripcion']);
     }
 
-    if($tecnico != ''){
+    if(mysqli_num_rows($tecnico)>0){
         $pdf->Ln(30);
         $pdf->Cell(13);
         $pdf->SetTextColor(48,149,160);
@@ -294,11 +294,9 @@ $referencias = $mysqli->query($con_referencias);
         while($row=$tecnico ->fetch_assoc()){
             $pdf->tecnico($row['ins_f_tecnica'], $row['nom_f_tecnica'], $row['f_final_f_tecnica']);
         }
-    }else {
-        
     }
 
-    if($tecnologo != ''){
+    if(mysqli_num_rows($tecnologo)>0){
         $pdf->Ln(10);
         $pdf->Cell(13);
         $pdf->SetTextColor(48,149,160);
@@ -312,7 +310,7 @@ $referencias = $mysqli->query($con_referencias);
     }
    
 
-    if($complementaria != ''){
+    if(mysqli_num_rows($complementaria)>0){
         $pdf->Ln(20);
         $pdf->Cell(15);
         $pdf->SetTextColor(48,149,160);
@@ -324,7 +322,7 @@ $referencias = $mysqli->query($con_referencias);
         }
     }
 
-    if($expaca != ''){
+    if(mysqli_num_rows($expaca)>0){
         $pdf->Ln(20);
         $pdf->Cell(15);
         $pdf->SetTextColor(48,149,160);
@@ -335,8 +333,8 @@ $referencias = $mysqli->query($con_referencias);
             $pdf->experienciaAcademica($row['nom_exp_academica'], $row['con_aplicados'], $row['materia']);
         }
     }
-    
-    if($explaboral != ''){
+
+    if(mysqli_num_rows($explaboral)>0){
         $pdf->Ln(20);
         $pdf->Cell(15);
         $pdf->SetTextColor(48,149,160);
@@ -347,8 +345,8 @@ $referencias = $mysqli->query($con_referencias);
             $pdf->experienciaLaboral($row['cargo'], $row['empresa'], $row['fun_principales'],$row['fecha_fin']);
         }
     }
-
-    if($referencias != ''){
+        
+    if(mysqli_num_rows($referencias)>0){
         $pdf->Ln(20);
         $pdf->Cell(15);
         $pdf->SetTextColor(48,149,160);
@@ -359,8 +357,20 @@ $referencias = $mysqli->query($con_referencias);
             $pdf->referencias($row['nom_ref'], $row['cargo_ref'], $row['tel_ref']);
         }
     }
+    $pdf->Output('hoja_de_vida.pdf', 'D');
+
+    if($referencias != ''){
+        $pdf->Ln(20);
+        $pdf->Cell(15);
+        $pdf->SetTextColor(48,149,160);
+        $pdf->SetFont('Arial','B',20);
+        $pdf->Cell(30,10,'Referencias',0,0,'');
+        
+        while($row=$referencias ->fetch_assoc()){
+            $pdf->referencias($row['nom_ref'], $row['cargo_ref'], $row['tel_ref']);
+        }
+    }
 
     
-    $pdf->Output('hoja_de_vida.pdf', 'D');
     header("Location: http://localhost/proyectosw/vista/it-next/it_about.php?ky=$code");
 ?>
