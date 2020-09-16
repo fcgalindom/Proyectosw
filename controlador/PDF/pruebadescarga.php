@@ -353,5 +353,5 @@ $referencias = $mysqli->query($con_referencias);
     }
 
     $pdf->Output('hoja_de_vida.pdf', 'D');
-    header("Location: http://localhost/proyectosw/vista/it-next/it_about.php");
+    header("Location: http://localhost/proyectosw/vista/it-next/it_about.php?ky=$code");
 ?>

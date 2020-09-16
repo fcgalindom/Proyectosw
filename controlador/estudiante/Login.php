@@ -1,6 +1,5 @@
 <?php
 include("../../modelo/conexion.php");
-$cod = new Codigo();
 $email = $_GET['email'];
 $password = $_GET['password'];
 

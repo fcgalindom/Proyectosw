@@ -127,7 +127,7 @@
     </div>
     <!-- -->
     <div class="form-group">
-    <form id="hojaDeVida">
+    <!-- <form id="hojaDeVida"> -->
     <form action="../../controlador/hoja_vida_registro/CRUD_estudiante.php" method="POST">
     <input type="hidden" name="key" value="<?php echo $_GET['ky'] ?>">
 

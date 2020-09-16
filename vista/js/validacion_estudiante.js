@@ -7,18 +7,9 @@ formulario.addEventListener('submit',function(e){
 
    var datos = new FormData(formulario)
 
-    console.log(datos.get('nombre'))
-    console.log(datos.get('apellido'))
-    console.log(datos.get('telefono'))
-    console.log(datos.get('email'))
-    console.log(datos.get('direccion'))
-    console.log(datos.get('carrera'))
-    console.log(datos.get('semestre'))
-    console.log(datos.get('password'))
-    console.log(datos.get('ConfirmPassword'))
 
 
-   fetch('../../controlador/registro.php',{
+   fetch('../../controlador/validaciones/registro.php',{
        method: 'POST',
        body: datos
    })
@@ -47,12 +38,22 @@ formulario.addEventListener('submit',function(e){
         `
        }
        else if (data === 'correcto'){
-        alertas.innerHTML = `
 
-         <div class="alert alert-primary" role="alert">
-          TODO ESTA PERFECTO PA REDIRIGIR
-        </div>
-        `
+        var ruta = "nombre=" + datos.get('nombre') + "&apellido=" + datos.get('apellido') + "&telefono=" + datos.get('telefono')
+        + "&email=" + datos.get('email') + "&direccion=" + datos.get('direccion') + "&carrera=" + datos.get('carrera')
+        + "&semestre=" + datos.get('semestre') + "&password=" + datos.get('password')
+
+        location.href = "../../controlador/estudiante/registro.php?"+ruta
+
+        // console.log(datos.get('nombre'))
+        // console.log(datos.get('apellido'))
+        // console.log(datos.get('telefono'))
+        // console.log(datos.get('email'))
+        // console.log(datos.get('direccion'))
+        // console.log(datos.get('carrera'))
+        // console.log(datos.get('semestre'))
+        // console.log(datos.get('password'))
+        // console.log(datos.get('ConfirmPassword'))
        }
    })
 })
