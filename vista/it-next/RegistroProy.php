@@ -1,12 +1,35 @@
 <!doctype html>
 <html lang="es">
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<head>
+<!-- basic -->
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<!-- mobile metas -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="initial-scale=1, maximum-scale=1">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+<link rel='stylesheet' type='text/css' media='screen' href='loginProy.css'>
+<!-- site metas -->
+<title>El bosque</title>
+<meta name="keywords" content="">
+<meta name="description" content="">
+<meta name="author" content="">
+<!-- site icons -->
+<link rel="icon" href="images/loaders/bosqueloader.png" type="image/gif" />
+<!-- bootstrap css -->
+<link rel="stylesheet" href="css/bootstrap.min.css" />
+<!-- Site css -->
+<link rel="stylesheet" href="css/style.css" />
+<!-- responsive css -->
+<link rel="stylesheet" href="css/responsive.css" />
+<!-- colors css -->
+<link rel="stylesheet" href="css/colors1.css" />
+<!-- custom css -->
+<link rel="stylesheet" href="css/custom.css" />
+<!-- wow Animation css -->
+<link rel="stylesheet" href="css/animate.css" />
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-    <link rel='stylesheet' type='text/css' media='screen' href='loginProy.css'>
+
 </head>
 <body>
 <div class="container-fluid">
@@ -83,7 +106,7 @@
                                         <label for="inputConfirmPassword">Confirmar contraseña</label>
                                     </div>
                                     
-                                    <button class="btn sqaure_bt" type="submit">Registrarse</button>
+                                    <button class="btn sqaure_bt btn-lg btn-block" type="submit">Registrarse</button>
                                 </form>
                                     <div id="alertas">
                                        
@@ -97,8 +120,16 @@
         </div>
 
         <script src="../js/validacion_estudiante.js"></script>
-
-    
+        <!-- js section -->
+        <script src="js/jquery.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <!-- menu js -->
+        <script src="js/menumaker.js"></script>
+        <!-- wow animation -->
+        <script src="js/wow.js"></script>
+        <!-- custom js -->
+        <script src="js/custom.js"></script>
+        <script>
 </body>
 </html>
 
