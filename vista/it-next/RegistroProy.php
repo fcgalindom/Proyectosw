@@ -78,7 +78,7 @@
                                         $carrera = mysqli_query($conexion,$sql);
                                         while ($fila = mysqli_fetch_array($carrera)) 
                                         { ?>
-                                            <option value="<?php echo $fila['cod_carrera'] ?>"><?php echo $fila['nom_carrea'] ?></option>
+                                            <option value="<?php echo $fila['cod_carrera'] ?>"><?php echo $fila['nom_carrera'] ?></option>
                                         <?php }
                                         ?>
                                         <option value="Carrera" selected>Carrera</option>

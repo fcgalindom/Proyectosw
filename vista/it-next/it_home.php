@@ -386,15 +386,20 @@ if($llave == null)
       <div class="col-md-4">
         <div class="full blog_colum">
           <div class="blog_feature_img"> <a  href="it_shop_detail.php"><img src="images/it_service/post-03.jpg" /></a></div>
+
+          
           <div class="post_time">
-            <p><i class="fa fa-clock-o"></i> April 16, 2018 ( In Maintenance )</p>
+            <p><i class="fa fa-clock-o"></i> </p>
           </div>
+
           <div class="blog_feature_head">
             <h4>Why Your Computer Hates You</h4>
           </div>
+
           <div class="blog_feature_cont">
             <p>Lorem ipsum dolor sit amet, consectetur quam justo, pretium adipiscing elit. Vestibulum quam justo, pretium eu tempus ut, ...</p>
           </div>
+
         </div>
       </div>
       <div class="col-md-4">

@@ -585,5 +585,8 @@
 <!-- wow animation -->
 <script src="js/wow.js"></script>
 <!-- custom js -->
-<script src="js/custom.js"></script>
-<script>
+
+
+
+</body>
+</html>
