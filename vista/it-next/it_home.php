@@ -110,7 +110,9 @@ if($llave == null)
                   <a href="<?php echo "it_contact?ky=$codigo" ?>">Datos de Contacto</a>
                 </li>    
                 <li> 
-                <input type="email" class="form-control" placeholder="Buscar" >
+                  <input type="text" class="form-control" name="texto" placeholder="Buscar">
+                  <button type="submit" onclick="" > Enviar </button>
+                  <h1></h1>
                 </li>           
               </ul>
             </div>

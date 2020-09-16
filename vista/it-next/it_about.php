@@ -76,7 +76,10 @@
                   <a href="<?php echo "it_contact?ky=$codigo" ?>">Datos de Contacto</a>
                 </li>    
                 <li> 
-                <input type="email" class="form-control" placeholder="Buscar" >
+                  <form action="../../controlador/filtros/filtro.php" method="post">
+                  <input type="text" class="form-control" name="texto" placeholder="Buscar">
+                  <button type="submit">Enviar</button>
+                  </form>
                 </li>           
               </ul>
             </div>

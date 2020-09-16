@@ -1,28 +1,69 @@
 <?php
+
 include("../../modelo/conexion.php");
-$email = $_GET['email'];
-$password = $_GET['password'];
 
-$sql = "SELECT cod_estudiante, correo,contrasenia FROM ESTUDIANTE";
-$encontrado = false;
-$codigo = 0;
-$conexion = conectar();
-$resultado = mysqli_query($conexion,$sql);
-
-while ($fila = mysqli_fetch_array($resultado)) 
+function buscarEstudiante()
 {
-    if($fila['correo'] == $email && $fila['contrasenia'] == $password)
+    $email = $_GET['email'];
+    $password = $_GET['password'];
+    $password = sha1($password);
+    $sql = "SELECT cod_estudiante, correo,contrasenia FROM ESTUDIANTE";
+    $codigo = 0;
+    $conexion = conectar();
+    $resultado = mysqli_query($conexion,$sql);
+
+    foreach ($resultado as $fila) 
     {
-        $codigo = $fila['cod_estudiante'];
-        $encontrado = true;
-        break;
+        if($fila['correo'] == $email && $fila['contrasenia'] == $password)
+        {
+            $codigo = $fila['cod_estudiante'];
+            break;
+        }
     }
+    return $codigo;
 }
 
-if($encontrado)
-{ 
-    header("Location: ../../vista/it-next/it_about.php?ky=$codigo");
+
+function buscarEmpresa()
+{
+    $email = $_GET['email'];
+    $password = $_GET['password'];
+    $password = sha1($password);
+    $sql = "SELECT cod_empresa, correo,contrasenia FROM EMPRESA";
+    $codigo = 0;
+    $conexion = conectar();
+    $resultado = mysqli_query($conexion,$sql);
+    foreach ($resultado as $fila) 
+    {
+        if($fila['correo'] == $email && $fila['contrasenia'] == $password)
+        {
+            $codigo = $fila['cod_empresa'];
+            break;
+        }
+    }
+    mysqli_close($conexion);
+    return $codigo;
 }
-else{
-    header("Location: ../../vista/it-next/loginproy.php");
+
+$cod_estudiante = buscarEstudiante();
+$cod_empresa = buscarEmpresa();
+
+if($cod_estudiante != 0)
+{
+    header("Location: ../../vista/it-next/it_about.php?ky=$cod_estudiante");
 }
+elseif ($cod_empresa != 0) 
+{
+   # header("Location: ");  --> redireccion
+   echo "Empresa encontrada";
+}
+else
+{
+    # No encontrado
+    header("Location: ../../vista/it-next/loginProy.php");
+}
+
+
+
+
+
