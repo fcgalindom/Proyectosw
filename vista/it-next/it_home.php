@@ -110,8 +110,10 @@ if($llave == null)
                   <a href="<?php echo "it_contact?ky=$codigo" ?>">Datos de Contacto</a>
                 </li>    
                 <li> 
+                  <form id="formulario">
                   <input type="text" class="form-control" name="texto" placeholder="Buscar">
-                  <button type="submit" onclick="" > Enviar </button>
+                  <button type="submit"> Enviar </button>
+                  </form>
                   <h1></h1>
                 </li>           
               </ul>
@@ -385,7 +387,7 @@ if($llave == null)
     </div>
 
     <?php
-  $conectar = mysqli_connect('localhost','root','','feriaop_bd');
+  $conectar = conectar();
   $sql= "SELECT logo, nom_oferta, fecha_inicio, descripcion_oferta, OFERTA.cod_oferta
   FROM oferta, oferta_estudiante, estudiante, empresa
   WHERE
@@ -511,7 +513,6 @@ if($llave == null)
 <script src="revolution/js/extensions/revolution.extension.parallax.min.js"></script>
 <script src="revolution/js/extensions/revolution.extension.slideanims.min.js"></script>
 <script src="revolution/js/extensions/revolution.extension.video.min.js"></script>
-
 
 </body>
 </html>
