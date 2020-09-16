@@ -269,7 +269,7 @@ $tecnico = $mysqli->query($con_tecnico);
 $con_tecnologo = "SELECT nom_f_tecnica, ins_f_tecnica, f_final_f_tecnica FROM f_tecnica WHERE nivel=2 AND cod_f_academica=$code ";
 $tecnologo = $mysqli->query($con_tecnologo);
 
-$con_complementaria = "SELECT nom_certificacion, f_final_f_tecnica, ins_f_tecnica, cant_horas FROM certificacion WHERE cod_f_academica=$code ";
+$con_complementaria = "SELECT nom_certificacion, fecha_final_certificacion, inst_certificacion, horas FROM certificacion WHERE cod_f_academica=$code ";
 $complementaria = $mysqli->query($con_complementaria);
 
 $con_expaca = "SELECT nom_exp_academica, con_aplicados, materia FROM exp_academica WHERE cod_estudiante=$code ";
@@ -312,7 +312,7 @@ $referencias = $mysqli->query($con_referencias);
         $pdf->Cell(30,10,'Formacion Complementaria',0,0,'');
 
         while($row=$complementaria ->fetch_assoc()){
-            $pdf->formacionComplementaria($row['ins_f_tecnica'], $row['nom_certificacion'], $row['f_final_f_tecnica'], $row['cant_horas']);
+            $pdf->formacionComplementaria($row['inst_certificacion'], $row['nom_certificacion'], $row['fecha_final_certificacion'], $row['horas']);
         }
     }
 
