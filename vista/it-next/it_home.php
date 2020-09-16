@@ -369,6 +369,7 @@ if($llave == null)
 <!-- end section -->
 
 <!-- section -->
+
 <div class="section padding_layout_1">
   <div class="container">
     <div class="row">
@@ -380,50 +381,52 @@ if($llave == null)
         </div>
       </div>
     </div>
-    <div class="row">
-      <div class="col-md-4">
-        <div class="full blog_colum">
-          <div class="blog_feature_img"> <a  href="it_shop_detail.php"><img src="images/it_service/post-03.jpg" /></a></div>
-          <div class="post_time">
-            <p><i class="fa fa-clock-o"></i> April 16, 2018 ( In Maintenance )</p>
-          </div>
-          <div class="blog_feature_head">
-            <h4>Why Your Computer Hates You</h4>
-          </div>
-          <div class="blog_feature_cont">
-            <p>Lorem ipsum dolor sit amet, consectetur quam justo, pretium adipiscing elit. Vestibulum quam justo, pretium eu tempus ut, ...</p>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-4">
-        <div class="full blog_colum">
-          <div class="blog_feature_img"> <a  href="it_shop_detail.html"><img src="images/it_service/post-04.jpg" /></a> </div>
-          <div class="post_time">
-            <p><i class="fa fa-clock-o"></i> April 16, 2018 ( In Maintenance )</p>
-          </div>
-          <div class="blog_feature_head">
-            <h4>Easy Tips To Computer Repair</h4>
-          </div>
-          <div class="blog_feature_cont">
-            <p>Lorem ipsum dolor sit amet, consectetur quam justo, pretium adipiscing elit. Vestibulum quam justo, pretium eu tempus ut, ...</p>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-4">
-        <div class="full blog_colum">
-          <div class="blog_feature_img"> <a  href="it_shop_detail.html"><img src="images/it_service/post-06.jpg" /></a> </div>
-          <div class="post_time">
-            <p><i class="fa fa-clock-o"></i> April 16, 2018 ( In Maintenance )</p>
-          </div>
-          <div class="blog_feature_head">
-            <h4>Computer Maintenance 2018</h4>
-          </div>
-          <div class="blog_feature_cont">
-            <p>Lorem ipsum dolor sit amet, consectetur quam justo, pretium adipiscing elit. Vestibulum quam justo, pretium eu tempus ut, ...</p>
-          </div>
-        </div>
-      </div>
-    </div>
+
+    <?php
+  $conectar = mysqli_connect('localhost','root','','feriaop_bd');
+  $sql= "SELECT logo, nom_oferta, fecha_inicio, descripcion_oferta, OFERTA.cod_oferta
+  FROM oferta, oferta_estudiante, estudiante, empresa
+  WHERE
+  estudiante.cod_estudiante =oferta_estudiante.cod_estudiante AND 
+  oferta_estudiante.cod_oferta = oferta.cod_oferta AND
+  empresa.cod_empresa = oferta.cod_empresa AND
+  estudiante.cod_carrera = oferta.oferta_carrera
+  GROUP BY logo, nom_oferta, fecha_inicio, descripcion_oferta, oferta.cod_oferta";
+
+  $respuesta=mysqli_query($conectar, $sql);   
+ 
+                
+              while ($row = mysqli_fetch_array($respuesta)): ?>
+                <div class="row">
+                   <div class="col-md-4">
+                      <div class="full blog_colum">
+                      
+                      <form action="it_shop_detail.php" method="POST">
+                        <input type="hidden" name="codigo_oferta" value="<?php echo $row['cod_oferta']?>">
+                        <div class="blog_feature_img"><img src="<?php echo $row['logo'] ?> "/></div>
+                        
+
+                        
+                        <div class="post_time">
+                          <p><i class="fa fa-clock-o"></i><?php echo  $row['fecha_inicio'] ?></p>
+                        </div>
+
+                        <div class="blog_feature_head">
+                          <h4><?php echo $row['nom_oferta'] ?></h4>
+                        </div>
+
+                        <div class="blog_feature_cont">
+                          <p><?php echo $row['descripcion_oferta'] ?></p>
+                        </div>
+
+                        <button type="submit" class="btn sqaure_bt">Ver mas</button>
+                        </form>
+                      </div>
+                    </div>
+                </div>
+              <?php endwhile;?>
+
+  
 
   </div>
 </div>

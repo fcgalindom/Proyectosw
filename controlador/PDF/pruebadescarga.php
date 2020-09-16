@@ -251,13 +251,13 @@ $con_obligatorios = "SELECT ins_bachiller, titulo_bachiller, fec_fin_bachiller, 
                     AND cod_estudiante=$code";
 $obligatorios = $mysqli->query($con_obligatorios);
 
-$con_tecnico = "SELECT nom_f_tecnica, ins_f_tecnica, f_final_f_tecnica FROM f_tecnica WHERE nivel=1 AND cod_f_academica=$code ";
+$con_tecnico = "SELECT nom_f_tecnica, inst_f_tecnica, f_final_f_tecnica FROM f_tecnica WHERE nivel=1 AND cod_f_academica=$code ";
 $tecnico = $mysqli->query($con_tecnico);
 
-$con_tecnologo = "SELECT nom_f_tecnica, ins_f_tecnica, f_final_f_tecnica FROM f_tecnica WHERE nivel=2 AND cod_f_academica=$code ";
+$con_tecnologo = "SELECT nom_f_tecnica, inst_f_tecnica, f_final_f_tecnica FROM f_tecnica WHERE nivel=2 AND cod_f_academica=$code ";
 $tecnologo = $mysqli->query($con_tecnologo);
 
-$con_complementaria = "SELECT nom_certificacion, fecha_final_certificacion, inst_certificacion, horas FROM certificacion WHERE cod_f_academica=$code ";
+$con_complementaria = "SELECT nom_certificacion, fecha_final_certificacion, inst_certificacion, horas FROM certificado WHERE cod_f_academica=$code ";
 $complementaria = $mysqli->query($con_complementaria);
 
 $con_expaca = "SELECT nom_exp_academica, con_aplicados, materia FROM exp_academica WHERE cod_estudiante=$code ";
@@ -266,7 +266,7 @@ $expaca = $mysqli->query($con_expaca);
 $con_explabo = "SELECT cargo, empresa, fun_principales, fecha_fin FROM exp_laboral WHERE cod_estudiante=$code ";
 $explaboral = $mysqli->query($con_explabo);
 
-$con_referencias = "SELECT nom_ref, cargo_ref, tel_ref FROM referencia WHERE cod_estudiante=$code ";
+$con_referencias = "SELECT nom_referencia, cargo_referencia, tel_referencia FROM referencia WHERE cod_estudiante=$code ";
 $referencias = $mysqli->query($con_referencias);
 
 
@@ -292,7 +292,7 @@ $referencias = $mysqli->query($con_referencias);
         $pdf->Cell(30,10,'Tecnico',0,0,'C');
 
         while($row=$tecnico ->fetch_assoc()){
-            $pdf->tecnico($row['ins_f_tecnica'], $row['nom_f_tecnica'], $row['f_final_f_tecnica']);
+            $pdf->tecnico($row['inst_f_tecnica'], $row['nom_f_tecnica'], $row['f_final_f_tecnica']);
         }
     }
 
@@ -354,7 +354,7 @@ $referencias = $mysqli->query($con_referencias);
         $pdf->Cell(30,10,'Referencias',0,0,'');
 
         while($row=$referencias ->fetch_assoc()){
-            $pdf->referencias($row['nom_ref'], $row['cargo_ref'], $row['tel_ref']);
+            $pdf->referencias($row['nom_referencia'], $row['cargo_referencia'], $row['tel_referencia']);
         }
     }
     $pdf->Output('hoja_de_vida.pdf', 'D');
@@ -367,7 +367,7 @@ $referencias = $mysqli->query($con_referencias);
         $pdf->Cell(30,10,'Referencias',0,0,'');
         
         while($row=$referencias ->fetch_assoc()){
-            $pdf->referencias($row['nom_ref'], $row['cargo_ref'], $row['tel_ref']);
+            $pdf->referencias($row['nom_referencia'], $row['cargo_referencia'], $row['tel_referencia']);
         }
     }
 

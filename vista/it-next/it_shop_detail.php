@@ -68,7 +68,7 @@
             <div id="navbar_menu">
               <ul class="first-ul">
                 <li> 
-                  <a class="active" href="<?php echo "it_home.php?ky=$codigo" ?>">Home</a>
+                  <a href="<?php echo "it_home.php?ky=$codigo" ?>">Home</a>
                 </li>
                 <li>
                   <a href="<?php echo "it_about.php?ky=$codigo" ?>">Hoja de Vida</a>
@@ -117,121 +117,79 @@
 <!-- section -->
 <div class="section padding_layout_1 product_detail">
   <div class="container">
-    <div class="row">
-      <div class="col-md-12">
-        <div class="row">
-          <div class=" col-md-5">
-            <div class="product_detail_feature_img hizoom hi2">
-            <?php  
-              
-                    $conectar = mysqli_connect('localhost','root','','feriaOportunidades');
-                    $sql= "SELECT descripcion_oferta, salario, TIPO_CONTRATO.nom_t_contrato, nom_empresa, EMPRESA.descripcion
-                            FROM OFERTA, EMPRESA, TIPO_CONTRATO
-                            WHERE EMPRESA.cod_empresa = OFERTA.cod_empresa AND OFERTA.cod_t_contrato = TIPO_CONTRATO.cod_t_contrato
-                            GROUP BY descripcion_oferta, salario, TIPO_CONTRATO.nom_t_contrato, nom_empresa, EMPRESA.descripcion";
+     <?php 
+           
+      $codigo_oferta=$_POST['codigo_oferta'];
+      
 
-                    $respuesta=mysqli_query($conectar, $sql);                     
-                                while ($row = mysqli_fetch_array($respuesta)){
-                                  echo  $row['descripcion'];
-                                }
-                     mysqli_close($conectar);
+      $conectar = mysqli_connect('localhost','root','','feriaop_bd');
+      $sql= "SELECT logo,nom_empresa, descripcion, nom_oferta, fecha_inicio, salario, descripcion_oferta
+      FROM oferta, tipo_contrato, empresa
+      WHERE
+      tipo_contrato.cod_t_contrato = oferta.cod_t_contrato AND
+      empresa.cod_empresa = oferta.cod_empresa AND
+      oferta.cod_oferta=1
+      GROUP BY logo,nom_empresa,descripcion, nom_oferta, fecha_inicio, salario, descripcion_oferta";
 
-                      ?>
-              <?php    
-                    $conectar = mysqli_connect('localhost','root','','feriaOportunidades');
-                    $sql= "SELECT descripcion_oferta, salario, TIPO_CONTRATO.nom_t_contrato, nom_empresa, EMPRESA.descripcion
-                            FROM OFERTA, EMPRESA, TIPO_CONTRATO
-                            WHERE EMPRESA.cod_empresa = OFERTA.cod_empresa AND OFERTA.cod_t_contrato = TIPO_CONTRATO.cod_t_contrato
-                            GROUP BY descripcion_oferta, salario, TIPO_CONTRATO.nom_t_contrato, nom_empresa, EMPRESA.descripcion";
+      $respuesta=mysqli_query($conectar, $sql);  
+        
+      while ($row = mysqli_fetch_array($respuesta)): ?>
+      <div class="row">
+        <div class="col-md-12">
+          <div class="row">
 
-                    $respuesta=mysqli_query($conectar, $sql);                     
-                                while ($row = mysqli_fetch_array($respuesta)){
-                                  echo  $row['descripcion'];
-                                }
-                     mysqli_close($conectar);
+            <div class=" col-md-5">
+              <div class="product_detail_feature_img ">
+              <div class="blog_feature_img"> <img src="<?php echo $row['logo'] ?>"/></div>
+              </div>
+            </div>
 
-                      ?>
-              <div class='hizoom hi2'> <img src="images/it_service/huawei.jpg" alt="#" /> </div>
+            <div class=" col-md-7 product_detail_side detail_style1">
+              <div class="product-heading">
+                <h2>
+                <?php echo $row['nom_oferta'] ?>
+                </h2>
+                <h3>
+                <?php echo $row['nom_empresa'] ?>
+                </h3>
+              </div>
+              <div class="detail-contant">
+                <p>
+                <?php echo $row['descripcion'] ?>
+                </p>    
+                <br>
+                <br>
+                <form class="cart" method="post" action="it_blog.php">
+                  <button type="submit" class="btn sqaure_bt">Enviar hoja de vida</button>
+                </form>
+              </div>
             </div>
           </div>
-          <div class=" col-md-7 product_detail_side detail_style1">
-            <div class="product-heading">
-              <h2>
 
-                <?php    
-                    $conectar = mysqli_connect('localhost','root','','feriaOportunidades');
-                    $sql= "SELECT descripcion_oferta, salario, TIPO_CONTRATO.nom_t_contrato, nom_empresa, EMPRESA.descripcion
-                            FROM OFERTA, EMPRESA, TIPO_CONTRATO
-                            WHERE EMPRESA.cod_empresa = OFERTA.cod_empresa AND OFERTA.cod_t_contrato = TIPO_CONTRATO.cod_t_contrato
-                            GROUP BY descripcion_oferta, salario, TIPO_CONTRATO.nom_t_contrato, nom_empresa, EMPRESA.descripcion";
-
-                    $respuesta=mysqli_query($conectar, $sql);                     
-                                while ($row = mysqli_fetch_array($respuesta)){
-                                  echo  $row['nom_empresa'];
-                                }
-                     mysqli_close($conectar);
-
-                      ?>
-
-              </h2>
-            </div>
-            <div class="detail-contant">
-              <p>
-                   
-                    <?php    
-                    $conectar = mysqli_connect('localhost','root','','feriaOportunidades');
-                    $sql= "SELECT descripcion_oferta, salario, TIPO_CONTRATO.nom_t_contrato, nom_empresa, EMPRESA.descripcion
-                            FROM OFERTA, EMPRESA, TIPO_CONTRATO
-                            WHERE EMPRESA.cod_empresa = OFERTA.cod_empresa AND OFERTA.cod_t_contrato = TIPO_CONTRATO.cod_t_contrato
-                            GROUP BY descripcion_oferta, salario, TIPO_CONTRATO.nom_t_contrato, nom_empresa, EMPRESA.descripcion";
-
-                    $respuesta=mysqli_query($conectar, $sql);                     
-                                while ($row = mysqli_fetch_array($respuesta)){
-                                  echo  $row['descripcion'];
-                                }
-                     mysqli_close($conectar);
-
-                      ?>
-                      
-                  </p>    
-              <form class="cart" method="post" action="it_blog.php">
-              
-                <button type="submit" class="btn sqaure_bt">Enviar hoja de vida</button>
-              </form>
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-md-12">
-            <div class="full">
-              <div class="tab_bar_section">
-                <ul class="nav nav-tabs" role="tablist">
-                  <li class="nav-item"><a class="nav-link active" data-toggle="tab" href="#">Descripcion de la Oferta</a></li>
-                </ul>
-                <!-- Tab panes -->
-                <div class="tab-content">
-                  <div id="description" class="tab-pane active">
-                    <div class="product_desc">
-
-                    <?php    
-                    $conectar = mysqli_connect('localhost','root','','feriaOportunidades');
-                    $sql= "SELECT descripcion_oferta, salario, TIPO_CONTRATO.nom_t_contrato, nom_empresa, EMPRESA.descripcion
-                            FROM OFERTA, EMPRESA, TIPO_CONTRATO
-                            WHERE EMPRESA.cod_empresa = OFERTA.cod_empresa AND OFERTA.cod_t_contrato = TIPO_CONTRATO.cod_t_contrato
-                            GROUP BY descripcion_oferta, salario, TIPO_CONTRATO.nom_t_contrato, nom_empresa, EMPRESA.descripcion";
-
-                    $respuesta=mysqli_query($conectar, $sql);                     
-                                while ($row = mysqli_fetch_array($respuesta)){
-                                  echo  $row['descripcion_oferta'];
-                                  echo "<br>";
-                                  echo  $row['salario'];
-                                  echo "<br>";
-                                  echo  $row['nom_t_contrato'];
-                                  echo "<br>";
-                                }
-                    mysqli_close($conectar);
-                    ?>
-
+          <div class="row">
+            <div class="col-md-12">
+              <div class="full">
+                <div class="tab_bar_section">
+                  <ul class="nav nav-tabs" role="tablist">
+                    <li class="nav-item"><a class="nav-link active" data-toggle="tab" href="#">Detalles de la Oferta</a></li>
+                  </ul>
+                  <!-- Tab panes -->
+                  <div class="tab-content">
+                    <div id="description" class="tab-pane active">
+                      <div class="product_desc">
+                      <br>
+                      <h2>
+                      <?php echo $row['nom_oferta'] ?>
+                      </h2>
+                      <h3>
+                      <br>
+                      <?php echo $row['descripcion_oferta'] ?>
+                      <br>
+                      <?php echo $row['salario'] ?>
+                      <br>
+                      <?php echo $row['fecha_inicio'] ?>
+                      <h3>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -239,10 +197,10 @@
             </div>
           </div>
         </div>
-      </div>
-    </div>
-  </div>
-</div>
+     </div>
+     <?php 
+     endwhile;
+     ?>  
 <!-- end section -->
 
 <!-- footer -->
