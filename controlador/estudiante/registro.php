@@ -9,12 +9,13 @@ $telefono = $_GET['telefono'];
 $email = $_GET['email'];
 $direccion = $_GET['direccion'];
 $carrera = $_GET['carrera'];
+$semestre = $_GET['semestre'];
 $passowrd = $_GET['password'];
 $nombre = "$nombre $apellido";
 #$passowrd = md5($passowrd);
 $passowrd = sha1($passowrd);
-$sql = "INSERT INTO ESTUDIANTE VALUES(0,'$nombre','$telefono','$email','$direccion',0,'$passowrd',$carrera)";
-echo $sql;
+$sql = "INSERT INTO ESTUDIANTE VALUES(0,'$nombre','$telefono','$email','$direccion',0,'$passowrd',$carrera,2,'$semestre')";
+//echo $sql;
 mysqli_query($conexion, $sql);
 mysqli_close($conexion);
 
