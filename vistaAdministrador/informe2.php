@@ -1,3 +1,24 @@
+<?php
+
+session_start();
+
+$codigo=$_SESSION['id'];
+ 
+//Validar que el usuario este logueado y exista un UID
+if ( ! ($_SESSION['autenticado'] == 'SI' && isset($_SESSION['id'])) )
+{
+    //En caso de que el usuario no este autenticado, crear un formulario y redireccionar a la
+    //pantalla de login, enviando un codigo de error
+?>
+       <form name="formulario" method="post" action="../login/loginProy.php">
+            <input type="hidden" name="msg_error" value="2">
+        </form>
+        <script type="text/javascript">
+            document.formulario.submit();
+        </script>
+<?php
+}
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -33,7 +54,7 @@ $conexion=conectar();
       </li>
       <li class="nav-item d-none d-sm-inline-block">
         <a href="AdminPrincipal.php" class="nav-link">Inicio</a>
-        <a style="    top: -46%; left: 706%;" href='#' class="nav-link">Cerrar Sesión</a>
+        <a style="    top: -46%; left: 706%;" href='../login/cerrarSesion.php' class="nav-link">Cerrar Sesión</a>
       </li>
     </ul>
   </nav>

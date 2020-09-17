@@ -1,3 +1,24 @@
+<?php
+
+session_start();
+
+$codigo=$_SESSION['id'];
+ 
+//Validar que el usuario este logueado y exista un UID
+if ( ! ($_SESSION['autenticado'] == 'SI' && isset($_SESSION['id'])) )
+{
+    //En caso de que el usuario no este autenticado, crear un formulario y redireccionar a la
+    //pantalla de login, enviando un codigo de error
+?>
+       <form name="formulario" method="post" action="../login/loginProy.php">
+            <input type="hidden" name="msg_error" value="2">
+        </form>
+        <script type="text/javascript">
+            document.formulario.submit();
+        </script>
+<?php
+}
+?>
 <?php 
 require_once "../modelo/conexion.php";
 $conexion = conectar();

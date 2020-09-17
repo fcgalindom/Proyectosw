@@ -1,7 +1,7 @@
 <?php
 require('fpdf.php');
 require_once "../../modelo/conexion.php";
-$conexion=conexion();
+$conexion=conectar();
 
 
 class PDF extends FPDF

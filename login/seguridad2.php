@@ -3,7 +3,8 @@
 include("../modelo/conexion.php");
 $conexion = conectar();
 $correo = $_POST['correo'];
-$password = sha1($_POST['password']);
+$password2= $_POST['password'];
+$password = sha1($password2);
 
 
 $sql = "SELECT cod_empresa FROM empresa WHERE correo='{$correo}' AND contrasenia='{$password}'"; 
@@ -23,16 +24,17 @@ if( $row=mysqli_fetch_array($respuesta) )
         //CODIGO DE SESION
          
         //Crear un formulario para redireccionar al usuario y enviar oculto su Id
-?>
+         ?>
         <form name="formulario" method="post" action="../vistaEmpresa/it-next/inicio.php">
             <input type="hidden" name="idUser" value='<?php echo $id ?>' />
         </form>
-<?php
-    $ingresos=$ingresos+1;
-    $sql4 = "UPDATE empresa SET ingresos='{$ingresos}'  WHERE cod_empresa='{$id}'"; 
-    mysqli_query($conexion, $sql4);
-    header ("Location: ../vistaEmpresa/it-next/inicio.php");
-    }else{
+         <?php
+        $ingresos=$ingresos+1;
+        $sql4 = "UPDATE empresa SET ingresos='{$ingresos}'  WHERE cod_empresa='{$id}'"; 
+        mysqli_query($conexion, $sql4);
+        header ("Location: ../vistaEmpresa/it-next/inicio.php");
+} 
+ else{
 
 
     $sql2 = "SELECT cod_estudiante, ingresos FROM estudiante WHERE correo='{$correo}' AND contrasenia='{$password}'"; 
@@ -53,24 +55,24 @@ if( $row=mysqli_fetch_array($respuesta) )
         //CODIGO DE SESION
          
         //Crear un formulario para redireccionar al usuario y enviar oculto su Id
-?>
+         ?>
         <form name="formulario" method="post" action="../vista/it-next/it_home.php">
             <input type="hidden" name="idUser" value='<?php echo $id ?>' />
         </form>
-<?php
-$ingresos=$ingresos+1;
-$sql3 = "UPDATE estudiante SET ingresos='{$ingresos}'  WHERE cod_estudiante='{$id}'"; 
-mysqli_query($conexion, $sql3);
-header ("Location: ../vista/it-next/it_home.php");    
-}
+         <?php
+        $ingresos=$ingresos+1;
+        $sql3 = "UPDATE estudiante SET ingresos='{$ingresos}'  WHERE cod_estudiante='{$id}'"; 
+        mysqli_query($conexion, $sql3);
+        header ("Location: ../vista/it-next/it_home.php");    
+    }
+else{
 
-$sql5 = "SELECT cod_empresa, ingresos FROM estudiante WHERE correo='{$correo}' AND contrasenia='{$password}'"; 
-$respuesta5=mysqli_query($conexion, $sql5);
+    $sql8 = "SELECT cod_admin FROM administrador WHERE correo='{$correo}' AND contrasenia='{$password2}'"; 
+    $respuesta8=mysqli_query($conexion, $sql8);
 
-if($row=mysqli_fetch_array($respuesta5))
-{
-    $id=$row['cod_estudiante'];
-        $ingresos=$row['ingresos'];
+     if($row=mysqli_fetch_array($respuesta8))
+    {
+        $id=$row['cod_admin'];
         //Iniciar una sesion de PHP
         session_start();
         //Crear una variable para indicar que se ha autenticado
@@ -80,28 +82,30 @@ if($row=mysqli_fetch_array($respuesta5))
         //CODIGO DE SESION
          
         //Crear un formulario para redireccionar al usuario y enviar oculto su Id
-?>
-        <form name="formulario" method="post" action="../vista/it-next/it_home.php">
+        ?>
+        <form name="formulario" method="post" action="../vistaAdministrador/AdminPrincipal.php">
             <input type="hidden" name="idUser" value='<?php echo $id ?>' />
         </form>
-<?php
-$ingresos=$ingresos+1;
-$sql3 = "UPDATE empresa SET ingresos='{$ingresos}'  WHERE cod_empresa='{$id}'"; 
-mysqli_query($conexion, $sql3);
-header ("Location: ../vista/it-next/it_home.php");  
-}
-
-
-    else {
-        //En caso de que no exista una fila...
-        //..Crear un formulario para redireccionar al usuario a la pagina de login
-        //enviandole un codigo de error
-?>
-        <form name="formulario" method="post" action="loginProy.php">
-            <input type="hidden" name="msg_error" value="1">
-        </form>
-<?php
-header ("Location: loginProy.php");   
+        <?php
+        header ("Location: ../vistaAdministrador/AdminPrincipal.php"); 
     }
-}
-    ?>
+
+    else 
+    {
+    //En caso de que no exista una fila...
+    //..Crear un formulario para redireccionar al usuario a la pagina de login
+    //enviandole un codigo de error
+     ?>
+    <form name="formulario" method="post" action="loginProy.php">
+        <input type="hidden" name="msg_error" value="1">
+    </form>
+    <?php
+     header ("Location: loginProy.php");   
+    }
+
+    
+   }
+ }
+
+ ?>
+
