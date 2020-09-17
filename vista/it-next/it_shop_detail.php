@@ -160,8 +160,16 @@ $codigo_oferta=$_POST['codigo_oferta'];
                 </p>    
                 <br>
                 <br>
-                <form class="cart" method="post" action="it_blog.php">
+                <form class="cart" method="POST" action="../../controlador/Crud/registros/registro_ofertas.php">
+                  <input type="hidden" name="codigo_estudiante" value="<?php echo $codigo ?>">
+                  <input type="hidden" name="codigo_oferta" value="<?php echo $codigo_oferta ?>">
                   <button type="submit" class="btn sqaure_bt">Enviar hoja de vida</button>
+                </form>
+                <br>
+                <form class="cart" method="POST" action="../../controlador/Crud/eliminaciones/eliminar_oferta.php">
+                  <input type="hidden" name="codigo_estudiante" value="<?php echo $codigo ?>">
+                  <input type="hidden" name="codigo_oferta" value="<?php echo $codigo_oferta ?>">
+                  <button type="submit" class="btn btn-danger">Anular oferta</button>
                 </form>
               </div>
             </div>
