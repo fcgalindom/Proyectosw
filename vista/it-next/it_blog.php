@@ -1,8 +1,25 @@
 <?php
 
+session_start();
+
+$codigo=$_SESSION['id'];
+ 
+//Validar que el usuario este logueado y exista un UID
+if ( ! ($_SESSION['autenticado'] == 'SI' && isset($_SESSION['id'])) )
+{
+    //En caso de que el usuario no este autenticado, crear un formulario y redireccionar a la
+    //pantalla de login, enviando un codigo de error
+?>
+       <form name="formulario" method="post" action="../../login/loginProy.php">
+            <input type="hidden" name="msg_error" value="2">
+        </form>
+        <script type="text/javascript">
+            document.formulario.submit();
+        </script>
+<?php
+}
 include("../../modelo/conexion.php");
 $conexion = conectar();
-
 $sql = "SELECT
 cod_estudiante
 FROM
@@ -10,7 +27,7 @@ perfil, estudiante, formacion_academica
 WHERE
 perfil.cod_perfil = estudiante.cod_estudiante AND
 formacion_academica.cod_f_academica = estudiante.cod_estudiante AND
-cod_estudiante = 1";
+cod_estudiante = $codigo";
 
 $resultado = mysqli_query($conexion, $sql);
 mysqli_close($conexion);
@@ -22,7 +39,7 @@ foreach ($resultado as $key)
 
 if($llave == null)
 {
-   header("Location: it_about.php");
+   header("Location: it_about.php?ky=$codigo");
 }
 ?>
 <!DOCTYPE html>
@@ -35,12 +52,12 @@ if($llave == null)
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="viewport" content="initial-scale=1, maximum-scale=1">
 <!-- site metas -->
-<title>It.Next - IT Service Responsive Html Theme</title>
+<title>El bosque</title>
 <meta name="keywords" content="">
 <meta name="description" content="">
 <meta name="author" content="">
 <!-- site icons -->
-<link rel="icon" href="images/fevicon/fevicon.png" type="image/gif" />
+<link rel="icon" href="images/loaders/bosqueloader.png" type="image/gif" />
 <!-- bootstrap css -->
 <link rel="stylesheet" href="css/bootstrap.min.css" />
 <!-- Site css -->
@@ -53,10 +70,6 @@ if($llave == null)
 <link rel="stylesheet" href="css/custom.css" />
 <!-- wow Animation css -->
 <link rel="stylesheet" href="css/animate.css" />
-<!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-      <![endif]-->
 </head>
 <body id="default_theme" class="it_service blog">
 <!-- loader -->
@@ -91,19 +104,27 @@ if($llave == null)
           <div class="menu_side">
             <div id="navbar_menu">
               <ul class="first-ul">
-                <li> <a  href="it_home.php">Home</a>
+                <li> 
+                  <a href= "it_home.php">Home</a>
                 </li>
-                <li><a href="it_about.php">Hoja de Vida</a></li>
+                <li>
+                  <a href= "it_about.php" >Hoja de Vida</a>
                 </li>
-                <li> <a class="active" href="it_blog.php">Mis ofertas</a>
+                <li> 
+                  <a class="active" href= "it_blog.php">Mis ofertas</a>
                 </li>
-                <li> <a  href="it_contact.php">Datos de Contacto</a>
-                </li>              
-              </ul>
-            </div>
-            <div class="search_icon">
-              <ul>
-                <li><a href="#" data-toggle="modal" data-target="#search_bar"><i class="fa fa-search" aria-hidden="true"></i></a></li>
+                <li> 
+                  <a href= "it_contact.php">Datos de Contacto</a>
+                </li>  
+                <li> 
+                  <a href="../../login/cerrarSesion.php">Cerrar Sesion</a>
+                </li>   
+                <li> 
+                  <form action="../../controlador/filtros/filtro.php" method="post">
+                  <input type="text" class="form-control" name="texto" placeholder="Buscar">
+                  <button type="submit">Enviar</button>
+                  </form>
+                </li>          
               </ul>
             </div>
           </div>
@@ -139,6 +160,13 @@ if($llave == null)
 <!-- section -->
 <div class="section padding_layout_1 blog_grid">
   <div class="container">
+
+  <?php 
+  $conexion = conectar();
+  $sql = "SELECT descripcion_oferta,cod_oferta FROM oferta, estudiante WHERE estudiante.cod_estudiante = oferta.oferta_carrera  GROUP BY descripcion_oferta";
+  $resultado = mysqli_query($conexion,$sql);
+  foreach ($resultado as $key) 
+  { ?>
     <div class="row">
       <div class="col-lg-6 col-md-1 col-sm-12 col-xs-12">
           <div class="blog_section">
@@ -152,9 +180,7 @@ if($llave == null)
                   <li><i class="fa fa-calendar" aria-hidden="true"></i> 12 Aug 2017</li>
                 </ul>
               </div>
-              <p>Consectetur, assumenda provident lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae laboriosam sunt hic perspiciatis, 
-                asperiores mollitia excepturi voluptatibus sequi nostrum ipsam veniam omnis nihil! A ea maiores corporis. Lorem ipsum dolor sit amet, consectetur adipisicing elit, 
-                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+              <p><?php echo $key['descripcion_oferta'] ?></p>
               <div class="bottom_info">
               
               </div>
@@ -173,106 +199,16 @@ if($llave == null)
                   <li><i class="fa fa-calendar" aria-hidden="true"></i> 12 Aug 2017</li>
                 </ul>
               </div>
-              <p>Consectetur, assumenda provident lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae laboriosam sunt hic perspiciatis, 
-                asperiores mollitia excepturi voluptatibus sequi nostrum ipsam veniam omnis nihil! A ea maiores corporis. Lorem ipsum dolor sit amet, consectetur adipisicing elit, 
-                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+              <p><?php echo $key['descripcion_oferta'] ?> </p>
               
             </div>
           </div>
-        
-      </div>
-      
+      </div>      
     </div>
-    <div class="row">
-      <div class="col-lg-6 col-md-1 col-sm-12 col-xs-12">
-          <div class="blog_section">
-            <div class="blog_feature_img"> <img class="img-responsive" src="images/it_service/post-06.jpg" alt="#"> </div>
-            <div class="blog_feature_cantant">
-              <p class="blog_head">Blogpost With Image</p>
-              <div class="post_info">
-                <ul>
-                  <li><i class="fa fa-user" aria-hidden="true"></i> Marketing</li>
-                  <li><i class="fa fa-comment" aria-hidden="true"></i> 5</li>
-                  <li><i class="fa fa-calendar" aria-hidden="true"></i> 12 Aug 2017</li>
-                </ul>
-              </div>
-              <p>Consectetur, assumenda provident lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae laboriosam sunt hic perspiciatis, 
-                asperiores mollitia excepturi voluptatibus sequi nostrum ipsam veniam omnis nihil! A ea maiores corporis. Lorem ipsum dolor sit amet, consectetur adipisicing elit, 
-                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
-              <div class="bottom_info">
-              
-              </div>
-            </div>
-          </div>
-      </div>
-      <div class="col-lg-6 col-md-1 col-sm-12 col-xs-12">
-         <div class="blog_section">
-            <div class="blog_feature_img"> <img class="img-responsive" src="images/it_service/home_01.png" alt="#"> </div>
-            <div class="blog_feature_cantant">
-              <p class="blog_head">Blogpost With Image</p>
-              <div class="post_info">
-                <ul>
-                  <li><i class="fa fa-user" aria-hidden="true"></i> Marketing</li>
-                  <li><i class="fa fa-comment" aria-hidden="true"></i> 5</li>
-                  <li><i class="fa fa-calendar" aria-hidden="true"></i> 12 Aug 2017</li>
-                </ul>
-              </div>
-              <p>Consectetur, assumenda provident lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae laboriosam sunt hic perspiciatis, 
-                asperiores mollitia excepturi voluptatibus sequi nostrum ipsam veniam omnis nihil! A ea maiores corporis. Lorem ipsum dolor sit amet, consectetur adipisicing elit, 
-                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
-              
-            </div>
-          </div>
-        
-      </div>
-      
-    </div>
-  </div>
-</div>
+  <?php }
+  ?>
 
 
-<!-- footer -->
-<footer class="footer_style_2">
-  <div class="container-fuild">
-    <div class="row">
-      <div class="map_section">
-        <div id="map"></div>
-      </div>
-      <div class="footer_blog">
-        <div class="row">
-          <div class="col-md-6">
-            <div class="main-heading left_text">
-              <h2>It Next Theme</h2>
-            </div>
-            <p>Tincidunt elit magnis nulla facilisis. Dolor sagittis maecenas. Sapien nunc amet ultrices, dolores sit ipsum velit purus aliquet, massa fringilla leo orci.</p>
-            <ul class="social_icons">
-              <li class="social-icon fb"><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-              <li class="social-icon tw"><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-              <li class="social-icon gp"><a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
-            </ul>
-          </div>
-          <div class="col-md-6">
-            <div class="main-heading left_text">
-              <h2>Additional links</h2>
-            </div>
-            <ul class="footer-menu">
-              <li><a href="it_about.html"><i class="fa fa-angle-right"></i> About us</a></li>
-              <li><a href="it_term_condition.html"><i class="fa fa-angle-right"></i> Terms and conditions</a></li>
-              <li><a href="it_privacy_policy.html"><i class="fa fa-angle-right"></i> Privacy policy</a></li>
-              <li><a href="it_news.html"><i class="fa fa-angle-right"></i> News</a></li>
-              <li><a href="it_contact.html"><i class="fa fa-angle-right"></i> Contact us</a></li>
-            </ul>
-          </div>
-          
-        </div>
-      </div>
-      <div class="cprt">
-        <p>ItNext © Copyrights 2019 Design by html.design</p>
-      </div>
-    </div>
-  </div>
-</footer>
-<!-- end footer -->
 
 <!-- js section -->
 <script src="js/jquery.min.js"></script>

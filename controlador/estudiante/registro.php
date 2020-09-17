@@ -2,7 +2,6 @@
 
 include("../../modelo/conexion.php");
 $conexion = conectar();
-
 $cod_estudiante = 0;
 $nombre = $_GET['nombre'];
 $apellido = $_GET['apellido'];
@@ -13,7 +12,9 @@ $carrera = $_GET['carrera'];
 $semestre = $_GET['semestre'];
 $passowrd = $_GET['password'];
 $nombre = "$nombre $apellido";
-$sql = "INSERT INTO ESTUDIANTE VALUES(0,'$nombre',$telefono,'$email','$direccion',0,'$passowrd',1,1,null)";
+$passowrd = sha1($passowrd);
+$sql = "INSERT INTO ESTUDIANTE VALUES(0,'$nombre',$telefono,'$email','$direccion',$carrera,0,'$semestre','$passowrd')";
+echo $sql;
 mysqli_query($conexion, $sql);
 mysqli_close($conexion);
 
