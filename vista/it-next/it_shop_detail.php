@@ -1,3 +1,8 @@
+<?php
+$codigo = $_POST['codigo'];
+$codigo_oferta=$_POST['codigo_oferta'];
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -118,10 +123,6 @@
 <div class="section padding_layout_1 product_detail">
   <div class="container">
      <?php 
-           
-      $codigo_oferta=$_POST['codigo_oferta'];
-      
-
       $conectar = mysqli_connect('localhost','root','','feriaop_bd');
       $sql= "SELECT logo,nom_empresa, descripcion, nom_oferta, fecha_inicio, salario, descripcion_oferta
       FROM oferta, tipo_contrato, empresa

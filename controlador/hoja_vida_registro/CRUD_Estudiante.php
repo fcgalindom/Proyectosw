@@ -255,12 +255,12 @@ function guardarCertificaciones()
     mysqli_close($conexion);
 }
 
-// guardarPerfil();
-// guardarFormacionAcademica();
-// guardar_f_tecnica();
-// guardarCertificaciones();
-// guardarReferencias();
- guardarExperienciaLaboral();
-// guardarExperienciaAcademica();
+guardarPerfil();
+guardarFormacionAcademica();
+guardar_f_tecnica();
+guardarCertificaciones();
+guardarReferencias();
+guardarExperienciaLaboral();
+guardarExperienciaAcademica();
 
-//header("Location: ../../vista/it-next/it_about.php?ky=$codigo");
+header("Location: ../../vista/it-next/it_about.php?ky=$codigo");

@@ -405,8 +405,6 @@ if($llave == null)
                    <div class="col-md-4">
                       <div class="full blog_colum">
                       
-                      <form action="it_shop_detail.php" method="POST">
-                        <input type="hidden" name="codigo_oferta" value="<?php echo $row['cod_oferta']?>">
                         <div class="blog_feature_img"><img src="<?php echo $row['logo'] ?> "/></div>
                         
 
@@ -422,7 +420,9 @@ if($llave == null)
                         <div class="blog_feature_cont">
                           <p><?php echo $row['descripcion_oferta'] ?></p>
                         </div>
-
+                        <form action="it_shop_detail.php" method="POST">
+                        <input type="hidden" name="codigo_oferta" value="<?php echo $row['cod_oferta']?>">
+                        <input type="hidden" name="codigo" value="<?php echo $codigo ?>">
                         <button type="submit" class="btn sqaure_bt">Ver mas</button>
                         </form>
                       </div>
