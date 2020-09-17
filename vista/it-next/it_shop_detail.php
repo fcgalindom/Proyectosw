@@ -1,3 +1,4 @@
+<?php $codigo = $_GET['ky'] ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -77,7 +78,7 @@
                   <a href="<?php echo "it_blog.php?ky=$codigo" ?>">Mis ofertas</a>
                 </li>
                 <li> 
-                  <a href="<?php echo "it_contact?ky=$codigo" ?>">Datos de Contacto</a>
+                  <a href="<?php echo "it_contact.php?ky=$codigo" ?>">Datos de Contacto</a>
                 </li>    
                 <li> 
                 <input type="email" class="form-control" placeholder="Buscar" >
@@ -128,7 +129,7 @@
       WHERE
       tipo_contrato.cod_t_contrato = oferta.cod_t_contrato AND
       empresa.cod_empresa = oferta.cod_empresa AND
-      oferta.cod_oferta=1
+      oferta.cod_oferta=$codigo_oferta
       GROUP BY logo,nom_empresa,descripcion, nom_oferta, fecha_inicio, salario, descripcion_oferta";
 
       $respuesta=mysqli_query($conectar, $sql);  

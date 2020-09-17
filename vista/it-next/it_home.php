@@ -107,7 +107,7 @@ if($llave == null)
                   <a href="<?php echo "it_blog.php?ky=$codigo" ?>">Mis ofertas</a>
                 </li>
                 <li> 
-                  <a href="<?php echo "it_contact?ky=$codigo" ?>">Datos de Contacto</a>
+                  <a href="<?php echo "it_contact.php?ky=$codigo" ?>">Datos de Contacto</a>
                 </li>    
                 <li> 
                   <input type="text" class="form-control" name="texto" placeholder="Buscar">
@@ -133,7 +133,7 @@ if($llave == null)
         <!-- START REVOLUTION SLIDER 5.0.7 auto mode -->
         <div id="rev_slider_4_1" class="rev_slider fullwidthabanner" style="display:none;" data-version="5.0.7">
           <ul>
-            <li data-index="rs-1812" data-transition="zoomin" data-slotamount="7"  data-easein="Power4.easeInOut" data-easeout="Power4.easeInOut" data-masterspeed="2000"  data-thumb="images/it_service/ingenieria1.jpg"  data-rotate="0"  data-saveperformance="off"  data-title="Computer Services" data-description="">
+            <li data-index="rs-1812" data-transition="zoomin" data-slotamount="7"  data-easein="Power4.easeInOut" data-easeout="Power4.easeInOut" data-masterspeed="2000"  data-thumb="images/it_service/ingenieria1.png"  data-rotate="0"  data-saveperformance="off"  data-title="Computer Services" data-description="">
               <!-- MAIN IMAGE -->
               <img src="images/it_service/ingenieria1.png"  alt="#"  data-bgposition="center center" data-kenburns="on" data-duration="30000" data-ease="Linear.easeNone" data-scalestart="100" data-scaleend="120" data-rotatestart="0" data-rotateend="0" data-offsetstart="0 0" data-offsetend="0 0" data-bgparallax="10" class="rev-slidebg" data-no-retina>
               <!-- LAYERS -->
@@ -400,13 +400,12 @@ if($llave == null)
                 
               while ($row = mysqli_fetch_array($respuesta)): ?>
                 <div class="row">
-                   <div class="col-md-4">
-                      <div class="full blog_colum">
+                   <div class="col-md-6">
+                      <div class="align-content-md-center">
                       
-                      <form action="it_shop_detail.php" method="POST">
+                      <form action="<?php echo "it_shop_detail.php?ky=$codigo" ?>" method="POST">
                         <input type="hidden" name="codigo_oferta" value="<?php echo $row['cod_oferta']?>">
-                        <div class="blog_feature_img"><img src="<?php echo $row['logo'] ?> "/></div>
-                        
+                        <div class="blog_feature_img"><img width="500" height="500" src="<?php echo $row['logo'] ?> "/></div>
 
                         
                         <div class="post_time">
@@ -426,10 +425,9 @@ if($llave == null)
                       </div>
                     </div>
                 </div>
+                <br>
+                <br>
               <?php endwhile;?>
-
-  
-
   </div>
 </div>
 <!-- end section -->

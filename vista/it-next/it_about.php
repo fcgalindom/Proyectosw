@@ -73,7 +73,7 @@
                   <a href="<?php echo "it_blog.php?ky=$codigo" ?>">Mis ofertas</a>
                 </li>
                 <li> 
-                  <a href="<?php echo "it_contact?ky=$codigo" ?>">Datos de Contacto</a>
+                  <a href="<?php echo "it_contact.php?ky=$codigo" ?>">Datos de Contacto</a>
                 </li>    
                 <li> 
                   <form action="../../controlador/filtros/filtro.php" method="post">

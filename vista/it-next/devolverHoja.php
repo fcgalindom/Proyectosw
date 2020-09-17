@@ -1,7 +1,4 @@
-<?php
-$codigo = $_GET['ky'];
-?>
-
+<?php $codigo = $_GET['ky'] ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -38,7 +35,7 @@ $codigo = $_GET['ky'];
       <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
       <![endif]-->
 </head>
-<body id="default_theme" class="contact_us">
+<body id="default_theme" class="it_service about">
 <!-- loader -->
 <div class="bg_load"> <img class="loader_animation" src="images/loaders/bosqueloader.png" alt="#" /> </div>
 <!-- end loader -->
@@ -81,7 +78,7 @@ $codigo = $_GET['ky'];
                   <a href="<?php echo "it_blog.php?ky=$codigo" ?>">Mis ofertas</a>
                 </li>
                 <li> 
-                  <a class="active" href="<?php echo "it_contact.php?ky=$codigo" ?>">Datos de Contacto</a>
+                  <a href="<?php echo "it_contact.php?ky=$codigo" ?>">Datos de Contacto</a>
                 </li>    
                 <li> 
                 <input type="email" class="form-control" placeholder="Buscar" >
@@ -105,10 +102,10 @@ $codigo = $_GET['ky'];
         <div class="full">
           <div class="title-holder">
             <div class="title-holder-cell text-left">
-              <h1 class="page-title">Contact</h1>
+              <h1 class="page-title">Empresa</h1>
               <ol class="breadcrumb">
-                <li><a href="index.html">Home</a></li>
-                <li class="active">Contact</li>
+                <li><a href="it_home.php">Home</a></li>
+                <li class="active">Empresa</li>
               </ol>
             </div>
           </div>
@@ -118,70 +115,94 @@ $codigo = $_GET['ky'];
   </div>
 </div>
 <!-- end inner page banner -->
-<div class="section padding_layout_1">
+<!-- section -->
+<div class="section padding_layout_1 product_detail">
   <div class="container">
-    <div class="row">
-      <div class="col-xl-2 col-lg-2 col-md-12 col-sm-12 col-xs-12"></div>
-      <div class="col-xl-8 col-lg-8 col-md-12 col-sm-12 col-xs-12">
-        <div class="row">
-          <div class="full">
-            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 adress_cont margin_bottom_30_all">
-              <div class="information_bottom left-side margin_bottom_20_all">
-                <div class="icon_bottom"> <i class="fa fa-road" aria-hidden="true"></i> </div>
-                <div class="info_cont">
-                  <h4>Lorem Ipsum is simply dummy text..</h4>
-                  <p>Sydney Australia</p>
-                </div>
-              </div>
-              <div class="information_bottom left-side margin_bottom_20_all">
-                <div class="icon_bottom"> <i class="fa fa-user" aria-hidden="true"></i> </div>
-                <div class="info_cont">
-                  <h4>0011 234 56789</h4>
-                  <p>Mon-Fri 8:30am-6:30pm</p>
-                </div>
-              </div>
-              <div class="information_bottom left-side">
-                <div class="icon_bottom"> <i class="fa fa-envelope" aria-hidden="true"></i> </div>
-                <div class="info_cont">
-                  <h4>Correo institucional</h4>
-                  <p>nombre@unbosque.edu.co</p>
-                </div>
+     <?php 
+           
+      $codigo_oferta=$_POST['codigo_oferta'];
+      
 
-                
+      $conectar = mysqli_connect('localhost','root','','feriaop_bd');
+      $sql= "SELECT logo,nom_empresa, descripcion, nom_oferta, fecha_inicio, salario, descripcion_oferta
+      FROM oferta, tipo_contrato, empresa
+      WHERE
+      tipo_contrato.cod_t_contrato = oferta.cod_t_contrato AND
+      empresa.cod_empresa = oferta.cod_empresa AND
+      oferta.cod_oferta=$codigo_oferta
+      GROUP BY logo,nom_empresa,descripcion, nom_oferta, fecha_inicio, salario, descripcion_oferta";
+
+      $respuesta=mysqli_query($conectar, $sql);  
+        
+      while ($row = mysqli_fetch_array($respuesta)): ?>
+      <div class="row">
+        <div class="col-md-12">
+          <div class="row">
+
+            <div class=" col-md-5">
+              <div class="product_detail_feature_img ">
+              <div class="blog_feature_img"> <img src="<?php echo $row['logo'] ?>"/></div>
               </div>
             </div>
-            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 adress_cont margin_bottom_30_all"> 
-              <div class="information_bottom left-side margin_bottom_20_all">
-                <div class="icon_bottom"> <i class="fa fa-road" aria-hidden="true"></i> </div>
-                <div class="info_cont">
-                  <h4>Lorem Ipsum is simply dummy text..</h4>
-                  <p>Sydney Australia</p>
+
+            <div class=" col-md-7 product_detail_side detail_style1">
+              <div class="product-heading">
+                <h2>
+                <?php echo $row['nom_oferta'] ?>
+                </h2>
+                <h3>
+                <?php echo $row['nom_empresa'] ?>
+                </h3>
+              </div>
+              <div class="detail-contant">
+                <p>
+                <?php echo $row['descripcion'] ?>
+                </p>    
+                <br>
+                <br>
+                <form class="cart" method="post" action="it_blog.php">
+                  <button type="submit" class="btn sqaure_bt">Cancelar Aplicacion a la oferta</button>
+                </form>
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-md-12">
+              <div class="full">
+                <div class="tab_bar_section">
+                  <ul class="nav nav-tabs" role="tablist">
+                    <li class="nav-item"><a class="nav-link active" data-toggle="tab" href="#">Detalles de la Oferta</a></li>
+                  </ul>
+                  <!-- Tab panes -->
+                  <div class="tab-content">
+                    <div id="description" class="tab-pane active">
+                      <div class="product_desc">
+                      <br>
+                      <h2>
+                      <?php echo $row['nom_oferta'] ?>
+                      </h2>
+                      <h3>
+                      <br>
+                      <?php echo $row['descripcion_oferta'] ?>
+                      <br>
+                      <?php echo $row['salario'] ?>
+                      <br>
+                      <?php echo $row['fecha_inicio'] ?>
+                      <h3>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
-              <div class="information_bottom left-side margin_bottom_20_all">
-                <div class="icon_bottom"> <i class="fa fa-user" aria-hidden="true"></i> </div>
-                <div class="info_cont">
-                  <h4>0011 234 56789</h4>
-                  <p>Mon-Fri 8:30am-6:30pm</p>
-                </div>
-              </div>
-              <div class="information_bottom left-side">
-                <div class="icon_bottom"> <i class="fa fa-envelope" aria-hidden="true"></i> </div>
-                <div class="info_cont">
-                  <h4>Correo institucional</h4>
-                  <p>nombre@unbosque.edu.co</p>
-                </div>
-              </div>
-                </div>
+            </div>
           </div>
         </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-
-
+     </div>
+     <?php 
+     endwhile;
+     ?>  
+<!-- end section -->
 
 <!-- footer -->
 <footer class="footer_style_2">
@@ -214,7 +235,8 @@ $codigo = $_GET['ky'];
               <li><a href="it_news.html"><i class="fa fa-angle-right"></i> News</a></li>
               <li><a href="it_contact.html"><i class="fa fa-angle-right"></i> Contact us</a></li>
             </ul>
-          </div>          
+          </div>
+         
         </div>
       </div>
       <div class="cprt">
@@ -234,5 +256,14 @@ $codigo = $_GET['ky'];
 <!-- custom js -->
 <script src="js/custom.js"></script>
 
+<!-- zoom effect -->
+<script src='js/hizoom.js'></script>
+<script>
+       
+        $('.hi2').hiZoom({
+            width: 400,
+            position: 'right'
+        });
+    </script>
 </body>
 </html>
