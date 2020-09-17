@@ -1,31 +1,4 @@
-<?php
-<<<<<<< HEAD
-
-session_start();
-
-$codigo=$_SESSION['id'];
- 
-//Validar que el usuario este logueado y exista un UID
-if ( ! ($_SESSION['autenticado'] == 'SI' && isset($_SESSION['id'])) )
-{
-    //En caso de que el usuario no este autenticado, crear un formulario y redireccionar a la
-    //pantalla de login, enviando un codigo de error
-?>
-       <form name="formulario" method="post" action="../../login/loginProy.php">
-            <input type="hidden" name="msg_error" value="2">
-        </form>
-        <script type="text/javascript">
-            document.formulario.submit();
-        </script>
-<?php
-}
-?>
-=======
-$codigo = $_POST['codigo'];
-$codigo_oferta=$_POST['codigo_oferta'];
-?>
-
->>>>>>> a2780013978197ecca1011b785f9a7c07b5c7fd6
+<?php $codigo = $_GET['ky'] ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -96,27 +69,6 @@ $codigo_oferta=$_POST['codigo_oferta'];
             <div id="navbar_menu">
               <ul class="first-ul">
                 <li> 
-<<<<<<< HEAD
-                  <a href= "it_home.php">Home</a>
-                </li>
-                <li>
-                  <a href= "it_about.php">Hoja de Vida</a>
-                </li>
-                <li> 
-                  <a href= "it_blog.php" >Mis ofertas</a>
-                </li>
-                <li> 
-                  <a href= "it_contact" >Datos de Contacto</a>
-                </li>   
-                <li> 
-                  <a href="../../login/cerrarSesion.php">Cerrar Sesion</a>
-                </li>  
-                <li> 
-                  <form action="../../controlador/filtros/filtro.php" method="post">
-                  <input type="text" class="form-control" name="texto" placeholder="Buscar">
-                  <button type="submit">Enviar</button>
-                  </form>
-=======
                   <a href="<?php echo "it_home.php?ky=$codigo" ?>">Home</a>
                 </li>
                 <li>
@@ -130,7 +82,6 @@ $codigo_oferta=$_POST['codigo_oferta'];
                 </li>    
                 <li> 
                 <input type="email" class="form-control" placeholder="Buscar" >
->>>>>>> a2780013978197ecca1011b785f9a7c07b5c7fd6
                 </li>           
               </ul>
             </div>
@@ -168,24 +119,17 @@ $codigo_oferta=$_POST['codigo_oferta'];
 <div class="section padding_layout_1 product_detail">
   <div class="container">
      <?php 
-<<<<<<< HEAD
            
       $codigo_oferta=$_POST['codigo_oferta'];
       
 
-=======
->>>>>>> a2780013978197ecca1011b785f9a7c07b5c7fd6
       $conectar = mysqli_connect('localhost','root','','feriaop_bd');
       $sql= "SELECT logo,nom_empresa, descripcion, nom_oferta, fecha_inicio, salario, descripcion_oferta
       FROM oferta, tipo_contrato, empresa
       WHERE
       tipo_contrato.cod_t_contrato = oferta.cod_t_contrato AND
       empresa.cod_empresa = oferta.cod_empresa AND
-<<<<<<< HEAD
-      oferta.cod_oferta='{$codigo}'
-=======
       oferta.cod_oferta=$codigo_oferta
->>>>>>> a2780013978197ecca1011b785f9a7c07b5c7fd6
       GROUP BY logo,nom_empresa,descripcion, nom_oferta, fecha_inicio, salario, descripcion_oferta";
 
       $respuesta=mysqli_query($conectar, $sql);  
@@ -216,23 +160,9 @@ $codigo_oferta=$_POST['codigo_oferta'];
                 </p>    
                 <br>
                 <br>
-<<<<<<< HEAD
                 <form class="cart" method="post" action="it_blog.php">
-                  <button type="submit" class="btn sqaure_bt">Enviar hoja de vida</button>
+                  <button type="submit" class="btn sqaure_bt">Cancelar Aplicacion a la oferta</button>
                 </form>
-=======
-                <form class="cart" method="POST" action="../../controlador/Crud/registros/registro_ofertas.php">
-                  <input type="hidden" name="codigo_estudiante" value="<?php echo $codigo ?>">
-                  <input type="hidden" name="codigo_oferta" value="<?php echo $codigo_oferta ?>">
-                  <button type="submit" class="btn sqaure_bt">Enviar hoja de vida</button>
-                </form>
-                <br>
-                <form class="cart" method="POST" action="../../controlador/Crud/eliminaciones/eliminar_oferta.php">
-                  <input type="hidden" name="codigo_estudiante" value="<?php echo $codigo ?>">
-                  <input type="hidden" name="codigo_oferta" value="<?php echo $codigo_oferta ?>">
-                  <button type="submit" class="btn btn-danger">Anular oferta</button>
-                </form>
->>>>>>> a2780013978197ecca1011b785f9a7c07b5c7fd6
               </div>
             </div>
           </div>
@@ -274,6 +204,48 @@ $codigo_oferta=$_POST['codigo_oferta'];
      ?>  
 <!-- end section -->
 
+<!-- footer -->
+<footer class="footer_style_2">
+  <div class="container-fuild">
+    <div class="row">
+      <div class="map_section">
+        <div id="map"></div>
+      </div>
+      <div class="footer_blog">
+        <div class="row">
+          <div class="col-md-6">
+            <div class="main-heading left_text">
+              <h2>It Next Theme</h2>
+            </div>
+            <p>Tincidunt elit magnis nulla facilisis. Dolor sagittis maecenas. Sapien nunc amet ultrices, dolores sit ipsum velit purus aliquet, massa fringilla leo orci.</p>
+            <ul class="social_icons">
+              <li class="social-icon fb"><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+              <li class="social-icon tw"><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+              <li class="social-icon gp"><a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
+            </ul>
+          </div>
+          <div class="col-md-6">
+            <div class="main-heading left_text">
+              <h2>Additional links</h2>
+            </div>
+            <ul class="footer-menu">
+              <li><a href="it_about.html"><i class="fa fa-angle-right"></i> About us</a></li>
+              <li><a href="it_term_condition.html"><i class="fa fa-angle-right"></i> Terms and conditions</a></li>
+              <li><a href="it_privacy_policy.html"><i class="fa fa-angle-right"></i> Privacy policy</a></li>
+              <li><a href="it_news.html"><i class="fa fa-angle-right"></i> News</a></li>
+              <li><a href="it_contact.html"><i class="fa fa-angle-right"></i> Contact us</a></li>
+            </ul>
+          </div>
+         
+        </div>
+      </div>
+      <div class="cprt">
+        <p>ItNext © Copyrights 2019 Design by html.design</p>
+      </div>
+    </div>
+  </div>
+</footer>
+<!-- end footer -->
 <!-- js section -->
 <script src="js/jquery.min.js"></script>
 <script src="js/bootstrap.min.js"></script>

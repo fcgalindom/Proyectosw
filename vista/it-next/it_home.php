@@ -21,6 +21,11 @@ if ( ! ($_SESSION['autenticado'] == 'SI' && isset($_SESSION['id'])) )
 
 include("../../modelo/conexion.php");
 $conexion = conectar();
+<<<<<<< HEAD
+=======
+
+$codigo = $_GET['ky'];
+>>>>>>> a2780013978197ecca1011b785f9a7c07b5c7fd6
 $sql = "SELECT
 cod_estudiante
 FROM
@@ -117,6 +122,7 @@ if($llave == null)
                   <a class="active" href="<?php echo "it_home.php?ky=$codigo" ?>">Home</a>
                 </li>
                 <li>
+<<<<<<< HEAD
                   <a href= "it_about.php">Hoja de Vida</a>
                 </li>
                 <li> 
@@ -133,6 +139,22 @@ if($llave == null)
                   <input type="text" class="form-control" name="texto" placeholder="Buscar">
                   <button type="submit">Enviar</button>
                   </form>
+=======
+                  <a href="<?php echo "it_about.php?ky=$codigo" ?>">Hoja de Vida</a>
+                </li>
+                <li> 
+                  <a href="<?php echo "it_blog.php?ky=$codigo" ?>">Mis ofertas</a>
+                </li>
+                <li> 
+                  <a href="<?php echo "it_contact.php?ky=$codigo" ?>">Datos de Contacto</a>
+                </li>    
+                <li> 
+                  <form id="formulario">
+                  <input type="text" class="form-control" name="texto" placeholder="Buscar">
+                  <button type="submit"> Enviar </button>
+                  </form>
+                  <h1></h1>
+>>>>>>> a2780013978197ecca1011b785f9a7c07b5c7fd6
                 </li>           
               </ul>
             </div>
@@ -153,7 +175,7 @@ if($llave == null)
         <!-- START REVOLUTION SLIDER 5.0.7 auto mode -->
         <div id="rev_slider_4_1" class="rev_slider fullwidthabanner" style="display:none;" data-version="5.0.7">
           <ul>
-            <li data-index="rs-1812" data-transition="zoomin" data-slotamount="7"  data-easein="Power4.easeInOut" data-easeout="Power4.easeInOut" data-masterspeed="2000"  data-thumb="images/it_service/ingenieria1.jpg"  data-rotate="0"  data-saveperformance="off"  data-title="Computer Services" data-description="">
+            <li data-index="rs-1812" data-transition="zoomin" data-slotamount="7"  data-easein="Power4.easeInOut" data-easeout="Power4.easeInOut" data-masterspeed="2000"  data-thumb="images/it_service/ingenieria1.png"  data-rotate="0"  data-saveperformance="off"  data-title="Computer Services" data-description="">
               <!-- MAIN IMAGE -->
               <img src="images/it_service/ingenieria1.png"  alt="#"  data-bgposition="center center" data-kenburns="on" data-duration="30000" data-ease="Linear.easeNone" data-scalestart="100" data-scaleend="120" data-rotatestart="0" data-rotateend="0" data-offsetstart="0 0" data-offsetend="0 0" data-bgparallax="10" class="rev-slidebg" data-no-retina>
               <!-- LAYERS -->
@@ -403,6 +425,7 @@ if($llave == null)
         </div>
       </div>
     </div>
+<<<<<<< HEAD
 
     <?php
   $conectar = conectar();
@@ -449,12 +472,114 @@ if($llave == null)
               <?php endwhile;?>
 
   
+=======
+>>>>>>> a2780013978197ecca1011b785f9a7c07b5c7fd6
 
+    <?php
+  $conectar = conectar();
+  $sql= "SELECT logo, nom_oferta, fecha_inicio, descripcion_oferta, 
+  OFERTA.cod_oferta FROM oferta, estudiante, empresa WHERE 
+  empresa.cod_empresa = oferta.cod_empresa AND estudiante.cod_carrera = oferta.oferta_carrera 
+  AND estudiante.cod_carrera=3 GROUP BY logo, nom_oferta, fecha_inicio, descripcion_oferta, oferta.cod_oferta";
+
+  $respuesta=mysqli_query($conectar, $sql);   
+ 
+                
+              while ($row = mysqli_fetch_array($respuesta)): ?>
+                <div class="row">
+                   <div class="col-md-6">
+                      <div class="align-content-md-center">
+                      
+                        <div class="blog_feature_img"><img width="500" height="500" src="<?php echo $row['logo'] ?> "/></div>
+                        
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                    <div class="post_time">
+                          <p><i class="fa fa-clock-o"></i><?php echo  $row['fecha_inicio'] ?></p>
+                        </div>
+
+                        <div class="blog_feature_head">
+                          <h4><?php echo $row['nom_oferta'] ?></h4>
+                        </div>
+
+                        <div class="blog_feature_cont">
+                          <p><?php echo $row['descripcion_oferta'] ?></p>
+                        </div>
+
+                        <form action="it_shop_detail.php" method="POST">
+                        <input type="hidden" name="codigo_oferta" value="<?php echo $row['cod_oferta']?>">
+                        <input type="hidden" name="codigo" value="<?php echo $codigo ?>">
+                        <button type="submit" class="btn sqaure_bt">Ver mas</button>
+                        </form>
+                    </div>
+                </div>
+                <br>
+                <br>
+              <?php endwhile;?>
   </div>
 </div>
 <!-- end section -->
 
 
+<<<<<<< HEAD
+=======
+<!-- Modal -->
+<div class="modal fade" id="search_bar" role="dialog">
+  <div class="modal-dialog">
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><i class="fa fa-close"></i></button>
+      </div>
+      <div class="modal-body">
+        <div class="row">
+          <div class="col-lg-8 col-md-8 col-sm-8 offset-lg-2 offset-md-2 offset-sm-2 col-xs-10 col-xs-offset-1">
+            <div class="navbar-search">
+              <form action="#" method="get" id="search-global-form" class="search-global">
+                <input type="text" placeholder="Type to search" autocomplete="off" name="s" id="search" value="" class="search-global__input">
+                <button class="search-global__btn"><i class="fa fa-search"></i></button>
+                <div class="search-global__note">Begin typing your search above and press return to search.</div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- End Model search bar -->
+<!-- footer -->
+<footer class="footer_style_2">
+  <div class="container-fuild">
+    <div class="row">
+      <div class="map_section">
+        <div id="map"></div>
+      </div>
+      <div class="footer_blog">
+        <div class="row">
+          <div class="col-md-6">
+            <div class="main-heading left_text">
+              <h2>It Next Theme</h2>
+            </div>
+            <p>Tincidunt elit magnis nulla facilisis. Dolor sagittis maecenas. Sapien nunc amet ultrices, dolores sit ipsum velit purus aliquet, massa fringilla leo orci.</p>
+           
+          </div>
+          <div class="col-md-6">
+            <div class="main-heading left_text">
+              <h2>Additional links</h2>
+            </div>
+            
+          </div>          
+      </div>
+      <div class="cprt">
+        <p>ItNext © Copyrights 2019 Design by html.design</p>
+      </div>
+    </div>
+  </div>
+</footer>
+<!-- end footer -->
+>>>>>>> a2780013978197ecca1011b785f9a7c07b5c7fd6
 <!-- js section -->
 <script src="js/jquery.min.js"></script>
 <script src="js/bootstrap.min.js"></script>

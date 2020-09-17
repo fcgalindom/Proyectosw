@@ -55,8 +55,8 @@ if( $row=mysqli_fetch_array($respuesta) )
         </form>
 <?php
 $ingresos=$ingresos+1;
-$sql2 = "UPDATE estudiante SET ingresos='{$ingresos}'  WHERE cod_empresa='{$id}'"; 
-$respuesta2=mysqli_query($conexion, $sql2);
+$sql3 = "UPDATE estudiante SET ingresos='{$ingresos}'  WHERE cod_estudiante='{$id}'"; 
+mysqli_query($conexion, $sql3);
 header ("Location: ../vista/it-next/it_home.php");    
 }
 
@@ -66,4 +66,18 @@ header ("Location: ../vista/it-next/it_home.php");
         //enviandole un codigo de error
 ?>
         <form name="formulario" method="post" action="loginProy.php">
-      
+            <input type="hidden" name="msg_error" value="1">
+        </form>
+<?php
+header ("Location: loginProy.php");   
+    }
+}
+    ?>
+
+
+
+
+
+
+
+

@@ -1,4 +1,5 @@
 <?php
+<<<<<<< HEAD
 
 session_start();
 
@@ -18,6 +19,11 @@ if ( ! ($_SESSION['autenticado'] == 'SI' && isset($_SESSION['id'])) )
         </script>
 <?php
 }
+=======
+$codigo = $_GET['ky'];
+require('fpdf/fpdf.php');
+
+>>>>>>> a2780013978197ecca1011b785f9a7c07b5c7fd6
     
 class PDF extends FPDF
 {

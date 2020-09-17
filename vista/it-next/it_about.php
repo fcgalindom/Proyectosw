@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?php
 
 session_start();
@@ -19,6 +20,10 @@ if ( ! ($_SESSION['autenticado'] == 'SI' && isset($_SESSION['id'])) )
 <?php
 }
 ?>
+=======
+<?php $codigo = $_GET['ky'] ?>
+
+>>>>>>> a2780013978197ecca1011b785f9a7c07b5c7fd6
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -83,6 +88,7 @@ if ( ! ($_SESSION['autenticado'] == 'SI' && isset($_SESSION['id'])) )
             <div id="navbar_menu">
               <ul class="first-ul">
                 <li> 
+<<<<<<< HEAD
                   <a  href= "it_home.php">Home</a>
                 </li>
                 <li>
@@ -96,6 +102,18 @@ if ( ! ($_SESSION['autenticado'] == 'SI' && isset($_SESSION['id'])) )
                 </li>
                 <li> 
                   <a href="../../login/cerrarSesion.php">Cerrar Sesion</a>
+=======
+                  <a  href="<?php echo "it_home.php?ky=$codigo" ?>">Home</a>
+                </li>
+                <li>
+                  <a class="active" href="<?php echo "it_about.php?ky=$codigo" ?>">Hoja de Vida</a>
+                </li>
+                <li> 
+                  <a href="<?php echo "it_blog.php?ky=$codigo" ?>">Mis ofertas</a>
+                </li>
+                <li> 
+                  <a href="<?php echo "it_contact.php?ky=$codigo" ?>">Datos de Contacto</a>
+>>>>>>> a2780013978197ecca1011b785f9a7c07b5c7fd6
                 </li>    
                 <li> 
                   <form action="../../controlador/filtros/filtro.php" method="post">
@@ -152,6 +170,11 @@ if ( ! ($_SESSION['autenticado'] == 'SI' && isset($_SESSION['id'])) )
     <div class="form-group">
     <!-- <form id="hojaDeVida"> -->
     <form action="../../controlador/hoja_vida_registro/CRUD_estudiante.php" method="POST">
+<<<<<<< HEAD
+=======
+    <input type="hidden" name="key" value="<?php echo $_GET['ky'] ?>">
+
+>>>>>>> a2780013978197ecca1011b785f9a7c07b5c7fd6
       <label class="font-weight-bold">Perfil Profesional</label>
       <br>
       <label >Conocimientos, habilidades, experiencia, competencias, areas de gusto, cualidades</label>
@@ -565,6 +588,42 @@ if ( ! ($_SESSION['autenticado'] == 'SI' && isset($_SESSION['id'])) )
 </div>
 <!-- end section -->
 
+<<<<<<< HEAD
+=======
+
+<!-- footer -->
+<footer class="footer_style_2">
+  <div class="container-fuild">
+    <div class="row">
+      <div class="map_section">
+        <div id="map"></div>
+      </div>
+      <div class="footer_blog">
+        <div class="row">
+          <div class="col-md-6">
+            <div class="main-heading left_text">
+              <h2>It Next Theme</h2>
+            </div>
+            <p>Tincidunt elit magnis nulla facilisis. Dolor sagittis maecenas. Sapien nunc amet ultrices, dolores sit ipsum velit purus aliquet, massa fringilla leo orci.</p>
+            
+          </div>
+          <div class="col-md-6">
+            <div class="main-heading left_text">
+              <h2>Additional links</h2>
+            </div>
+            
+          </div>
+          
+        </div>
+      </div>
+      <div class="cprt">
+        <p>ItNext © Copyrights 2019 Design by html.design</p>
+      </div>
+    </div>
+  </div>
+</footer>
+<!-- end footer -->
+>>>>>>> a2780013978197ecca1011b785f9a7c07b5c7fd6
 <!-- js section -->
 <script src="js/jquery.min.js"></script>
 <script src="js/bootstrap.min.js"></script>

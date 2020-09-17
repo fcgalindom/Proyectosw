@@ -1,4 +1,5 @@
 <?php
+<<<<<<< HEAD
 
 session_start();
 
@@ -18,6 +19,9 @@ if ( ! ($_SESSION['autenticado'] == 'SI' && isset($_SESSION['id'])) )
         </script>
 <?php
 }
+=======
+$codigo = $_GET['ky'];
+>>>>>>> a2780013978197ecca1011b785f9a7c07b5c7fd6
 ?>
 
 <!DOCTYPE html>
@@ -90,6 +94,7 @@ if ( ! ($_SESSION['autenticado'] == 'SI' && isset($_SESSION['id'])) )
             <div id="navbar_menu">
               <ul class="first-ul">
                 <li> 
+<<<<<<< HEAD
                   <a href="it_home.php">Home</a>
                 </li>
                 <li>
@@ -109,6 +114,21 @@ if ( ! ($_SESSION['autenticado'] == 'SI' && isset($_SESSION['id'])) )
                   <input type="text" class="form-control" name="texto" placeholder="Buscar">
                   <button type="submit">Enviar</button>
                   </form>
+=======
+                  <a href="<?php echo "it_home.php?ky=$codigo" ?>">Home</a>
+                </li>
+                <li>
+                  <a href="<?php echo "it_about.php?ky=$codigo" ?>">Hoja de Vida</a>
+                </li>
+                <li> 
+                  <a href="<?php echo "it_blog.php?ky=$codigo" ?>">Mis ofertas</a>
+                </li>
+                <li> 
+                  <a class="active" href="<?php echo "it_contact.php?ky=$codigo" ?>">Datos de Contacto</a>
+                </li>    
+                <li> 
+                <input type="email" class="form-control" placeholder="Buscar" >
+>>>>>>> a2780013978197ecca1011b785f9a7c07b5c7fd6
                 </li>           
               </ul>
             </div>
