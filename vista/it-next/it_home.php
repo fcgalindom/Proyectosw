@@ -1,8 +1,26 @@
 <?php
 
+session_start();
+
+$codigo=$_SESSION['id'];
+ 
+//Validar que el usuario este logueado y exista un UID
+if ( ! ($_SESSION['autenticado'] == 'SI' && isset($_SESSION['id'])) )
+{
+    //En caso de que el usuario no este autenticado, crear un formulario y redireccionar a la
+    //pantalla de login, enviando un codigo de error
+?>
+       <form name="formulario" method="post" action="../../login/loginProy.php">
+            <input type="hidden" name="msg_error" value="2">
+        </form>
+        <script type="text/javascript">
+            document.formulario.submit();
+        </script>
+<?php
+}
+
 include("../../modelo/conexion.php");
 $conexion = conectar();
-
 $sql = "SELECT
 cod_estudiante
 FROM
@@ -10,7 +28,7 @@ perfil, estudiante, formacion_academica
 WHERE
 perfil.cod_perfil = estudiante.cod_estudiante AND
 formacion_academica.cod_f_academica = estudiante.cod_estudiante AND
-cod_estudiante = 1";
+cod_estudiante = $codigo";
 
 $resultado = mysqli_query($conexion, $sql);
 mysqli_close($conexion);
@@ -22,10 +40,9 @@ foreach ($resultado as $key)
 
 if($llave == null)
 {
-   header("Location: it_about.php");
+   header("Location: it_about.php?ky=$codigo");
 }
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -36,12 +53,12 @@ if($llave == null)
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="viewport" content="initial-scale=1, maximum-scale=1">
 <!-- site metas -->
-<title>It.Next - IT Service Responsive Html Theme</title>
+<title>El bosque</title>
 <meta name="keywords" content="">
 <meta name="description" content="">
 <meta name="author" content="">
 <!-- site icons -->
-<link rel="icon" href="images/fevicon/fevicon.png" type="image/gif" />
+<link rel="icon" href="images/loaders/bosqueloader.png" type="image/gif" />
 <!-- bootstrap css -->
 <link rel="stylesheet" href="css/bootstrap.min.css" />
 <!-- Site css -->
@@ -96,19 +113,24 @@ if($llave == null)
           <div class="menu_side">
             <div id="navbar_menu">
               <ul class="first-ul">
-                <li> <a class="active" href="it_home.php">Home</a>
+                <li> 
+                  <a class="active" href="<?php echo "it_home.php?ky=$codigo" ?>">Home</a>
                 </li>
-                <li><a href="it_about.php">Hoja de Vida</a></li>
+                <li>
+                  <a href= "it_about.php">Hoja de Vida</a>
                 </li>
-                <li> <a href="it_blog.php">Mis ofertas</a>
-                </li>
-                <li> <a href="it_contact.php">Datos de Contacto</a>
-                </li>              
-              </ul>
-            </div>
-            <div class="search_icon">
-              <ul>
-                <li><a href="#" data-toggle="modal" data-target="#search_bar"><i class="fa fa-search" aria-hidden="true"></i></a></li>
+                <li> 
+                  <a href= "it_blog.php">Mis ofertas</a>
+                </li>  
+                <li> 
+                  <a href="../../login/cerrarSesion.php">Cerrar Sesion</a>
+                </li>   
+                <li> 
+                  <form action="../../controlador/filtros/filtro.php" method="post">
+                  <input type="text" class="form-control" name="texto" placeholder="Buscar">
+                  <button type="submit">Enviar</button>
+                  </form>
+                </li>           
               </ul>
             </div>
           </div>
@@ -128,7 +150,7 @@ if($llave == null)
         <!-- START REVOLUTION SLIDER 5.0.7 auto mode -->
         <div id="rev_slider_4_1" class="rev_slider fullwidthabanner" style="display:none;" data-version="5.0.7">
           <ul>
-            <li data-index="rs-1812" data-transition="zoomin" data-slotamount="7"  data-easein="Power4.easeInOut" data-easeout="Power4.easeInOut" data-masterspeed="2000"  data-thumb="images/it_service/ingenieria1.jpg"  data-rotate="0"  data-saveperformance="off"  data-title="Computer Services" data-description="">
+            <li data-index="rs-1812" data-transition="zoomin" data-slotamount="7"  data-easein="Power4.easeInOut" data-easeout="Power4.easeInOut" data-masterspeed="2000"  data-thumb="images/it_service/ingenieria1.png"  data-rotate="0"  data-saveperformance="off"  data-title="Computer Services" data-description="">
               <!-- MAIN IMAGE -->
               <img src="images/it_service/ingenieria1.png"  alt="#"  data-bgposition="center center" data-kenburns="on" data-duration="30000" data-ease="Linear.easeNone" data-scalestart="100" data-scaleend="120" data-rotatestart="0" data-rotateend="0" data-offsetstart="0 0" data-offsetend="0 0" data-bgparallax="10" class="rev-slidebg" data-no-retina>
               <!-- LAYERS -->
@@ -366,6 +388,7 @@ if($llave == null)
 <!-- end section -->
 
 <!-- section -->
+
 <div class="section padding_layout_1">
   <div class="container">
     <div class="row">
@@ -377,166 +400,54 @@ if($llave == null)
         </div>
       </div>
     </div>
-    <div class="row">
-      <div class="col-md-4">
-        <div class="full blog_colum">
-          <div class="blog_feature_img"> <a  href="it_shop_detail.html"><img src="images/it_service/post-03.jpg" /></a></div>
-          <div class="post_time">
-            <p><i class="fa fa-clock-o"></i> April 16, 2018 ( In Maintenance )</p>
-          </div>
-          <div class="blog_feature_head">
-            <h4>Why Your Computer Hates You</h4>
-          </div>
-          <div class="blog_feature_cont">
-            <p>Lorem ipsum dolor sit amet, consectetur quam justo, pretium adipiscing elit. Vestibulum quam justo, pretium eu tempus ut, ...</p>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-4">
-        <div class="full blog_colum">
-          <div class="blog_feature_img"> <a  href="it_shop_detail.html"><img src="images/it_service/post-04.jpg" /></a> </div>
-          <div class="post_time">
-            <p><i class="fa fa-clock-o"></i> April 16, 2018 ( In Maintenance )</p>
-          </div>
-          <div class="blog_feature_head">
-            <h4>Easy Tips To Computer Repair</h4>
-          </div>
-          <div class="blog_feature_cont">
-            <p>Lorem ipsum dolor sit amet, consectetur quam justo, pretium adipiscing elit. Vestibulum quam justo, pretium eu tempus ut, ...</p>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-4">
-        <div class="full blog_colum">
-          <div class="blog_feature_img"> <a  href="it_shop_detail.html"><img src="images/it_service/post-06.jpg" /></a> </div>
-          <div class="post_time">
-            <p><i class="fa fa-clock-o"></i> April 16, 2018 ( In Maintenance )</p>
-          </div>
-          <div class="blog_feature_head">
-            <h4>Computer Maintenance 2018</h4>
-          </div>
-          <div class="blog_feature_cont">
-            <p>Lorem ipsum dolor sit amet, consectetur quam justo, pretium adipiscing elit. Vestibulum quam justo, pretium eu tempus ut, ...</p>
-          </div>
-        </div>
-      </div>
-    </div>
-     <br><br>
-    <div class="row">
-      <div class="col-md-4">
-        <div class="full blog_colum">
-          <div class="blog_feature_img"> <a  href="it_shop_detail.html"><img src="images/it_service/post-03.jpg" /></a>> </div>
-          <div class="post_time">
-            <p><i class="fa fa-clock-o"></i> April 16, 2018 ( In Maintenance )</p>
-          </div>
-          <div class="blog_feature_head">
-            <h4>Why Your Computer Hates You</h4>
-          </div>
-          <div class="blog_feature_cont">
-            <p>Lorem ipsum dolor sit amet, consectetur quam justo, pretium adipiscing elit. Vestibulum quam justo, pretium eu tempus ut, ...</p>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-4">
-        <div class="full blog_colum">
-          <div class="blog_feature_img"> <a  href="it_shop_detail.html"><img src="images/it_service/post-04.jpg" /></a> </div>
-          <div class="post_time">
-            <p><i class="fa fa-clock-o"></i> April 16, 2018 ( In Maintenance )</p>
-          </div>
-          <div class="blog_feature_head">
-            <h4>Easy Tips To Computer Repair</h4>
-          </div>
-          <div class="blog_feature_cont">
-            <p>Lorem ipsum dolor sit amet, consectetur quam justo, pretium adipiscing elit. Vestibulum quam justo, pretium eu tempus ut, ...</p>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-4">
-        <div class="full blog_colum">
-          <div class="blog_feature_img"> <a  href="it_shop_detail.html"><img src="images/it_service/post-06.jpg" /></a> </div>
-          <div class="post_time">
-            <p><i class="fa fa-clock-o"></i> April 16, 2018 ( In Maintenance )</p>
-          </div>
-          <div class="blog_feature_head">
-            <h4>Computer Maintenance 2018</h4>
-          </div>
-          <div class="blog_feature_cont">
-            <p>Lorem ipsum dolor sit amet, consectetur quam justo, pretium adipiscing elit. Vestibulum quam justo, pretium eu tempus ut, ...</p>
-          </div>
-        </div>
-      </div>
-    </div>
 
+    <?php
+  $conectar = conectar();
+  $sql= "SELECT logo, nom_oferta, fecha_inicio, descripcion_oferta, 
+  OFERTA.cod_oferta FROM oferta, estudiante, empresa WHERE 
+  empresa.cod_empresa = oferta.cod_empresa AND estudiante.cod_carrera = oferta.oferta_carrera 
+  AND estudiante.cod_carrera=3 GROUP BY logo, nom_oferta, fecha_inicio, descripcion_oferta, oferta.cod_oferta";
+
+  $respuesta=mysqli_query($conectar, $sql);   
+ 
+                
+              while ($row = mysqli_fetch_array($respuesta)): ?>
+                <div class="row">
+                   <div class="col-md-6">
+                      <div class="align-content-md-center">
+                      
+                        <div class="blog_feature_img"><img width="500" height="500" src="<?php echo $row['logo'] ?> "/></div>
+                        
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                    <div class="post_time">
+                          <p><i class="fa fa-clock-o"></i><?php echo  $row['fecha_inicio'] ?></p>
+                        </div>
+
+                        <div class="blog_feature_head">
+                          <h4><?php echo $row['nom_oferta'] ?></h4>
+                        </div>
+
+                        <div class="blog_feature_cont">
+                          <p><?php echo $row['descripcion_oferta'] ?></p>
+                        </div>
+
+                        <form action="it_shop_detail.php" method="POST">
+                        <input type="hidden" name="codigo_oferta" value="<?php echo $row['cod_oferta']?>">
+                        <input type="hidden" name="codigo" value="<?php echo $codigo ?>">
+                        <button type="submit" class="btn sqaure_bt">Ver mas</button>
+                        </form>
+                    </div>
+                </div>
+                <br>
+                <br>
+              <?php endwhile;?>
   </div>
 </div>
 <!-- end section -->
 
 
-<!-- Modal -->
-<div class="modal fade" id="search_bar" role="dialog">
-  <div class="modal-dialog">
-    <!-- Modal content-->
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal"><i class="fa fa-close"></i></button>
-      </div>
-      <div class="modal-body">
-        <div class="row">
-          <div class="col-lg-8 col-md-8 col-sm-8 offset-lg-2 offset-md-2 offset-sm-2 col-xs-10 col-xs-offset-1">
-            <div class="navbar-search">
-              <form action="#" method="get" id="search-global-form" class="search-global">
-                <input type="text" placeholder="Type to search" autocomplete="off" name="s" id="search" value="" class="search-global__input">
-                <button class="search-global__btn"><i class="fa fa-search"></i></button>
-                <div class="search-global__note">Begin typing your search above and press return to search.</div>
-              </form>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-<!-- End Model search bar -->
-<!-- footer -->
-<footer class="footer_style_2">
-  <div class="container-fuild">
-    <div class="row">
-      <div class="map_section">
-        <div id="map"></div>
-      </div>
-      <div class="footer_blog">
-        <div class="row">
-          <div class="col-md-6">
-            <div class="main-heading left_text">
-              <h2>It Next Theme</h2>
-            </div>
-            <p>Tincidunt elit magnis nulla facilisis. Dolor sagittis maecenas. Sapien nunc amet ultrices, dolores sit ipsum velit purus aliquet, massa fringilla leo orci.</p>
-            <ul class="social_icons">
-              <li class="social-icon fb"><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-              <li class="social-icon tw"><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-              <li class="social-icon gp"><a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
-            </ul>
-          </div>
-          <div class="col-md-6">
-            <div class="main-heading left_text">
-              <h2>Additional links</h2>
-            </div>
-            <ul class="footer-menu">
-              <li><a href="it_about.html"><i class="fa fa-angle-right"></i> About us</a></li>
-              <li><a href="it_term_condition.html"><i class="fa fa-angle-right"></i> Terms and conditions</a></li>
-              <li><a href="it_privacy_policy.html"><i class="fa fa-angle-right"></i> Privacy policy</a></li>
-              <li><a href="it_news.html"><i class="fa fa-angle-right"></i> News</a></li>
-              <li><a href="it_contact.html"><i class="fa fa-angle-right"></i> Contact us</a></li>
-            </ul>
-          </div>          
-      </div>
-      <div class="cprt">
-        <p>ItNext © Copyrights 2019 Design by html.design</p>
-      </div>
-    </div>
-  </div>
-</footer>
-<!-- end footer -->
 <!-- js section -->
 <script src="js/jquery.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
@@ -558,7 +469,6 @@ if($llave == null)
 <script src="revolution/js/extensions/revolution.extension.parallax.min.js"></script>
 <script src="revolution/js/extensions/revolution.extension.slideanims.min.js"></script>
 <script src="revolution/js/extensions/revolution.extension.video.min.js"></script>
-
 
 </body>
 </html>

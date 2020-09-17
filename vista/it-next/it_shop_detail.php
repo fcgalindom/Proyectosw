@@ -1,3 +1,31 @@
+<?php
+<<<<<<< HEAD
+
+session_start();
+
+$codigo=$_SESSION['id'];
+ 
+//Validar que el usuario este logueado y exista un UID
+if ( ! ($_SESSION['autenticado'] == 'SI' && isset($_SESSION['id'])) )
+{
+    //En caso de que el usuario no este autenticado, crear un formulario y redireccionar a la
+    //pantalla de login, enviando un codigo de error
+?>
+       <form name="formulario" method="post" action="../../login/loginProy.php">
+            <input type="hidden" name="msg_error" value="2">
+        </form>
+        <script type="text/javascript">
+            document.formulario.submit();
+        </script>
+<?php
+}
+?>
+=======
+$codigo = $_POST['codigo'];
+$codigo_oferta=$_POST['codigo_oferta'];
+?>
+
+>>>>>>> a2780013978197ecca1011b785f9a7c07b5c7fd6
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,12 +36,12 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="viewport" content="initial-scale=1, maximum-scale=1">
 <!-- site metas -->
-<title>It.Next - IT Service Responsive Html Theme</title>
+<title>El bosque</title>
 <meta name="keywords" content="">
 <meta name="description" content="">
 <meta name="author" content="">
 <!-- site icons -->
-<link rel="icon" href="images/fevicon/fevicon.png" type="image/gif" />
+<link rel="icon" href="images/loaders/bosqueloader.png" type="image/gif" />
 <!-- bootstrap css -->
 <link rel="stylesheet" href="css/bootstrap.min.css" />
 <!-- Site css -->
@@ -67,23 +95,43 @@
           <div class="menu_side">
             <div id="navbar_menu">
               <ul class="first-ul">
-                <li> <a  href="it_home.html">Home</a>
-                  
+                <li> 
+<<<<<<< HEAD
+                  <a href= "it_home.php">Home</a>
                 </li>
-                <li><a class="active" href="it_about.html">Hoja de Vida</a></li>
-                  
+                <li>
+                  <a href= "it_about.php">Hoja de Vida</a>
                 </li>
-                <li> <a href="it_blog.html">Mis ofertas</a>
-                  
+                <li> 
+                  <a href= "it_blog.php" >Mis ofertas</a>
                 </li>
-                <li> <a  href="it_contact.html">Datos de Contacto</a>
-                  
-                </li>              
-              </ul>
-            </div>
-            <div class="search_icon">
-              <ul>
-                <li><a href="#" data-toggle="modal" data-target="#search_bar"><i class="fa fa-search" aria-hidden="true"></i></a></li>
+                <li> 
+                  <a href= "it_contact" >Datos de Contacto</a>
+                </li>   
+                <li> 
+                  <a href="../../login/cerrarSesion.php">Cerrar Sesion</a>
+                </li>  
+                <li> 
+                  <form action="../../controlador/filtros/filtro.php" method="post">
+                  <input type="text" class="form-control" name="texto" placeholder="Buscar">
+                  <button type="submit">Enviar</button>
+                  </form>
+=======
+                  <a href="<?php echo "it_home.php?ky=$codigo" ?>">Home</a>
+                </li>
+                <li>
+                  <a href="<?php echo "it_about.php?ky=$codigo" ?>">Hoja de Vida</a>
+                </li>
+                <li> 
+                  <a href="<?php echo "it_blog.php?ky=$codigo" ?>">Mis ofertas</a>
+                </li>
+                <li> 
+                  <a href="<?php echo "it_contact.php?ky=$codigo" ?>">Datos de Contacto</a>
+                </li>    
+                <li> 
+                <input type="email" class="form-control" placeholder="Buscar" >
+>>>>>>> a2780013978197ecca1011b785f9a7c07b5c7fd6
+                </li>           
               </ul>
             </div>
           </div>
@@ -119,92 +167,100 @@
 <!-- section -->
 <div class="section padding_layout_1 product_detail">
   <div class="container">
-    <div class="row">
-      <div class="col-md-12">
-        <div class="row">
-          <div class=" col-md-5">
-            <div class="product_detail_feature_img hizoom hi2">
-              <div class='hizoom hi2'> <img src="images/it_service/huawei.jpg" alt="#" /> </div>
+     <?php 
+<<<<<<< HEAD
+           
+      $codigo_oferta=$_POST['codigo_oferta'];
+      
+
+=======
+>>>>>>> a2780013978197ecca1011b785f9a7c07b5c7fd6
+      $conectar = mysqli_connect('localhost','root','','feriaop_bd');
+      $sql= "SELECT logo,nom_empresa, descripcion, nom_oferta, fecha_inicio, salario, descripcion_oferta
+      FROM oferta, tipo_contrato, empresa
+      WHERE
+      tipo_contrato.cod_t_contrato = oferta.cod_t_contrato AND
+      empresa.cod_empresa = oferta.cod_empresa AND
+<<<<<<< HEAD
+      oferta.cod_oferta='{$codigo}'
+=======
+      oferta.cod_oferta=$codigo_oferta
+>>>>>>> a2780013978197ecca1011b785f9a7c07b5c7fd6
+      GROUP BY logo,nom_empresa,descripcion, nom_oferta, fecha_inicio, salario, descripcion_oferta";
+
+      $respuesta=mysqli_query($conectar, $sql);  
+        
+      while ($row = mysqli_fetch_array($respuesta)): ?>
+      <div class="row">
+        <div class="col-md-12">
+          <div class="row">
+
+            <div class=" col-md-5">
+              <div class="product_detail_feature_img ">
+              <div class="blog_feature_img"> <img src="<?php echo $row['logo'] ?>"/></div>
+              </div>
+            </div>
+
+            <div class=" col-md-7 product_detail_side detail_style1">
+              <div class="product-heading">
+                <h2>
+                <?php echo $row['nom_oferta'] ?>
+                </h2>
+                <h3>
+                <?php echo $row['nom_empresa'] ?>
+                </h3>
+              </div>
+              <div class="detail-contant">
+                <p>
+                <?php echo $row['descripcion'] ?>
+                </p>    
+                <br>
+                <br>
+<<<<<<< HEAD
+                <form class="cart" method="post" action="it_blog.php">
+                  <button type="submit" class="btn sqaure_bt">Enviar hoja de vida</button>
+                </form>
+=======
+                <form class="cart" method="POST" action="../../controlador/Crud/registros/registro_ofertas.php">
+                  <input type="hidden" name="codigo_estudiante" value="<?php echo $codigo ?>">
+                  <input type="hidden" name="codigo_oferta" value="<?php echo $codigo_oferta ?>">
+                  <button type="submit" class="btn sqaure_bt">Enviar hoja de vida</button>
+                </form>
+                <br>
+                <form class="cart" method="POST" action="../../controlador/Crud/eliminaciones/eliminar_oferta.php">
+                  <input type="hidden" name="codigo_estudiante" value="<?php echo $codigo ?>">
+                  <input type="hidden" name="codigo_oferta" value="<?php echo $codigo_oferta ?>">
+                  <button type="submit" class="btn btn-danger">Anular oferta</button>
+                </form>
+>>>>>>> a2780013978197ecca1011b785f9a7c07b5c7fd6
+              </div>
             </div>
           </div>
-          <div class=" col-md-7 product_detail_side detail_style1">
-            <div class="product-heading">
-              <h2>
 
-                <?php    
-                    $conectar = mysqli_connect('localhost','root','','feriaOportunidades');
-                    $sql= "SELECT descripcion_oferta, salario, TIPO_CONTRATO.nom_t_contrato, nom_empresa, EMPRESA.descripcion
-                            FROM OFERTA, EMPRESA, TIPO_CONTRATO
-                            WHERE EMPRESA.cod_empresa = OFERTA.cod_empresa AND OFERTA.cod_t_contrato = TIPO_CONTRATO.cod_t_contrato
-                            GROUP BY descripcion_oferta, salario, TIPO_CONTRATO.nom_t_contrato, nom_empresa, EMPRESA.descripcion";
-
-                    $respuesta=mysqli_query($conectar, $sql);                     
-                                while ($row = mysqli_fetch_array($respuesta)){
-                                  echo  $row['nom_empresa'];
-                                }
-                     mysqli_close($conectar);
-
-                      ?>
-
-              </h2>
-            </div>
-            <div class="detail-contant">
-              <p>
-                   
-                    <?php    
-                    $conectar = mysqli_connect('localhost','root','','feriaOportunidades');
-                    $sql= "SELECT descripcion_oferta, salario, TIPO_CONTRATO.nom_t_contrato, nom_empresa, EMPRESA.descripcion
-                            FROM OFERTA, EMPRESA, TIPO_CONTRATO
-                            WHERE EMPRESA.cod_empresa = OFERTA.cod_empresa AND OFERTA.cod_t_contrato = TIPO_CONTRATO.cod_t_contrato
-                            GROUP BY descripcion_oferta, salario, TIPO_CONTRATO.nom_t_contrato, nom_empresa, EMPRESA.descripcion";
-
-                    $respuesta=mysqli_query($conectar, $sql);                     
-                                while ($row = mysqli_fetch_array($respuesta)){
-                                  echo  $row['descripcion'];
-                                }
-                     mysqli_close($conectar);
-
-                      ?>
-                      
-                  </p>    
-              <form class="cart" method="post" action="it_blog.php">
-              
-                <button type="submit" class="btn sqaure_bt">Enviar hoja de vida</button>
-              </form>
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-md-12">
-            <div class="full">
-              <div class="tab_bar_section">
-                <ul class="nav nav-tabs" role="tablist">
-                  <li class="nav-item"><a class="nav-link active" data-toggle="tab" href="#">Descripcion de la Oferta</a></li>
-                </ul>
-                <!-- Tab panes -->
-                <div class="tab-content">
-                  <div id="description" class="tab-pane active">
-                    <div class="product_desc">
-
-                    <?php    
-                    $conectar = mysqli_connect('localhost','root','','feriaOportunidades');
-                    $sql= "SELECT descripcion_oferta, salario, TIPO_CONTRATO.nom_t_contrato, nom_empresa, EMPRESA.descripcion
-                            FROM OFERTA, EMPRESA, TIPO_CONTRATO
-                            WHERE EMPRESA.cod_empresa = OFERTA.cod_empresa AND OFERTA.cod_t_contrato = TIPO_CONTRATO.cod_t_contrato
-                            GROUP BY descripcion_oferta, salario, TIPO_CONTRATO.nom_t_contrato, nom_empresa, EMPRESA.descripcion";
-
-                    $respuesta=mysqli_query($conectar, $sql);                     
-                                while ($row = mysqli_fetch_array($respuesta)){
-                                  echo  $row['descripcion_oferta'];
-                                  echo "<br>";
-                                  echo  $row['salario'];
-                                  echo "<br>";
-                                  echo  $row['nom_t_contrato'];
-                                  echo "<br>";
-                                }
-                    mysqli_close($conectar);
-                    ?>
-
+          <div class="row">
+            <div class="col-md-12">
+              <div class="full">
+                <div class="tab_bar_section">
+                  <ul class="nav nav-tabs" role="tablist">
+                    <li class="nav-item"><a class="nav-link active" data-toggle="tab" href="#">Detalles de la Oferta</a></li>
+                  </ul>
+                  <!-- Tab panes -->
+                  <div class="tab-content">
+                    <div id="description" class="tab-pane active">
+                      <div class="product_desc">
+                      <br>
+                      <h2>
+                      <?php echo $row['nom_oferta'] ?>
+                      </h2>
+                      <h3>
+                      <br>
+                      <?php echo $row['descripcion_oferta'] ?>
+                      <br>
+                      <?php echo $row['salario'] ?>
+                      <br>
+                      <?php echo $row['fecha_inicio'] ?>
+                      <h3>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -212,54 +268,12 @@
             </div>
           </div>
         </div>
-      </div>
-    </div>
-  </div>
-</div>
+     </div>
+     <?php 
+     endwhile;
+     ?>  
 <!-- end section -->
 
-<!-- footer -->
-<footer class="footer_style_2">
-  <div class="container-fuild">
-    <div class="row">
-      <div class="map_section">
-        <div id="map"></div>
-      </div>
-      <div class="footer_blog">
-        <div class="row">
-          <div class="col-md-6">
-            <div class="main-heading left_text">
-              <h2>It Next Theme</h2>
-            </div>
-            <p>Tincidunt elit magnis nulla facilisis. Dolor sagittis maecenas. Sapien nunc amet ultrices, dolores sit ipsum velit purus aliquet, massa fringilla leo orci.</p>
-            <ul class="social_icons">
-              <li class="social-icon fb"><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-              <li class="social-icon tw"><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-              <li class="social-icon gp"><a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
-            </ul>
-          </div>
-          <div class="col-md-6">
-            <div class="main-heading left_text">
-              <h2>Additional links</h2>
-            </div>
-            <ul class="footer-menu">
-              <li><a href="it_about.html"><i class="fa fa-angle-right"></i> About us</a></li>
-              <li><a href="it_term_condition.html"><i class="fa fa-angle-right"></i> Terms and conditions</a></li>
-              <li><a href="it_privacy_policy.html"><i class="fa fa-angle-right"></i> Privacy policy</a></li>
-              <li><a href="it_news.html"><i class="fa fa-angle-right"></i> News</a></li>
-              <li><a href="it_contact.html"><i class="fa fa-angle-right"></i> Contact us</a></li>
-            </ul>
-          </div>
-         
-        </div>
-      </div>
-      <div class="cprt">
-        <p>ItNext © Copyrights 2019 Design by html.design</p>
-      </div>
-    </div>
-  </div>
-</footer>
-<!-- end footer -->
 <!-- js section -->
 <script src="js/jquery.min.js"></script>
 <script src="js/bootstrap.min.js"></script>

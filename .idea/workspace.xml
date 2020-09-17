@@ -1,0 +1,327 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="48626bb6-51b3-42d8-8e29-fc29ac2c404f" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/controlador/auth.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/controlador/datos_vista.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/controlador/estudiante/Login.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/controlador/estudiante/registro.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/controlador/hoja_vida_registro/CRUD_Estudiante.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/controlador/registro.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/feriaop_bd (2).sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modelo/conexion.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vista/Formulario/RegistroProy.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vista/Formulario/loginProy.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vista/Formulario/loginProy.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vista/it-next/contact.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vista/it-next/css/animate.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vista/it-next/css/bootstrap-grid.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vista/it-next/css/bootstrap-grid.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vista/it-next/css/bootstrap-reboot.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vista/it-next/css/bootstrap-reboot.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vista/it-next/css/bootstrap-select.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vista/it-next/css/bootstrap.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vista/it-next/css/bootstrap.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vista/it-next/css/colors1.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vista/it-next/css/colors1_dark.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vista/it-next/css/colors2.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vista/it-next/css/colors3.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vista/it-next/css/colors_landing_page.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vista/it-next/css/custom.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vista/it-next/css/dark_layout.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vista/it-next/css/font-awesome.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vista/it-next/css/font-awesome.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vista/it-next/css/hizoom.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vista/it-next/css/owl.carousel.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vista/it-next/css/owl.carousel.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vista/it-next/css/owl.theme.default.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vista/it-next/css/responsive.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vista/it-next/css/style.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vista/it-next/fonts/FontAwesome.otf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vista/it-next/fonts/fontawesome-webfont.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vista/it-next/fonts/fontawesome-webfont.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vista/it-next/fonts/fontawesome-webfont.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vista/it-next/fonts/fontawesome-webfont.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vista/it-next/fonts/fontawesome-webfont.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vista/it-next/images/fevicon/fevicon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vista/it-next/images/gradian_black.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vista/it-next/images/gradian_blue.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vista/it-next/images/it_service/1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vista/it-next/images/it_service/2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vista/it-next/images/it_service/22.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vista/it-next/images/it_service/3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vista/it-next/images/it_service/4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vista/it-next/images/it_service/404_error_img.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vista/it-next/images/it_service/5.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vista/it-next/images/it_service/6.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vista/it-next/images/it_service/7.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vista/it-next/images/it_service/8.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vista/it-next/images/it_service/accepted.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vista/it-next/images/it_service/bosque.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vista/it-next/images/it_service/bosque.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vista/it-next/images/it_service/brand_icon1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vista/it-next/images/it_service/brand_icon2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vista/it-next/images/it_service/brand_icon3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vista/it-next/images/it_service/brand_icon4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vista/it-next/images/it_service/brand_icon5.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vista/it-next/images/it_service/client1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vista/it-next/images/it_service/client1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vista/it-next/images/it_service/client2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vista/it-next/images/it_service/client2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vista/it-next/images/it_service/client3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vista/it-next/images/it_service/client3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vista/it-next/images/it_service/dark_bg_img.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vista/it-next/images/it_service/dark_bg_img2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vista/it-next/images/it_service/home_01.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vista/it-next/images/it_service/huawei.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vista/it-next/images/it_service/i1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vista/it-next/images/it_service/i2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vista/it-next/images/it_service/i3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vista/it-next/images/it_service/i4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vista/it-next/images/it_service/ingenieria1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vista/it-next/images/it_service/ingenieria2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vista/it-next/images/it_service/ingenieria3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vista/it-next/images/it_service/inner_page_banner.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vista/it-next/images/it_service/location_icon_map_cont.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vista/it-next/images/it_service/logo2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vista/it-next/images/it_service/phone_icon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vista/it-next/images/it_service/post-01.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vista/it-next/images/it_service/post-02.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vista/it-next/images/it_service/post-03.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vista/it-next/images/it_service/post-04.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vista/it-next/images/it_service/post-05.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vista/it-next/images/it_service/post-06.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vista/it-next/images/it_service/post-07.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vista/it-next/images/it_service/post-08.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vista/it-next/images/it_service/si1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vista/it-next/images/it_service/si2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vista/it-next/images/it_service/si3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vista/it-next/images/it_service/si4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vista/it-next/images/it_service/si5.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vista/it-next/images/it_service/si6.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vista/it-next/images/it_service/slide1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vista/it-next/images/it_service/slide2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vista/it-next/images/it_service/slide3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vista/it-next/images/it_service/team-member-1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vista/it-next/images/it_service/team-member-2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vista/it-next/images/it_service/team-member-3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vista/it-next/images/it_service/test_bg.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vista/it-next/images/loaders/bosqueloader.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vista/it-next/images/loaders/loader_1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vista/it-next/images/logos/it_logo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vista/it-next/images/logos/it_logo_white.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vista/it-next/images/logos/logito.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vista/it-next/images/logos/logo2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vista/it-next/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vista/it-next/it_about.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vista/it-next/it_blog.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vista/it-next/it_blog_detail.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vista/it-next/it_blog_grid.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vista/it-next/it_career.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vista/it-next/it_cart.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vista/it-next/it_checkout.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vista/it-next/it_computer_repair.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vista/it-next/it_contact.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vista/it-next/it_contact_2.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vista/it-next/it_data_recovery.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vista/it-next/it_error.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vista/it-next/it_faq.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vista/it-next/it_home.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vista/it-next/it_home_dark.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vista/it-next/it_mobile_service.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vista/it-next/it_network_solution.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vista/it-next/it_news.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vista/it-next/it_price.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vista/it-next/it_privacy_policy.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vista/it-next/it_service.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vista/it-next/it_service_detail.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vista/it-next/it_service_list.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vista/it-next/it_shop.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vista/it-next/it_shop_detail.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vista/it-next/it_techn_support.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vista/it-next/it_term_condition.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vista/it-next/js/bootstrap.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vista/it-next/js/custom.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vista/it-next/js/hizoom.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vista/it-next/js/jquery.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vista/it-next/js/menumaker.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vista/it-next/js/wow.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vista/it-next/make_appointment.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vista/it-next/revolution/assets/coloredbg.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vista/it-next/revolution/assets/gridtile.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vista/it-next/revolution/assets/gridtile_3x3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vista/it-next/revolution/assets/gridtile_3x3_white.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vista/it-next/revolution/assets/gridtile_white.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vista/it-next/revolution/assets/loader.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vista/it-next/revolution/css/closedhand.cur" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vista/it-next/revolution/css/layers.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vista/it-next/revolution/css/navigation.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vista/it-next/revolution/css/openhand.cur" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vista/it-next/revolution/css/settings.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vista/it-next/revolution/fonts/revicons/revicons.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vista/it-next/revolution/fonts/revicons/revicons.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vista/it-next/revolution/fonts/revicons/revicons.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vista/it-next/revolution/fonts/revicons/revicons.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vista/it-next/revolution/js/extensions/revolution.extension.actions.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vista/it-next/revolution/js/extensions/revolution.extension.carousel.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vista/it-next/revolution/js/extensions/revolution.extension.kenburn.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vista/it-next/revolution/js/extensions/revolution.extension.layeranimation.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vista/it-next/revolution/js/extensions/revolution.extension.migration.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vista/it-next/revolution/js/extensions/revolution.extension.navigation.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vista/it-next/revolution/js/extensions/revolution.extension.parallax.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vista/it-next/revolution/js/extensions/revolution.extension.slideanims.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vista/it-next/revolution/js/extensions/revolution.extension.video.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vista/it-next/revolution/js/jquery.themepunch.revolution.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vista/it-next/revolution/js/jquery.themepunch.tools.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vista/js/validacion_estudiante.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vista/js/validacion_login.js" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings">
+    <execution />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1h6gRD1DtQ6WvHQEcO71avIxr75" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Proyectosw-ramaEstudiante" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\wamp64\www\Proyectosw\vista" />
+      <recent name="C:\wamp64\www\Proyectosw\controlador" />
+      <recent name="C:\wamp64\www\Proyectosw" />
+      <recent name="C:\wamp64\www\Proyectosw\modelo" />
+      <recent name="C:\wamp64\www\Proyectosw\data" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\wamp64\www\Proyectosw\modelo" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="48626bb6-51b3-42d8-8e29-fc29ac2c404f" name="Default Changelist" comment="" />
+      <created>1599336960767</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1599336960767</updated>
+      <workItem from="1599336977768" duration="24117000" />
+      <workItem from="1599450630514" duration="125000" />
+      <workItem from="1599450797940" duration="30000" />
+      <workItem from="1599450831582" duration="2657000" />
+      <workItem from="1599583069202" duration="6410000" />
+      <workItem from="1599591075937" duration="1745000" />
+      <workItem from="1599592866176" duration="1814000" />
+      <workItem from="1599594769822" duration="1777000" />
+      <workItem from="1599596602275" duration="1786000" />
+      <workItem from="1599598459435" duration="1864000" />
+      <workItem from="1599600672299" duration="1822000" />
+      <workItem from="1599602568169" duration="1754000" />
+      <workItem from="1599604367377" duration="1776000" />
+      <workItem from="1599606185397" duration="1772000" />
+      <workItem from="1599608029737" duration="1858000" />
+      <workItem from="1599609949629" duration="1275000" />
+      <workItem from="1599611860562" duration="1676000" />
+      <workItem from="1599615709563" duration="1266000" />
+      <workItem from="1599617813722" duration="1021000" />
+      <workItem from="1599619641642" duration="1591000" />
+      <workItem from="1599621996137" duration="1774000" />
+      <workItem from="1599623811552" duration="395000" />
+      <workItem from="1599754645528" duration="2248000" />
+      <workItem from="1600286714482" duration="37000" />
+      <workItem from="1600286770987" duration="97000" />
+      <workItem from="1600287115035" duration="22000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="469" y="0" key="#PHP" timestamp="1599370044292">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="469" y="0" key="#PHP/0.0.1366.728@0.0.1366.728" timestamp="1599370044292" />
+    <state x="137" y="19" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1599601326829">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="137" y="19" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.728@0.0.1366.728" timestamp="1599601326829" />
+    <state x="730" y="92" key="#com.intellij.ide.util.MemberChooser" timestamp="1599370603967">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="730" y="92" key="#com.intellij.ide.util.MemberChooser/0.0.1366.728@0.0.1366.728" timestamp="1599370603967" />
+    <state x="413" y="111" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1599452097980">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="413" y="111" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1366.728@0.0.1366.728" timestamp="1599452097980" />
+    <state x="463" y="119" key="FileChooserDialogImpl" timestamp="1600287133942">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="463" y="119" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1600287133942" />
+    <state x="447" y="87" key="NewPhpClassDialog" timestamp="1599606801246">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="447" y="87" key="NewPhpClassDialog/0.0.1366.728@0.0.1366.728" timestamp="1599606801246" />
+    <state x="517" y="287" key="NewPhpFileDialog" timestamp="1599606811566">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="517" y="287" key="NewPhpFileDialog/0.0.1366.728@0.0.1366.728" timestamp="1599606811566" />
+    <state x="0" y="0" width="1339" height="715" key="dock-window-1" timestamp="1599606158691">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="0" y="0" width="1339" height="715" key="dock-window-1/0.0.1366.728@0.0.1366.728" timestamp="1599606158691" />
+    <state x="339" y="162" key="run.anything.popup" timestamp="1599337329665">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="339" y="162" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1599337329665" />
+  </component>
+</project>
