@@ -8,6 +8,7 @@ $password = sha1($_POST['password']);
 
 $sql = "SELECT cod_empresa FROM empresa WHERE correo='{$correo}' AND contrasenia='{$password}'"; 
 $respuesta=mysqli_query($conexion, $sql);
+$ingresos=0;
 $id="";
 //Si existe al menos una fila
 if( $row=mysqli_fetch_array($respuesta) )
@@ -27,6 +28,9 @@ if( $row=mysqli_fetch_array($respuesta) )
             <input type="hidden" name="idUser" value='<?php echo $id ?>' />
         </form>
 <?php
+    $ingresos=$ingresos+1;
+    $sql4 = "UPDATE empresa SET ingresos='{$ingresos}'  WHERE cod_empresa='{$id}'"; 
+    mysqli_query($conexion, $sql4);
     header ("Location: ../vistaEmpresa/it-next/inicio.php");
     }else{
 
