@@ -388,14 +388,10 @@ if($llave == null)
 
     <?php
   $conectar = conectar();
-  $sql= "SELECT logo, nom_oferta, fecha_inicio, descripcion_oferta, OFERTA.cod_oferta
-  FROM oferta, oferta_estudiante, estudiante, empresa
-  WHERE
-  estudiante.cod_estudiante =oferta_estudiante.cod_estudiante AND 
-  oferta_estudiante.cod_oferta = oferta.cod_oferta AND
-  empresa.cod_empresa = oferta.cod_empresa AND
-  estudiante.cod_carrera = oferta.oferta_carrera
-  GROUP BY logo, nom_oferta, fecha_inicio, descripcion_oferta, oferta.cod_oferta";
+  $sql= "SELECT logo, nom_oferta, fecha_inicio, descripcion_oferta, 
+  OFERTA.cod_oferta FROM oferta, estudiante, empresa WHERE 
+  empresa.cod_empresa = oferta.cod_empresa AND estudiante.cod_carrera = oferta.oferta_carrera 
+  AND estudiante.cod_carrera=3 GROUP BY logo, nom_oferta, fecha_inicio, descripcion_oferta, oferta.cod_oferta";
 
   $respuesta=mysqli_query($conectar, $sql);   
  
@@ -405,11 +401,12 @@ if($llave == null)
                    <div class="col-md-6">
                       <div class="align-content-md-center">
                       
-                        <div class="blog_feature_img"><img src="<?php echo $row['logo'] ?> "/></div>
+                        <div class="blog_feature_img"><img width="500" height="500" src="<?php echo $row['logo'] ?> "/></div>
                         
-
-                        
-                        <div class="post_time">
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                    <div class="post_time">
                           <p><i class="fa fa-clock-o"></i><?php echo  $row['fecha_inicio'] ?></p>
                         </div>
 
@@ -420,12 +417,12 @@ if($llave == null)
                         <div class="blog_feature_cont">
                           <p><?php echo $row['descripcion_oferta'] ?></p>
                         </div>
+
                         <form action="it_shop_detail.php" method="POST">
                         <input type="hidden" name="codigo_oferta" value="<?php echo $row['cod_oferta']?>">
                         <input type="hidden" name="codigo" value="<?php echo $codigo ?>">
                         <button type="submit" class="btn sqaure_bt">Ver mas</button>
                         </form>
-                      </div>
                     </div>
                 </div>
                 <br>
