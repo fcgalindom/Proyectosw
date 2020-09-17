@@ -36,5 +36,3 @@ return $array;
 }
 
 ?>
-
-<script src="../../vista/js/filtro.js"></script>

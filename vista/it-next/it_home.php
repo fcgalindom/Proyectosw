@@ -110,8 +110,10 @@ if($llave == null)
                   <a href="<?php echo "it_contact.php?ky=$codigo" ?>">Datos de Contacto</a>
                 </li>    
                 <li> 
+                  <form id="formulario">
                   <input type="text" class="form-control" name="texto" placeholder="Buscar">
-                  <button type="submit" onclick="" > Enviar </button>
+                  <button type="submit"> Enviar </button>
+                  </form>
                   <h1></h1>
                 </li>           
               </ul>
@@ -385,7 +387,7 @@ if($llave == null)
     </div>
 
     <?php
-  $conectar = mysqli_connect('localhost','root','','feriaop_bd');
+  $conectar = conectar();
   $sql= "SELECT logo, nom_oferta, fecha_inicio, descripcion_oferta, OFERTA.cod_oferta
   FROM oferta, oferta_estudiante, estudiante, empresa
   WHERE
@@ -403,9 +405,8 @@ if($llave == null)
                    <div class="col-md-6">
                       <div class="align-content-md-center">
                       
-                      <form action="<?php echo "it_shop_detail.php?ky=$codigo" ?>" method="POST">
-                        <input type="hidden" name="codigo_oferta" value="<?php echo $row['cod_oferta']?>">
-                        <div class="blog_feature_img"><img width="500" height="500" src="<?php echo $row['logo'] ?> "/></div>
+                        <div class="blog_feature_img"><img src="<?php echo $row['logo'] ?> "/></div>
+                        
 
                         
                         <div class="post_time">
@@ -419,7 +420,9 @@ if($llave == null)
                         <div class="blog_feature_cont">
                           <p><?php echo $row['descripcion_oferta'] ?></p>
                         </div>
-
+                        <form action="it_shop_detail.php" method="POST">
+                        <input type="hidden" name="codigo_oferta" value="<?php echo $row['cod_oferta']?>">
+                        <input type="hidden" name="codigo" value="<?php echo $codigo ?>">
                         <button type="submit" class="btn sqaure_bt">Ver mas</button>
                         </form>
                       </div>
@@ -509,7 +512,6 @@ if($llave == null)
 <script src="revolution/js/extensions/revolution.extension.parallax.min.js"></script>
 <script src="revolution/js/extensions/revolution.extension.slideanims.min.js"></script>
 <script src="revolution/js/extensions/revolution.extension.video.min.js"></script>
-
 
 </body>
 </html>

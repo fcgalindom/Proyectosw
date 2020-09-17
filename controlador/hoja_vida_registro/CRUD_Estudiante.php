@@ -10,6 +10,7 @@ function guardarPerfil()
     $perfil = $_POST['perfil'];
     $key = $_POST['key'];
     $sql = "INSERT INTO PERFIL VALUES($key,'$perfil')";
+    echo $sql;
     $conexion = conectar();
     mysqli_query($conexion,$sql);
     mysqli_close($conexion);
@@ -40,7 +41,7 @@ function guardarExperienciaLaboral()
     if($cargo != '' && $empresa != '' && $funciones != '' && $fecha_fin != '')
     {
         $sql = "INSERT INTO EXP_LABORAL VALUES(0,'$cargo','$empresa','$funciones','$fecha_fin',$key)";
-        mysqli_query($conexion,$sql);
+       mysqli_query($conexion,$sql);
     }
 
     $cargo = $_POST['cargo2'];

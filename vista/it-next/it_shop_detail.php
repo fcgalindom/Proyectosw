@@ -1,4 +1,8 @@
-<?php $codigo = $_GET['ky'] ?>
+<?php
+$codigo = $_POST['codigo'];
+$codigo_oferta=$_POST['codigo_oferta'];
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -119,10 +123,6 @@
 <div class="section padding_layout_1 product_detail">
   <div class="container">
      <?php 
-           
-      $codigo_oferta=$_POST['codigo_oferta'];
-      
-
       $conectar = mysqli_connect('localhost','root','','feriaop_bd');
       $sql= "SELECT logo,nom_empresa, descripcion, nom_oferta, fecha_inicio, salario, descripcion_oferta
       FROM oferta, tipo_contrato, empresa
@@ -160,8 +160,16 @@
                 </p>    
                 <br>
                 <br>
-                <form class="cart" method="post" action="it_blog.php">
+                <form class="cart" method="POST" action="../../controlador/Crud/registros/registro_ofertas.php">
+                  <input type="hidden" name="codigo_estudiante" value="<?php echo $codigo ?>">
+                  <input type="hidden" name="codigo_oferta" value="<?php echo $codigo_oferta ?>">
                   <button type="submit" class="btn sqaure_bt">Enviar hoja de vida</button>
+                </form>
+                <br>
+                <form class="cart" method="POST" action="../../controlador/Crud/eliminaciones/eliminar_oferta.php">
+                  <input type="hidden" name="codigo_estudiante" value="<?php echo $codigo ?>">
+                  <input type="hidden" name="codigo_oferta" value="<?php echo $codigo_oferta ?>">
+                  <button type="submit" class="btn btn-danger">Anular oferta</button>
                 </form>
               </div>
             </div>
