@@ -21,11 +21,6 @@ if ( ! ($_SESSION['autenticado'] == 'SI' && isset($_SESSION['id'])) )
 
 include("../../modelo/conexion.php");
 $conexion = conectar();
-<<<<<<< HEAD
-=======
-
-$codigo = $_GET['ky'];
->>>>>>> a2780013978197ecca1011b785f9a7c07b5c7fd6
 $sql = "SELECT
 cod_estudiante
 FROM
@@ -122,14 +117,10 @@ if($llave == null)
                   <a class="active" href="<?php echo "it_home.php?ky=$codigo" ?>">Home</a>
                 </li>
                 <li>
-<<<<<<< HEAD
                   <a href= "it_about.php">Hoja de Vida</a>
                 </li>
                 <li> 
                   <a href= "it_blog.php">Mis ofertas</a>
-                </li>
-                <li> 
-                  <a href= "it_contact.php">Datos de Contacto</a>
                 </li>  
                 <li> 
                   <a href="../../login/cerrarSesion.php">Cerrar Sesion</a>
@@ -139,22 +130,6 @@ if($llave == null)
                   <input type="text" class="form-control" name="texto" placeholder="Buscar">
                   <button type="submit">Enviar</button>
                   </form>
-=======
-                  <a href="<?php echo "it_about.php?ky=$codigo" ?>">Hoja de Vida</a>
-                </li>
-                <li> 
-                  <a href="<?php echo "it_blog.php?ky=$codigo" ?>">Mis ofertas</a>
-                </li>
-                <li> 
-                  <a href="<?php echo "it_contact.php?ky=$codigo" ?>">Datos de Contacto</a>
-                </li>    
-                <li> 
-                  <form id="formulario">
-                  <input type="text" class="form-control" name="texto" placeholder="Buscar">
-                  <button type="submit"> Enviar </button>
-                  </form>
-                  <h1></h1>
->>>>>>> a2780013978197ecca1011b785f9a7c07b5c7fd6
                 </li>           
               </ul>
             </div>
@@ -425,55 +400,6 @@ if($llave == null)
         </div>
       </div>
     </div>
-<<<<<<< HEAD
-
-    <?php
-  $conectar = conectar();
-  $sql= "SELECT logo, nom_oferta, fecha_inicio, descripcion_oferta, OFERTA.cod_oferta
-  FROM oferta, oferta_estudiante, estudiante, empresa
-  WHERE
-  estudiante.cod_estudiante =oferta_estudiante.cod_estudiante AND 
-  oferta_estudiante.cod_oferta = oferta.cod_oferta AND
-  empresa.cod_empresa = oferta.cod_empresa AND
-  estudiante.cod_carrera = oferta.oferta_carrera
-  GROUP BY logo, nom_oferta, fecha_inicio, descripcion_oferta, oferta.cod_oferta";
-
-  $respuesta=mysqli_query($conectar, $sql);   
- 
-                
-              while ($row = mysqli_fetch_array($respuesta)): ?>
-                <div class="row">
-                   <div class="col-md-4">
-                      <div class="full blog_colum">
-                      
-                      <form action="it_shop_detail.php" method="POST">
-                        <input type="hidden" name="codigo_oferta" value="<?php echo $row['cod_oferta']?>">
-                        <div class="blog_feature_img"><img src="<?php echo $row['logo'] ?> "/></div>
-                        
-
-                        
-                        <div class="post_time">
-                          <p><i class="fa fa-clock-o"></i><?php echo  $row['fecha_inicio'] ?></p>
-                        </div>
-
-                        <div class="blog_feature_head">
-                          <h4><?php echo $row['nom_oferta'] ?></h4>
-                        </div>
-
-                        <div class="blog_feature_cont">
-                          <p><?php echo $row['descripcion_oferta'] ?></p>
-                        </div>
-
-                        <button type="submit" class="btn sqaure_bt">Ver mas</button>
-                        </form>
-                      </div>
-                    </div>
-                </div>
-              <?php endwhile;?>
-
-  
-=======
->>>>>>> a2780013978197ecca1011b785f9a7c07b5c7fd6
 
     <?php
   $conectar = conectar();
@@ -522,64 +448,6 @@ if($llave == null)
 <!-- end section -->
 
 
-<<<<<<< HEAD
-=======
-<!-- Modal -->
-<div class="modal fade" id="search_bar" role="dialog">
-  <div class="modal-dialog">
-    <!-- Modal content-->
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal"><i class="fa fa-close"></i></button>
-      </div>
-      <div class="modal-body">
-        <div class="row">
-          <div class="col-lg-8 col-md-8 col-sm-8 offset-lg-2 offset-md-2 offset-sm-2 col-xs-10 col-xs-offset-1">
-            <div class="navbar-search">
-              <form action="#" method="get" id="search-global-form" class="search-global">
-                <input type="text" placeholder="Type to search" autocomplete="off" name="s" id="search" value="" class="search-global__input">
-                <button class="search-global__btn"><i class="fa fa-search"></i></button>
-                <div class="search-global__note">Begin typing your search above and press return to search.</div>
-              </form>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-<!-- End Model search bar -->
-<!-- footer -->
-<footer class="footer_style_2">
-  <div class="container-fuild">
-    <div class="row">
-      <div class="map_section">
-        <div id="map"></div>
-      </div>
-      <div class="footer_blog">
-        <div class="row">
-          <div class="col-md-6">
-            <div class="main-heading left_text">
-              <h2>It Next Theme</h2>
-            </div>
-            <p>Tincidunt elit magnis nulla facilisis. Dolor sagittis maecenas. Sapien nunc amet ultrices, dolores sit ipsum velit purus aliquet, massa fringilla leo orci.</p>
-           
-          </div>
-          <div class="col-md-6">
-            <div class="main-heading left_text">
-              <h2>Additional links</h2>
-            </div>
-            
-          </div>          
-      </div>
-      <div class="cprt">
-        <p>ItNext © Copyrights 2019 Design by html.design</p>
-      </div>
-    </div>
-  </div>
-</footer>
-<!-- end footer -->
->>>>>>> a2780013978197ecca1011b785f9a7c07b5c7fd6
 <!-- js section -->
 <script src="js/jquery.min.js"></script>
 <script src="js/bootstrap.min.js"></script>

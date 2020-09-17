@@ -228,7 +228,6 @@ if ( ! ($_SESSION['autenticado'] == 'SI' && isset($_SESSION['id'])) )
                     <div class="select">
                                     <select name=" oferta_carrera" class="form-control" >
                                         <?php 
-                                        include("../../modelo/conexion.php");
                                         $conexion = conectar();
                                         $sql = "SELECT * FROM CARRERA";
                                         $carrera = mysqli_query($conexion,$sql);

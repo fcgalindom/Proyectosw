@@ -1,65 +1,44 @@
 <?php
 
 include("../../modelo/conexion.php");
-$codigo = $_POST['key'];
 
 //finalizado
 function guardarPerfil()
 {
     
     $perfil = $_POST['perfil'];
-<<<<<<< HEAD
-    $codigo=$_SESSION['id'];
+    $codigo = $_POST['codigo'];
     $sql = "INSERT INTO PERFIL VALUES($codigo,'$perfil')";
-=======
-    $key = $_POST['key'];
-    $sql = "INSERT INTO PERFIL VALUES($key,'$perfil')";
->>>>>>> a2780013978197ecca1011b785f9a7c07b5c7fd6
-    echo $sql;
     $conexion = conectar();
     mysqli_query($conexion,$sql);
     mysqli_close($conexion);
-    header("Location: ../../vista/it-next/it_home.php");
 }
 
 // finalizado
 function guardarFormacionAcademica()
 {
     $conexion = conectar();
-<<<<<<< HEAD
-    $codigo=$_SESSION['id'];
-=======
-    $key = $_POST['key'];
->>>>>>> a2780013978197ecca1011b785f9a7c07b5c7fd6
+    $codigo = $_POST['codigo'];
     $ins_bachiller  = $_POST['bachillerInst'];
     $titulo = $_POST['bachillerTit'];
     $ingles = $_POST['ingles'];
     $fecha = $_POST['bachillerFecha'];
-<<<<<<< HEAD
     $sql = "INSERT INTO FORMACION_ACADEMICA VALUES($codigo,'$ins_bachiller','$titulo','$fecha','$ingles')";
-=======
-    $sql = "INSERT INTO FORMACION_ACADEMICA VALUES($key,'$ins_bachiller','$titulo','$fecha','$ingles')";
->>>>>>> a2780013978197ecca1011b785f9a7c07b5c7fd6
     mysqli_query($conexion,$sql);
     mysqli_close($conexion);
-    header("Location: ../../vista/it-next/it_home.php");
 }
 
 function guardarExperienciaLaboral()
 {
     $conexion = conectar();
-    $codigo=$_SESSION['id'];
+    $codigo = $_POST['codigo'];
     $cargo = $_POST['cargo'];
     $empresa = $_POST['empresa'];
     $funciones = $_POST['fun_principales'];
     $fecha_fin = $_POST['fecha_fin'];
     if($cargo != '' && $empresa != '' && $funciones != '' && $fecha_fin != '')
     {
-<<<<<<< HEAD
         $sql = "INSERT INTO EXP_LABORAL VALUES(0,'$cargo','$empresa','$funciones','$fecha_fin',$codigo)";
-=======
-        $sql = "INSERT INTO EXP_LABORAL VALUES(0,'$cargo','$empresa','$funciones','$fecha_fin',$key)";
->>>>>>> a2780013978197ecca1011b785f9a7c07b5c7fd6
        mysqli_query($conexion,$sql);
     }
 
@@ -93,13 +72,12 @@ function guardarExperienciaLaboral()
         mysqli_query($conexion,$sql);
     }
     mysqli_close($conexion);
-    header("Location: ../../vista/it-next/it_home.php");
 }
 
 function guardarExperienciaAcademica()
 {
     $conexion = conectar();
-    $codigo=$_SESSION['id'];
+    $codigo = $_POST['codigo'];
     $nombre = $_POST['nom_exp_academica'];
     $conocimientos = $_POST['con_aplicados'];
     $materia = $_POST['materia'];
@@ -128,14 +106,13 @@ function guardarExperienciaAcademica()
         mysqli_query($conexion,$sql);
     }
     mysqli_close($conexion);
-    header("Location: ../../vista/it-next/it_home.php");
 }
 
 // falta cod_estudiante
 function guardarReferencias()
 {
     $conexion = conectar();
-    $codigo=$_SESSION['id'];
+    $codigo = $_POST['codigo'];
     $nombre = $_POST['nom_referencia'];
     $cargo = $_POST['cargo_referencia'];
     $celular = $_POST['celular_referencia'];
@@ -156,7 +133,6 @@ function guardarReferencias()
         mysqli_query($conexion,$sql);
     }
     mysqli_close($conexion);
-    header("Location: ../../vista/it-next/it_home.php");
   
 }
 
@@ -164,11 +140,7 @@ function guardarReferencias()
 function guardar_f_tecnica()
 {
     $conexion = conectar();
-<<<<<<< HEAD
-    $codigo=$_SESSION['id'];
-=======
-    $key = $_POST['key'];
->>>>>>> a2780013978197ecca1011b785f9a7c07b5c7fd6
+    $codigo = $_POST['codigo'];
     $nombre = $_POST['tecnicoTit'];
     $fecha = $_POST['tecnicoFecha'];
     $institucion = $_POST['tecnicoInst'];
@@ -229,26 +201,20 @@ function guardar_f_tecnica()
         mysqli_query($conexion,$sql);
     }
     mysqli_close($conexion);
-    header("Location: ../../vista/it-next/it_home.php");
-    
 }
 
 //falta estudiante
 function guardarCertificaciones()
 {
     $conexion = conectar();
-    $codigo=$_SESSION['id'];
+    $codigo = $_POST['codigo'];
     $nombre_cer = $_POST['nombre_certificacion'];
     $ins_certificado = $_POST['ins_certificado'];
     $fec_certificado = $_POST['fec_certificado'];
     $horas = $_POST['cant_horas'];
     if($nombre_cer != '' && $ins_certificado != '' && $fec_certificado != '' && $horas != '')
     {
-<<<<<<< HEAD
         $sql = "INSERT INTO CERTIFICACION VALUES(0,'$nombre_cer','$ins_certificado',$horas,'$fec_certificado',$codigo)";
-=======
-        $sql = "INSERT INTO CERTIFICACION VALUES(0,'$nombre_cer','$ins_certificado',$horas,'$fec_certificado',$key)";
->>>>>>> a2780013978197ecca1011b785f9a7c07b5c7fd6
         echo $sql."<br>";
         mysqli_query($conexion,$sql);
     }
@@ -259,11 +225,7 @@ function guardarCertificaciones()
     $horas = $_POST['cant_horas2'];
     if ($nombre_cer != '' && $ins_certificado != '' && $fec_certificado != '' && $horas != '') 
     {
-<<<<<<< HEAD
         $sql = "INSERT INTO CERTIFICACION VALUES(0,'$nombre_cer','$ins_certificado',$horas,'$fec_certificado',$codigo)";
-=======
-        $sql = "INSERT INTO CERTIFICACION VALUES(0,'$nombre_cer','$ins_certificado',$horas,'$fec_certificado',$key)";
->>>>>>> a2780013978197ecca1011b785f9a7c07b5c7fd6
         echo $sql."<br>";
         mysqli_query($conexion,$sql);
     }
@@ -274,11 +236,7 @@ function guardarCertificaciones()
     $horas = $_POST['cant_horas3'];
     if ($nombre_cer != '' && $ins_certificado != '' && $fec_certificado != '' && $horas != '') 
     {
-<<<<<<< HEAD
         $sql = "INSERT INTO CERTIFICACION VALUES(0,'$nombre_cer','$ins_certificado',$horas,'$fec_certificado',$codigo)";
-=======
-        $sql = "INSERT INTO CERTIFICACION VALUES(0,'$nombre_cer','$ins_certificado',$horas,'$fec_certificado',$key)";
->>>>>>> a2780013978197ecca1011b785f9a7c07b5c7fd6
         echo $sql."<br>";
         mysqli_query($conexion,$sql);
     }
@@ -289,29 +247,13 @@ function guardarCertificaciones()
     $horas = $_POST['cant_horas4'];
     if ($nombre_cer != '' && $ins_certificado != '' && $fec_certificado != '' && $horas != '') 
     {
-<<<<<<< HEAD
         $sql = "INSERT INTO CERTIFICACION VALUES(0,'$nombre_cer','$ins_certificado',$horas,'$fec_certificado',$codigo)";
-=======
-        $sql = "INSERT INTO CERTIFICACION VALUES(0,'$nombre_cer','$ins_certificado',$horas,'$fec_certificado',$key)";
->>>>>>> a2780013978197ecca1011b785f9a7c07b5c7fd6
         echo $sql."<br>";
         mysqli_query($conexion,$sql);
     }
     mysqli_close($conexion);
-    header("Location: ../../vista/it-next/it_home.php");
 }
 
-<<<<<<< HEAD
-// guardarPerfil();
-// guardarFormacionAcademica();
-// guardar_f_tecnica();
-// guardarCertificaciones();
-// guardarReferencias();
- guardarExperienciaLaboral();
-// guardarExperienciaAcademica();
-
-//header("Location: ../../vista/it-next/it_about.php?ky=$codigo");
-=======
 guardarPerfil();
 guardarFormacionAcademica();
 guardar_f_tecnica();
@@ -320,5 +262,4 @@ guardarReferencias();
 guardarExperienciaLaboral();
 guardarExperienciaAcademica();
 
-header("Location: ../../vista/it-next/it_about.php?ky=$codigo");
->>>>>>> a2780013978197ecca1011b785f9a7c07b5c7fd6
+header("Location: ../../vista/it-next/it_home.php");

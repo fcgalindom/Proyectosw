@@ -35,7 +35,7 @@ if( $row=mysqli_fetch_array($respuesta) )
     }else{
 
 
-    $sql2 = "SELECT cod_estudiante ingresos FROM estudiante WHERE correo='{$correo}' AND contrasenia='{$password}'"; 
+    $sql2 = "SELECT cod_estudiante, ingresos FROM estudiante WHERE correo='{$correo}' AND contrasenia='{$password}'"; 
     $respuesta2=mysqli_query($conexion, $sql2);
     $ingresos=0;
     $id="";
@@ -77,11 +77,3 @@ header ("Location: loginProy.php");
     }
 }
     ?>
-
-
-
-
-
-
-
-
